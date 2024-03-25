@@ -28,6 +28,9 @@
 `// Generate a function that will perform calculations`
 
 **Specific request**
-`// Generate a function that will accept two numbers and an operator. The function will perform the operation between the numbers and return the result.`
+`// Generate a function that will accept two numbers and an arithmetic operator. The function will perform the operation between the numbers and return the result.`
+
+**Additional Suggestions**
+Delete the existing code, leaving the comments. Place your cursor at the end of the comment and press enter and wait until copilot generates a partial suggestion. Press Ctrl - Right Arrow to move to the next suggestion, and stop when in a suitable place. Then press Ctrl+Enter to view additional suggestions. Note that there isn't always an additional suggestion that Copilot can provide.
 
 ## 4.) Context from Adjancent files

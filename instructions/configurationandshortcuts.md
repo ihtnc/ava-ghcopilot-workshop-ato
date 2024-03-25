@@ -1,41 +1,69 @@
 ## GitHub Copilot Shortcuts in Visual Studio Code
 
-- `Ctrl + Enter`: Accept the currently suggested completion by GitHub Copilot.
-- `Tab`: Navigate to the next placeholder, if the suggestion includes placeholders.
-- `Shift + Tab`: Navigate to the previous placeholder, if the suggestion includes placeholders.
-- `Ctrl + Space`: Manually trigger a suggestion from GitHub Copilot.
+## Keyboard shortcuts for macOS
+
+| Action                                                        | Shortcut            | Command name                               |
+| ------------------------------------------------------------- | ------------------- | ------------------------------------------ |
+| Accept an inline suggestion                                   | Tab                 | `editor.action.inlineSuggest.commit`       |
+| Dismiss an inline suggestion                                  | Esc                 | `editor.action.inlineSuggest.hide`         |
+| Show next inline suggestion                                   | Option (⌥)+]        | `editor.action.inlineSuggest.showNext`     |
+| Show previous inline suggestion                               | Option (⌥)+[        | `editor.action.inlineSuggest.showPrevious` |
+| Trigger inline suggestion                                     | Option (⌥)+\        | `editor.action.inlineSuggest.trigger`      |
+| Open GitHub Copilot (additional suggestions in separate pane) | Ctrl+Return         | `github.copilot.generate`                  |
+| Toggle GitHub Copilot on/off                                  | No default shortcut | `github.copilot.toggleCopilot`             |
+
+## Keyboard shortcuts for Windows
+
+| Action                                                        | Shortcut            | Command name                               |
+| ------------------------------------------------------------- | ------------------- | ------------------------------------------ |
+| Accept an inline suggestion                                   | Tab                 | `editor.action.inlineSuggest.commit`       |
+| Dismiss an inline suggestion                                  | Esc                 | `editor.action.inlineSuggest.hide`         |
+| Show next inline suggestion                                   | Alt+]               | `editor.action.inlineSuggest.showNext`     |
+| Show previous inline suggestion                               | Alt+[               | `editor.action.inlineSuggest.showPrevious` |
+| Trigger inline suggestion                                     | Alt+\               | `editor.action.inlineSuggest.trigger`      |
+| Open GitHub Copilot (additional suggestions in separate pane) | Ctrl+Enter          | `github.copilot.generate`                  |
+| Toggle GitHub Copilot on/off                                  | No default shortcut | `github.copilot.toggleCopilot`             |
+
+## Keyboard shortcuts for Linux
+
+| Action                                                        | Shortcut            | Command name                               |
+| ------------------------------------------------------------- | ------------------- | ------------------------------------------ |
+| Accept an inline suggestion                                   | Tab                 | `editor.action.inlineSuggest.commit`       |
+| Dismiss an inline suggestion                                  | Esc                 | `editor.action.inlineSuggest.hide`         |
+| Show next inline suggestion                                   | Alt+]               | `editor.action.inlineSuggest.showNext`     |
+| Show previous inline suggestion                               | Alt+[               | `editor.action.inlineSuggest.showPrevious` |
+| Trigger inline suggestion                                     | Alt+\               | `editor.action.inlineSuggest.trigger`      |
+| Open GitHub Copilot (additional suggestions in separate pane) | Ctrl+Enter          | `github.copilot.generate`                  |
+| Toggle GitHub Copilot on/off                                  | No default shortcut | `github.copilot.toggleCopilot`             |
 
 ## GitHub Copilot Shortcuts in Visual Studio 2022
 
-### MacOS
+### Windows default keyboard shortcuts
 
-- `Cmd + Enter`: Accept the currently suggested completion by GitHub Copilot.
-- `Tab`: Navigate to the next placeholder, if the suggestion includes placeholders.
-- `Shift + Tab`: Navigate to the previous placeholder, if the suggestion includes placeholders.
-- `Cmd + Space`: Manually trigger a suggestion from GitHub Copilot.
-
-### Windows
-
-- `Ctrl + Enter`: Accept the currently suggested completion by GitHub Copilot.
-- `Tab`: Navigate to the next placeholder, if the suggestion includes placeholders.
-- `Shift + Tab`: Navigate to the previous placeholder, if the suggestion includes placeholders.
-- `Ctrl + Space`: Manually trigger a suggestion from GitHub Copilot.
+| Action                          | Shortcut     | Command name                           |
+| ------------------------------- | ------------ | -------------------------------------- |
+| Show next inline suggestion     | `Alt+.`      | `Tools.Nextsuggestion`                 |
+| Show previous inline suggestion | `Alt+,`      | `Tools.Previoussuggestion`             |
+| Trigger inline suggestion       | `Ctrl+Alt+\` | `Edit.Copilot.TriggerInlineSuggestion` |
 
 ## GitHub Copilot Shortcuts in IntelliJ IDEA
 
-### MacOS
+- **macOS**
 
-- `Cmd + Shift + Space`: Manually trigger a suggestion from GitHub Copilot.
-- `Cmd + Shift + Enter`: Accept the currently suggested completion by GitHub Copilot.
-- `Tab`: Navigate to the next placeholder, if the suggestion includes placeholders.
-- `Shift + Tab`: Navigate to the previous placeholder, if the suggestion includes placeholders.
+  - Accept: `Tab`
+  - Dismiss: `Esc`
+  - Next Inline Suggestion: `Option (⌥)` or `Alt+]`
+  - Previous Inline Suggestion: `Option (⌥)` or `Alt+[`
+  - Inline Suggestion: `Option (⌥)+\`
+  - Additional Suggestions: `Option (⌥)` or `Alt+Return`
 
-### Windows
-
-- `Ctrl + Shift + Space`: Manually trigger a suggestion from GitHub Copilot.
-- `Ctrl + Shift + Enter`: Accept the currently suggested completion by GitHub Copilot.
-- `Tab`: Navigate to the next placeholder, if the suggestion includes placeholders.
-- `Shift + Tab`: Navigate to the previous placeholder, if the suggestion includes placeholders.
+- **Windows and Linux**
+  - Accept: `Tab`
+  - Dismiss: `Esc`
+  - Next Inline Suggestion: `Alt+]`
+  - Previous Inline Suggestion: `Alt+[`
+  - Inline Suggestion: `Alt+\`
+  - Additional Suggestions: `Alt+Enter`
 
 # Temporarily Disabling GitHub Copilot Inline Suggestions
 
