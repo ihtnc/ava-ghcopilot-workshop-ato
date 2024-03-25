@@ -1,0 +1,26 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "IntroductionRecap",
+  "steps": [
+    {
+      "file": "instructions/codetours/02-introghcopilot.md",
+      "description": "Let's quickly recap the key takeaways from the Introduction to GitHub Copilot video that you've seen to ensure we're all on the same page and ready to harness this powerful tool within our development workflows.",
+      "line": 1
+    },
+    {
+      "file": "instructions/codetours/02-introghcopilot.md",
+      "description": "GitHub Copilot is like having a co-pilot in the cockpit of your coding environment. It's there to help you navigate through the complexities of coding by providing real-time suggestions in VS Code, Visual Studio 2022, and JetBrains IDEs.",
+      "line": 5
+    },
+    {
+      "file": "instructions/codetours/02-introghcopilot.md",
+      "description": "Think of GitHub Copilot as a turbocharger for your IDE. It's an extension that seamlessly integrates into your existing setup, enhancing your coding experience without the need for a separate application.",
+      "line": 6
+    },
+    {
+      "file": "instructions/codetours/02-introghcopilot.md",
+      "description": "The core features of GitHub Copilot are designed to boost your productivity. It offers intelligent code suggestions, facilitates communication with inline chat, and accelerates your workflow with handy keyboard shortcuts.",
+      "line": 7
+    }
+  ]
+}

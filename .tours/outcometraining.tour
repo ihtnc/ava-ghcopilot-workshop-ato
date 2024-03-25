@@ -1,0 +1,31 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "outcometraining",
+  "steps": [
+    {
+      "file": "instructions/codetours/00-outcometraining.md",
+      "description": "Once you complete this training, here are some expected outcome.",
+      "line": 1
+    },
+    {
+      "file": "instructions/codetours/00-outcometraining.md",
+      "description": "First, you will get answers to specific use case scenario questions. As you probably have been experimenting with GitHub Copilot quite a bit, you might have questions about “what if” type of scenario. For example, you might be interested in knowing how to use Copilot for generating unit test cases. Or, you might wonder what is the best way to write “prompt” so you can get accurate answer.",
+      "line": 5
+    },
+    {
+      "file": "instructions/codetours/00-outcometraining.md",
+      "description": "To illustrate the versatility of GitHub Copilot, we've prepared a series of targeted demos. For instance, if you're looking to automate tasks with PowerShell, we'll show you how Copilot can assist in scripting a solution to read folder sizes and output the data to a CSV file.\r\n\r\nMoreover, if you're tackling more complex functions—perhaps a challenging item from your backlog—Copilot can be your research assistant, offering guidance and code examples to speed up your development process.",
+      "line": 9
+    },
+    {
+      "file": "instructions/codetours/00-outcometraining.md",
+      "description": "In our final objective, we'll dive into advanced tips and leading practices for maximizing GitHub Copilot's utility. Discover features beyond inline suggestions and chat, like using /slash commands to tailor Copilot's assistance to your precise development tasks.",
+      "line": 13
+    },
+    {
+      "file": "instructions/codetours/00-outcometraining.md",
+      "description": "As a last objective, you can learn about in-depth tips and tricks as well as Leading Practices on how to utilize GitHub Copilot. You will achieve that by directly learning from GitHub engineers who have been actually using Copilot working with customers or building own projects. Another part of this is getting deep dive into prompt engineering. We did cover Prompt Engineering in GitHub Copilot Fundamental training, but we will cover more in detail this training",
+      "line": 13
+    }
+  ]
+}
