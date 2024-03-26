@@ -1,0 +1,78 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "basicusage",
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "In this first demo, we're going to explore the core functionality of GitHub Copilot. I'm going to demonstrate the basics of how you can leverage this AI-powered tool to enhance your coding experience"
+    },
+    {
+      "file": "exercise/python/demo.py",
+      "description": "Let's give GitHub Copilot some context about what we're trying to do. Let's start by adding the following comment to the file line of the demo.py file. \n\n```python\n# Question: What are the popular JavaScript frameworks?\n# Answer:\n```\n\n\nPress `Next` to to get continue 👇",
+      "line": 2
+    },
+    {
+      "file": "exercise/python/demo.py",
+      "description": "Let's write another question, this time asking about popular databases. \n\n```python\n# Question: What are the popular web databases?\n# Answer:\n```\n\n\nPress `Next` to to get continue 👇",
+      "line": 6
+    },
+    {
+      "title": "Recap",
+      "description": "GitHub Copilot goes beyond simple autocompletion; it predicts and suggests full lines or blocks of code. Instead of one word at a time, it offers the most likely suggestion based on the context you provide it."
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Let's give GitHub Copilot some context about what we're trying to do. Let's start by adding the following comment to the file line of the demo.js file. \n\n```javascript\n// Generate a function that will accept a string and return the string in reverse\n```\nAccept Copilot's suggestions by pressing `Tab` then `Enter`.\n\nPress `Next` to to get continue 👇",
+      "line": 1
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Let's run and test this reverseString function in the terminal. \n\n```python\nnode exercise\\javascript\\demo.js\n```\n\n\nPress `Next` to to get continue 👇",
+      "line": 10
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Let's change the word to ALVIN and test it again. \n\n```python\nnode exercise\\javascript\\demo.js\n```\n\n\nPress `Next` to to get continue 👇",
+      "line": 10
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Delete the existing code and comment at the top. We'll now see how GitHub Copilot responds with vague requests.\n\n```javascript\n// Generate a function that will perform calculations\n```\n\nPress `Next`\n\n\n",
+      "line": 1
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Notice that vague comments may yield vague or unexpected suggestions from GitHub Copilot. For precise, useful code generation, always provide clear, specific comments to guide its suggestion.",
+      "line": 1
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Let's delete the existing code and comment at the top. let's now provide a clearer comment.\n\n```javascript\n// Generate a function that will accept two numbers and an arithmetic operator. The function will perform the operation between the numbers and return the result.\n```\n\nPress `Next`\n\n\n",
+      "line": 1
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Let's ask Copilot to add a statement to test this calculator function\r\n\r\n```javascript\r\n// Test the function using 5 * 4\r\n```\r\nPlace your cursor at the end of the comment then press `Enter`. Wait for Copilot to provide a suggestion.",
+      "line": 18
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Run the code in the Terminal\r\n\r\n```javascript\r\nnode exercise\\javascript\\demo.js\r\n```\r\nSave demo.js then copy and paste the command in the terminal window then press `Enter`",
+      "line": 20
+    },
+    {
+      "title": "Recap",
+      "description": "Providing clear context to GitHub Copilot significantly improves your chances of receiving the most relevant and optimal code suggestions. Context is Key and Precision matters."
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Delete the console.log and the fuction. Let's get Copilot help us recreate the function and ask it for additional suggestion.\r\n\r\n```javascript\r\nfunction performCalculation()\r\n```\r\n\r\nUse Ctrl+Right Arrow to accept each suggestion one item at a time. Once all the parameters are suggested, press Ctrl+Enter to view Copilot's additional suggestion pane.\r\n\r\nSelect the suggestion the satisfies your requirement.",
+      "line": 2
+    },
+    {
+      "title": "Recap",
+      "description": "The 'Additional Suggestions pane' in GitHub Copilot offers developers multiple versions of code suggestions, giving them choices to best fit their specific requirements."
+    }
+  ],
+  "ref": "main"
+}

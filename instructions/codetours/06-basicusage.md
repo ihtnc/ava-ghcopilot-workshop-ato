@@ -9,6 +9,8 @@
 # Answer: <Show how Copilot generates an answer>
 ```
 
+GitHub Copilot goes beyond simple autocompletion; it predicts and suggests full lines or blocks of code. Instead of one word at a time, it offers the best answers to your coding queries.
+
 # 2.) JavaScript - Generate a revers string function
 
 - Open exercise\javascript\demo.js
@@ -33,4 +35,4 @@
 **Additional Suggestions**
 Delete the existing code, leaving the comments. Place your cursor at the end of the comment and press enter and wait until copilot generates a partial suggestion. Press Ctrl - Right Arrow to move to the next suggestion, and stop when in a suitable place. Then press Ctrl+Enter to view additional suggestions. Note that there isn't always an additional suggestion that Copilot can provide.
 
-## 4.) Context from Adjancent files
+## 4.) Context from Adjacent files
