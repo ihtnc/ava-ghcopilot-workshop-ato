@@ -1,0 +1,26 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "notcovered",
+  "steps": [
+    {
+      "file": "instructions/codetours/01-notcoveredintraining.md",
+      "description": "As we get started, I want to set the stage for what today's discussion will cover and, just as importantly, what it will not include.",
+      "line": 1
+    },
+    {
+      "file": "instructions/codetours/01-notcoveredintraining.md",
+      "description": "- While programming language best practices are essential to software development, our focus today is specifically on the Copilot tool.\r\n- We aim to understand how Copilot functions and assists in coding, rather than discussing broader programming methodologies.\r\n- Think of Copilot as a co-pilot in your coding journey, here to support rather than teach the fundamentals of programming languages.",
+      "line": 5
+    },
+    {
+      "file": "instructions/codetours/01-notcoveredintraining.md",
+      "description": "- There is a vast array of functionalities within code editors and IDEs, but today we'll concentrate only on those aspects that intersect with Copilot's features.\r\n- Our discussion will be on how Copilot integrates and enhances these supported IDEs, providing a seamless coding experience.\r\n- Consider how Copilot's capabilities can be applied within your preferred coding environment to streamline your workflow.",
+      "line": 11
+    },
+    {
+      "file": "instructions/codetours/01-notcoveredintraining.md",
+      "description": "- It's always exciting to speculate about future developments, but today we'll keep our attention on the current state of Copilot.\r\n- Understanding what Copilot offers now is crucial for effectively utilizing the tool in your current projects.\r\n- Let's focus on maximizing the potential of Copilot's existing features to improve your productivity and code quality today.",
+      "line": 17
+    }
+  ]
+}

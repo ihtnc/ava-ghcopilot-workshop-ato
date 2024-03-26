@@ -1,0 +1,21 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "requestaccess",
+  "steps": [
+    {
+      "file": "instructions/codetours/03-requestingaccess.md",
+      "description": "Let's dive into the nuts and bolts of getting you set up with Copilot access, so you can start integrating this tool into your dev workflow right away.",
+      "line": 1
+    },
+    {
+      "file": "instructions/codetours/03-requestingaccess.md",
+      "description": "- Make sure you're on a Windows machine.\r\n- Open the UAM 2.0 system.\r\n- Search for GitHub Copilot User",
+      "line": 3
+    },
+    {
+      "file": "instructions/codetours/03-requestingaccess.md",
+      "description": "- Submit your application through the system and Inform your line manager for their approval.\r\n- Once approved, wait for 30 to 60 minutes to be added to the AD group that corresponds with GitHub Copilot access.\r\n- Subsequently, you will be included in a GitHub Copilot Microsoft Teams Channel for any support-related queries or training questions about GitHub Copilot.",
+      "line": 9
+    }
+  ]
+}
