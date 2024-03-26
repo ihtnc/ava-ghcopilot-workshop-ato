@@ -72,6 +72,21 @@
     {
       "title": "Recap",
       "description": "The 'Additional Suggestions pane' in GitHub Copilot offers developers multiple versions of code suggestions, giving them choices to best fit their specific requirements."
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "As a developer, you may know another way that the code can be written, but you're not sure about the syntax. Copilot can help you with that.\r\nLet's say you know about the eval() built-in function in JavaScript, but you're not sure how to use it. Highlight the function and press Ctrl+i.\r\nIn the inline-chat Window, type `refactor this code using eval()`, then let's see what Copilot suggests",
+      "line": 2
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Let's ask Copilot to test the function by instructing it to add a terminal input for the user so we don't have to hard code the values.\r\nDelete the comment and the console.log statement, then insert the comment below.\r\n\r\n```javascript\r\n// Test the function by accepting user input for the numbers and the operator\r\n```\r\nPlace your cursor at the end of the comment then press `Enter`. Wait for Copilot to provide a suggestion.",
+      "line": 13
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "In this demonstration of inline suggestions, note that while GitHub Copilot can process comments in various languages, but its proficiency with non-English inputs hasn’t been fully measured. Use caution when relying on its interpretation of foreign language comments. Let's try it out.\r\n(Delete the contents of demo.js)\r\n\r\n```javascript\r\n// Gumawa ka ng function na tumatanggap ng salita o sintensya at ibalik ang bilang ng mga letra. Huwag isama ang space.\r\n// Halimbawa: \"Hello\" ay may 5 na letra.\r\n```\r\n\r\nPress `Next` to continue.",
+      "line": 2
     }
   ],
   "ref": "main"

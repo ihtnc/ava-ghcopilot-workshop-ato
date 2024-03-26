@@ -35,4 +35,15 @@ GitHub Copilot goes beyond simple autocompletion; it predicts and suggests full 
 **Additional Suggestions**
 Delete the existing code, leaving the comments. Place your cursor at the end of the comment and press enter and wait until copilot generates a partial suggestion. Press Ctrl - Right Arrow to move to the next suggestion, and stop when in a suitable place. Then press Ctrl+Enter to view additional suggestions. Note that there isn't always an additional suggestion that Copilot can provide.
 
-## 4.) Context from Adjacent files
+## 5.) Refactoring and using Developer’s intuition
+
+As a developer, you may know another way that the code can be written, but you're not sure about the syntax. Copilot can help you with that.
+Let's say you know about the eval() built-in function in JavaScript, but you're not sure how to use it. Highlight the function and press Ctrl+i.
+In the inline-chat Window, type `refactor this code using eval()`, then let's see what Copilot suggests.
+
+Let's test Copilot if it can understand my request in Tagalog.
+
+// Gumawa ka ng function na tumatanggap ng salita o sintensya at ibalik ang bilang ng mga letra. Huwag isama ang space.
+// Halimbawa: "Hello" ay may 5 na letra.
+
+## 5.) Context from Adjacent files
