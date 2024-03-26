@@ -86,7 +86,26 @@
     {
       "file": "exercise/javascript/demo.js",
       "description": "In this demonstration of inline suggestions, note that while GitHub Copilot can process comments in various languages, but its proficiency with non-English inputs hasn’t been fully measured. Use caution when relying on its interpretation of foreign language comments. Let's try it out.\r\n(Delete the contents of demo.js)\r\n\r\n```javascript\r\n// Gumawa ka ng function na tumatanggap ng salita o sintensya at ibalik ang bilang ng mga letra. Huwag isama ang space.\r\n// Halimbawa: \"Hello\" ay may 5 na letra.\r\n```\r\n\r\nPress `Next` to continue.",
-      "line": 2
+      "line": 3
+    },
+    {
+      "title": "Providing more context",
+      "description": "GitHub Copilot can give better suggestions the more context you provide it. Besides using clear comments, meaningful names for functions and variables, having related files open can also help GitHub Copilot to generate more relevant suggestions."
+    },
+    {
+      "file": "complete/javascript/context.js",
+      "description": "This is a sample javascript file with some sample functions. Let's open demo.js again and repeat the previous demo where we've asked Copilot to produce a function the performs a calculation between two numbers.",
+      "line": 1
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Let's delete the existing code and comment at the top. let's now provide a clearer comment.\n\n```javascript\n// Generate a function that will accept two numbers and an arithmetic operator. The function will perform the operation between the numbers and return the result.\n```\n\nPress `Next`\n\n\n",
+      "line": 1
+    },
+    {
+      "file": "exercise/javascript/demo.js",
+      "description": "Notice how GitHub Copilot used the pattern on how functions are written from the Context.js.\n\nA feature of Copilot is that it adapts to Context based on the other files that are open. By having relevant files adjacent to the one you are working on, Copilot might give a more suitable suggestion or even match the pattern how functions in your project are written. In a real-world scenario, you can open other files in your current project and use that as guidance for Copilot to suggest, enabling you to follow your development standards while using GitHub Copilot.\n\n\n",
+      "line": 12
     }
   ],
   "ref": "main"

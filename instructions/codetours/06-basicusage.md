@@ -46,4 +46,12 @@ Let's test Copilot if it can understand my request in Tagalog.
 // Gumawa ka ng function na tumatanggap ng salita o sintensya at ibalik ang bilang ng mga letra. Huwag isama ang space.
 // Halimbawa: "Hello" ay may 5 na letra.
 
-## 5.) Context from Adjacent files
+## 6.) Context from Adjacent files
+
+Talking Point: GitHub Copilot can give better suggestions the more context you provide it. Besides using clear comments, meaningful names for functions and variables, having related files open can also help GitHub Copilot to generate more relevant suggestions.
+Instructions: Close all tabs, except demo.js
+Delete all contents of the file, then paste this comment at the top.
+Tip: Press Alt-Z to wrap long text. (VS Code)
+// Generate a function that will accept two numbers and an arithmetic operator. The function will perform the operation between the numbers and return the result.
+Talking Point: Let's look again at the recommended code. I'll take a screenshot of this one, then let's compare it with another recommendation when we open another file that might influence Copilot to suggest differently.
+Note: The intention is to show Copilot suggestion with and without context from a neighbouring file.
