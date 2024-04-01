@@ -2,27 +2,28 @@
 
 /**
  * Performs an arithmetic operation on two numbers.
- *  
  * @param {number} num1 The first number.
  * @param {number} num2 The second number.
  * @param {string} operator The arithmetic operator ('+', '-', '*', '/').
  * @returns {number} The result of the operation.
  * @throws {TypeError} If the arguments are not numbers or the operator is invalid.
- * @throws {Error} If the division by zero is attempted.
+ * 
  * @example
  * // Returns 5
  * calculateOperation(3, 2, '+');
- * @example
- * // Returns -1
- * calculateOperation(3, 4, '-');
  * 
- 
+
 function calculateOperation(num1, num2, operator) {
     // Verify that the arguments are numbers
     if (typeof num1 !== 'number' || typeof num2 !== 'number') {
-        throw new TypeError('The arguments must be numbers.');
+        throw new TypeError('The first two arguments must be numbers.');
     }
-
+    
+    // Verify that the operator is a string
+    if (typeof operator !== 'string') {
+        throw new TypeError('The operator must be a string.');
+    }
+    
     // Perform the operation based on the operator
     switch (operator) {
         case '+':
@@ -32,14 +33,9 @@ function calculateOperation(num1, num2, operator) {
         case '*':
             return num1 * num2;
         case '/':
-            // Check for division by zero
-            if (num2 === 0) {
-                throw new Error('Division by zero is not allowed.');
-            }
             return num1 / num2;
         default:
-            throw new TypeError('Invalid operator.');
+            throw new TypeError('Invalid operator. Use "+", "-", "*", or "/".');
     }
 }
-
-
+ */
