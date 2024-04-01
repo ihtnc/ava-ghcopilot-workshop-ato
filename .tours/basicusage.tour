@@ -8,13 +8,13 @@
     },
     {
       "file": "exercise/python/demo.py",
-      "description": "Let's give GitHub Copilot some context about what we're trying to do. Let's start by adding the following comment to the file line of the demo.py file. \n\n```python\n# Question: What are the popular JavaScript frameworks?\n# Answer:\n```\n\n\nPress `Next` to to get continue 👇",
-      "line": 2
+      "description": "# Context is Key\nContext provides the necessary backdrop that informs the purpose and function of the code. For GitHub Copilot, context comes from comments, code structure, and naming conventions that guide its AI to generate relevant and useful suggestions. By feeding it descriptive comments and clear code patterns, Copilot can better understand the intent behind code segments and assist in crafting suggestions tailored to the developer's needs\n\nLet's dive into a simple yet illuminating example that showcases how Copilot interprets our comments to provide intelligent completions.\n\nWe've begun with a straightforward Q&A comment in our demo.py file. I will write simple Q&A written in python comments and let Github Copilot suggest an answer.\n\n```python\n# Question: What are the popular JavaScript frameworks?\n# Answer:\n```\n\n\nPress `Next` to to get continue 👇",
+      "line": 4
     },
     {
       "file": "exercise/python/demo.py",
-      "description": "Let's write another question, this time asking about popular databases. \n\n```python\n# Question: What are the popular web databases?\n# Answer:\n```\n\n\nPress `Next` to to get continue 👇",
-      "line": 6
+      "description": "Let's write another question, this time asking about popular databases. \n\n```python\n# Question: What are the popular web databases?\n# Answer:\n```\n\nWhile GitHub Copilot operates across various programming languages, remember to use the language-specific commenting character, such as # for Python or double slash `//` for JavaScript, to provide context. This ensures Copilot accurately interprets your intent and offers the most suitable suggestions for your code.\n\nPress `Next` to to get continue 👇",
+      "line": 10
     },
     {
       "title": "Recap",
@@ -22,7 +22,7 @@
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "Let's give GitHub Copilot some context about what we're trying to do. Let's start by adding the following comment to the file line of the demo.js file. \n\n```javascript\n// Generate a function that will accept a string and return the string in reverse\n```\nAccept Copilot's suggestions by pressing `Tab` then `Enter`.\n\nPress `Next` to to get continue 👇",
+      "description": "Let's give GitHub Copilot some context about what we're trying to do. Let's start by adding the following comment to the file line of the demo.js file. \n\n```javascript\n// Generate a function that will accept a string and return the string in reverse\n```\nAccept Copilot's suggestions by pressing `Tab` then `Enter`.\n\nPress Enter until you see the suggestion to output the result using the Console.\n\nPress `Next` to to get continue 👇",
       "line": 1
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "Let's change the word to ALVIN and test it again. \n\n```python\nnode exercise\\javascript\\demo.js\n```\n\n\nPress `Next` to to get continue 👇",
+      "description": "Let's change the word to ALVIN and test it again. \n\n```python\nnode exercise\\javascript\\demo.js\n```\n\nRemember to Save the File before executing in the terminal.\n\nPress `Next` to to get continue 👇",
       "line": 10
     },
     {
@@ -47,12 +47,12 @@
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "Let's delete the existing code and comment at the top. let's now provide a clearer comment.\n\n```javascript\n// Generate a function that will accept two numbers and an arithmetic operator. The function will perform the operation between the numbers and return the result.\n```\n\nPress `Next`\n\n\n",
+      "description": "Let's delete the existing code and comment at the top. let's now provide a clearer comment.\n\n```javascript\n// Generate a function that will accept two numbers and an arithmetic operator. The function will perform the operation between the numbers and return the result.\n```\n\nPress `Next` to Test the Function\n\n\n",
       "line": 1
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "Let's ask Copilot to add a statement to test this calculator function\r\n\r\n```javascript\r\n// Test the function using 5 * 4\r\n```\r\nPlace your cursor at the end of the comment then press `Enter`. Wait for Copilot to provide a suggestion.",
+      "description": "Let's ask Copilot to add a statement to test this calculator function\r\n\r\n```javascript\r\n// Try out the function with different numbers and operations\r\n```\r\nPlace your cursor at the end of the comment then press `Enter`. Wait for Copilot to provide a suggestion.",
       "line": 18
     },
     {
@@ -66,7 +66,7 @@
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "Delete the console.log and the fuction. Let's get Copilot help us recreate the function and ask it for additional suggestion.\r\n\r\n```javascript\r\nfunction performCalculation()\r\n```\r\n\r\nUse Ctrl+Right Arrow to accept each suggestion one item at a time. Once all the parameters are suggested, press Ctrl+Enter to view Copilot's additional suggestion pane.\r\n\r\nSelect the suggestion the satisfies your requirement.",
+      "description": "Delete the console.log and the fuction. Let's get Copilot help us recreate the function using a different and ask it for additional suggestion. Let's type the what we want the function name to be and observe how Copilot will suggest code in this manner.\r\n\r\n```javascript\r\nfunction performCalculation()\r\n```\r\n\r\nUse Ctrl+Right Arrow to accept each suggestion one item at a time. Once all the parameters are suggested, press Ctrl+Enter to view Copilot's additional suggestion pane.\r\n\r\nSelect the suggestion the satisfies your requirement.",
       "line": 2
     },
     {
