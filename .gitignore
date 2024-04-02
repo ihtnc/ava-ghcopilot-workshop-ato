@@ -3,3 +3,12 @@ ghcp/
 # exclude environment files
 .env
 .env.local
+
+# exclude .vs
+.vs/
+
+# exclude testing folder for now
+testing/
+
+# exclude archives folder
+archives/

@@ -8,8 +8,8 @@
     },
     {
       "file": "exercise/python/demo.py",
-      "description": "# Context is Key\nContext provides the necessary backdrop that informs the purpose and function of the code. For GitHub Copilot, context comes from comments, code structure, and naming conventions that guide its AI to generate relevant and useful suggestions. By feeding it descriptive comments and clear code patterns, Copilot can better understand the intent behind code segments and assist in crafting suggestions tailored to the developer's needs\n\nLet's dive into a simple yet illuminating example that showcases how Copilot interprets our comments to provide intelligent completions.\n\nWe've begun with a straightforward Q&A comment in our demo.py file. I will write simple Q&A written in python comments and let Github Copilot suggest an answer.\n\n```python\n# Question: What are the popular JavaScript frameworks?\n# Answer:\n```\n\n\nPress `Next` to to get continue 👇",
-      "line": 4
+      "description": "# Context is Key\nContext provides the necessary backdrop that informs the purpose and function of the code. For GitHub Copilot, context comes from comments, code structure, and opened files that guide its AI to generate relevant and useful suggestions. By feeding it descriptive comments and clear code patterns from other files, Copilot can better understand the intent behind code segments and assist in crafting suggestions tailored to your needs.\n\nLet's dive into a simple yet insightful example that showcases how Copilot interprets our comments to provide intelligent completions.\n\nLet's begin with a straightforward Q&A comment in our demo.py file. I will write simple Q&A written in python comments and let Github Copilot suggest an answer.\n\n```python\n# Question: What are the popular JavaScript frameworks?\n# Answer:\n```\n\n\nPress `Next` to to get continue 👇",
+      "line": 5
     },
     {
       "file": "exercise/python/demo.py",
@@ -66,7 +66,7 @@
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "Delete the console.log and the fuction. Let's get Copilot help us recreate the function using a different and ask it for additional suggestion. Let's type the what we want the function name to be and observe how Copilot will suggest code in this manner.\r\n\r\n```javascript\r\nfunction performCalculation()\r\n```\r\n\r\nUse Ctrl+Right Arrow to accept each suggestion one item at a time. Once all the parameters are suggested, press Ctrl+Enter to view Copilot's additional suggestion pane.\r\n\r\nSelect the suggestion the satisfies your requirement.",
+      "description": "Note: This feature is currently not working and has been reported to GitHub.\r\n\r\nDelete the console.log and the fuction. Let's get Copilot help us recreate the function using a different and ask it for additional suggestion. Let's type the what we want the function name to be and observe how Copilot will suggest code in this manner.\r\n\r\n```javascript\r\nfunction performCalculation()\r\n```\r\n\r\nUse Ctrl+Right Arrow to accept each suggestion one item at a time. Once all the parameters are suggested, press Ctrl+Enter to view Copilot's additional suggestion pane.\r\n\r\nSelect the suggestion the satisfies your requirement.",
       "line": 2
     },
     {
@@ -80,13 +80,13 @@
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "Let's ask Copilot to test the function by instructing it to add a terminal input for the user so we don't have to hard code the values.\r\nDelete the comment and the console.log statement, then insert the comment below.\r\n\r\n```javascript\r\n// Test the function by accepting user input for the numbers and the operator\r\n```\r\nPlace your cursor at the end of the comment then press `Enter`. Wait for Copilot to provide a suggestion.",
-      "line": 13
+      "description": "Using Ctrl+i, let's ask Copilot to add an error handler for invalid parameter type and operation.\r\n\r\nHighlight the entire function. Copy and paste the below instructions into the inline chat and see what Copilot will suggest.\r\n\r\n```javascript\r\n//Add an error handler for incorrect type and operation\r\n```",
+      "line": 6
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "In this demonstration of inline suggestions, note that while GitHub Copilot can process comments in various languages, but its proficiency with non-English inputs hasn’t been fully measured. Use caution when relying on its interpretation of foreign language comments. Let's try it out.\r\n(Delete the contents of demo.js)\r\n\r\n```javascript\r\n// Gumawa ka ng function na tumatanggap ng salita o sintensya at ibalik ang bilang ng mga letra. Huwag isama ang space.\r\n// Halimbawa: \"Hello\" ay may 5 na letra.\r\n```\r\n\r\nPress `Next` to continue.",
-      "line": 3
+      "description": "Let's ask Copilot to test the function by instructing it to add a terminal input for the user so we don't have to hard code the values.\r\nDelete the comment and the console.log statement, then insert the comment below.\r\n\r\n```javascript\r\n// Test the function by accepting user input for the numbers and the operator using Node Readline.\r\n```\r\nPlace your cursor at the end of the comment then press `Enter`. Wait for Copilot to provide a suggestion.",
+      "line": 22
     },
     {
       "title": "Providing more context",
@@ -104,7 +104,7 @@
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "Notice how GitHub Copilot used the pattern on how functions are written from the Context.js.\n\nA feature of Copilot is that it adapts to Context based on the other files that are open. By having relevant files adjacent to the one you are working on, Copilot might give a more suitable suggestion or even match the pattern how functions in your project are written. In a real-world scenario, you can open other files in your current project and use that as guidance for Copilot to suggest, enabling you to follow your development standards while using GitHub Copilot.\n\n\n",
+      "description": "Notice how GitHub Copilot used the pattern on how functions are written from the Context.js. Note that `context.js` could be any other file in your code base. It doesn't need to have the name context.js.\n\nA feature of Copilot is that it adapts to Context based on the other files that are open. By having relevant files adjacent to the one you are working on, Copilot might give a more suitable suggestion or even match the pattern how functions in your project are written. In a real-world scenario, you can open other files in your current project and use that as guidance for Copilot to suggest, enabling you to follow your development standards while using GitHub Copilot.\n\n\n",
       "line": 12
     }
   ],
