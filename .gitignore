@@ -12,3 +12,11 @@ testing/
 
 # exclude archives folder
 archives/
+
+# exclude complete/python/api folder
+api/
+
+# Exclude __pycache__ folders
+__pycache__/
+
+

@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "02-additional-features",
+  "title": "02-Additional-Features",
   "steps": [
     {
       "title": "Introduction",
@@ -76,8 +76,8 @@
       "line": 1
     },
     {
-      "title": "Writing Unit Test",
-      "description": "We will explore more about Writing Unit Tests with the help of Copilot later on this session.\r\n\r\nImagine you've finished crafting a feature and are ready to commit your changes. A good practice is to make small, manageable commits.\r\n\r\nFor generating commit messages with Git, GitHub Copilot can assist you. Here's how to use it:\r\n\r\n- Navigate to Git Source Control.\r\n- Look for the ✨ icon and click it.\r\n- Copilot will suggest a commit message based on your changes.\r\n\r\n**Remember:** If your commit includes multiple changes, Copilot will provide a suggested message that you can review and edit as needed before finalizing your commit.\r\n\r\nPress `Next` to continue 👇"
+      "title": "Commit Message",
+      "description": "We will explore more about Writing Unit Tests with the help of Copilot later in this session.\r\n\r\nImagine you've finished crafting a feature and are ready to commit your changes. A good practice is to make small, manageable commits.\r\n\r\nFor generating commit messages with Git, GitHub Copilot can assist you. Here's how to use it:\r\n\r\n- Navigate to Git Source Control.\r\n- Look for the ✨ icon and click it.\r\n- Copilot will suggest a commit message based on your changes.\r\n\r\n**Remember:** If your commit includes multiple changes, Copilot will provide a suggested message that you can review and edit as needed before finalizing your commit.\r\n\r\nPress `Next` to continue 👇"
     }
   ],
   "ref": "main"
