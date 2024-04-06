@@ -42,7 +42,7 @@
     },
     {
       "file": "complete/javascript/demo.js",
-      "description": "# /test\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\nYou can select individual or multiple functions then launching the inline-chat:\r\n\r\nPress `Ctrl+i` then type /tests\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
+      "description": "# /test\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\nYou can select individual or multiple functions then launching the inline-chat:\r\n\r\nPress `Ctrl+i` then type /tests\r\n\r\nLet's try it out. It may produce some errors, but let's use Copilot to help us fix it on the fly.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
       "line": 3
     }
   ],
