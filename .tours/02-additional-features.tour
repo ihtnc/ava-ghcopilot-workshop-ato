@@ -1,6 +1,50 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
   "title": "02-additional-features",
-  "steps": [],
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "GitHub Copilot offers interactive features beyond passive code suggestions. Let's explore commands that can accelerate your workflow and handy tools for navigating your project, such as quickly locating files or functions.\r\n\r\n\r\nPress `Next` to continue 👇"
+    },
+    {
+      "file": "complete/javascript/demo.js",
+      "description": "# /doc\nQuickly add documentation in the form of comments quickly just by highlighting an entire lines of code or fuction and pressing:\n\n`Ctrl-i` then typing `/doc`\n\nLet's try it out.\n\n(Switch to the unlocked demo.js)\n\nPress `Next` to continue 👇",
+      "line": 3,
+      "selection": {
+        "start": {
+          "line": 15,
+          "character": 1
+        },
+        "end": {
+          "line": 15,
+          "character": 28
+        }
+      }
+    },
+    {
+      "file": "complete/javascript/demo.js",
+      "description": "# /explain\r\nAsk Copilot to explain a code snippet or entire function by launching the inline-chat:\r\n\r\n`Ctrl-i` then typing `/explain`\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
+      "line": 18
+    },
+    {
+      "file": "complete/javascript/demo.js",
+      "description": "# /fix\r\nLet's simulate a code error by forcing syntax errors in the function and have Copilot suggest the fix by using /fix:\r\n\r\n`Ctrl-i` then typing `/fix`\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
+      "line": 3
+    },
+    {
+      "file": "complete/javascript/context.js",
+      "description": "# /fix\r\nLet's try out /fix in another file, this time, using the Context Menu.\r\n\r\nRight-click the red squigly line, select Copilot, then select `Fix This`.\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
+      "line": 3
+    },
+    {
+      "title": "Time saver",
+      "description": "Picture grappling with lengthy code riddled with red squiggly lines indicating errors. Typically, you'd painstakingly search for incorrect syntax, missing brackets or colons. With GitHub Copilot, however, you can quickly identify and correct issues by simply requesting assistance, potentially cutting down your debugging time."
+    },
+    {
+      "file": "complete/javascript/demo.js",
+      "description": "# /test\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\nYou can select individual or multiple functions then launching the inline-chat:\r\n\r\nPress `Ctrl+i` then type /tests\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
+      "line": 3
+    }
+  ],
   "ref": "9f6a758f3a3ed49ae4d65c9bce795bbbd00528c3"
 }

@@ -5,13 +5,13 @@
  * @returns {number} The sum of num1 and num2.
  */
 function calculateSum(num1, num2) {
-    // Verify that the arguments are numbers
-    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
-        throw new TypeError('The arguments must be numbers.');
-    }
+  // Verify that the arguments are numbers
+  if (typeof num1 !== "number" || typeof num2 !== "number") {
+    throw new TypeError("The arguments must be numbers.");
+  }
 
-    // Return the sum of num1 and num2
-    return num1 + num2;
+  // Return the sum of num1 and num2
+  return num1 + num2;
 }
 
 /**
@@ -21,11 +21,11 @@ function calculateSum(num1, num2) {
  * @returns {boolean} True if the user meets the age requirement, false otherwise.
  */
 function isUserEligibleForAccess(age, minimumAge = 18) {
-    // Verify that the age is a positive number
-    if (typeof age !== 'number' || age < 0) {
-        throw new TypeError('Age must be a positive number.');
-    }
+  // Verify that the age is a positive number
+  if (typeof age !== "number" || age < 0) {
+    throw new TypeError("Age must be a positive number.");
+  }
 
-    // Compare the user's age with the minimum age
-    return age >= minimumAge;
+  // Compare the user's age with the minimum age
+  return age >= minimumAge;
 }

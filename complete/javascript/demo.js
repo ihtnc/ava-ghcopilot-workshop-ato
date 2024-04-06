@@ -44,6 +44,3 @@ const memoizedFibonacci = (function () {
 
   return f;
 })();
-
-console.log(memoizedFibonacci(10)); // 55
-console.log(memoizedFibonacci(20)); // 6765

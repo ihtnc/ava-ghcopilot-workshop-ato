@@ -1,0 +1,22 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "08-Developer-Preferences",
+  "steps": [
+    {
+      "file": "instructions/codetours/developerpreferences.md",
+      "description": "Before we proceed further in the demos, let's see how you can configure your environment on how to interact with GitHub Copilot.\r\n\r\nIf, for any reason, you need to disable GitHub Copilot, here are the steps.\r\n\r\n(Collapse this tour)\r\n\r\nPress `Next` to continue 👇\r\n",
+      "line": 1
+    },
+    {
+      "file": "instructions/codetours/developerpreferences.md",
+      "description": "And the steps for JetBrains IDE is similar\r\n\r\n(Collapse this tour)\r\n\r\nPress `Next` to continue 👇",
+      "line": 22
+    },
+    {
+      "file": "instructions/codetours/developerpreferences.md",
+      "description": "Rebinding Keyboard shortcuts can also help speed up your interactions with GitHub Copilot.\r\n\r\n(Collapse this tour)\r\n\r\nPress `Next` to continue 👇",
+      "line": 28
+    }
+  ],
+  "ref": "95694ed7eedbe09fed18c6030d18463b3af37c7e"
+}
