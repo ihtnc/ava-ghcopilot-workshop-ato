@@ -24,7 +24,8 @@
     {
       "file": "exercise/python/demo.py",
       "description": "Let's write another question, this time asking about popular databases. \n\n```python\n# Question: What are the popular web databases?\n# Answer:\n```\n\nWhile GitHub Copilot operates across various programming languages, remember to use the language-specific commenting character, such as # for Python or double slash `//` for JavaScript, to provide context. This ensures Copilot accurately interprets your intent and offers the most suitable suggestions for your code.\n\nPress `Next` to continue 👇",
-      "line": 11
+      "line": 11,
+      "title": "QnA comment"
     },
     {
       "title": "Recap",
