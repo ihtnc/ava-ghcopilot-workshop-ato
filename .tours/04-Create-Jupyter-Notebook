@@ -1,0 +1,10 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "04-Create-Jupyter-Notebook",
+  "steps": [
+    {
+      "title": "Creating a Jupyter Notebook",
+      "description": "In this exercise, we will create a simple Jupyter notebook with the help of GitHub Copilot."
+    }
+  ]
+}
