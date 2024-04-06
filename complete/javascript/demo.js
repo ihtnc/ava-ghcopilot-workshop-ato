@@ -13,6 +13,8 @@ function performOperation(num1, num2, operator) {
   }
 }
 
+module.exports = { performOperation };
+
 // Generate a function that will accept a string and return the string in reverse
 
 function reverseString(str) {
