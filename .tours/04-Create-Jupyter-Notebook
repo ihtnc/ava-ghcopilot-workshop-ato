@@ -4,7 +4,11 @@
   "steps": [
     {
       "title": "Creating a Jupyter Notebook",
-      "description": "In this exercise, we will create a simple Jupyter notebook with the help of GitHub Copilot."
+      "description": "## Creating a Jupyter notebook with Copilot\r\n\r\nIn this exercise, we will create a simple Jupyter notebook with the help of GitHub Copilot Chat.\r\n\r\nNote: In this demo, expect to encounter several issues, in which we will seek Copilot chat's help on resolving them on the fly.\r\n\r\nLet's now ask Copilot to create the Notebook.\r\n\r\n```text\r\n@workspace /newNotebook Create a new Jupyter notebook than analyzes the CSV from file complete\\csv\\usage.csv. Include the steps in installing the require packages as the first step in the Notebook\r\n```\r\n\r\n### Python Virtual Environment\r\n\r\nIt is always recommend that when working with Python notebooks, is to isolate your dependencies using Python venv or Conda.\r\nThis will allow you to work on different versions of Python and modules without impacting your other work.\r\n\r\n```powershell\r\n.\\ghcp\\scripts\\activate (Windows)\r\n```\r\n\r\n```bash\r\nsource ghcp/scripts/activate (Unix)\r\n```"
+    },
+    {
+      "title": "Ask Chat to Create the Notebook",
+      "description": "## Creating a Jupyter notebook with Copilot\r\n\r\nLet's now ask Copilot to create the Notebook. Open Chat Copy and paste below or type them in manually.\r\n\r\n```text\r\n@workspace /newNotebook Create a new Jupyter notebook than analyzes the CSV from file complete\\csv\\usage.csv\r\n```\r\n\r\n"
     }
   ]
 }

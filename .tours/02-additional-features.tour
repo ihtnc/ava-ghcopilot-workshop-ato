@@ -78,6 +78,22 @@
     {
       "title": "Commit Message",
       "description": "We will explore more about Writing Unit Tests with the help of Copilot later in this session.\r\n\r\nImagine you've finished crafting a feature and are ready to commit your changes. A good practice is to make small, manageable commits.\r\n\r\nFor generating commit messages with Git, GitHub Copilot can assist you. Here's how to use it:\r\n\r\n- Navigate to Git Source Control.\r\n- Look for the ✨ icon and click it.\r\n- Copilot will suggest a commit message based on your changes.\r\n\r\n**Remember:** If your commit includes multiple changes, Copilot will provide a suggested message that you can review and edit as needed before finalizing your commit.\r\n\r\nPress `Next` to continue 👇"
+    },
+    {
+      "title": "Workspace Agent",
+      "description": "## @Workspace\r\n\r\n@workspace provides you the ability to ask Copilot about your current project. You can ask it to explain an entire file or find files based on what you are looking for"
+    },
+    {
+      "title": "Find a file",
+      "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\nExampe: In the chat window, type the following:\r\n\r\n```text\r\n@workspace Search for python files where I can find helper functions that validates phone, email and url\r\n```\r\n\r\nHit `Enter` and see what Copilot comes back with."
+    },
+    {
+      "title": "Open Chat in Editor",
+      "description": "## Opening Chat as a Tab\r\n\r\nYou can place the Chat interface as a Tab if you need more real estate.\r\n\r\nSimple click ellipses found in the chat window. When you hover over it, a tool tip will say \"Views and More Actions...\"\r\n\r\nClick \"Open Chat in Editor\""
+    },
+    {
+      "title": "Find a file continued",
+      "description": "### @Workspace - Find\r\n\r\nExamine the response from GitHub Copilot. If it finds the file you are looking for, it will provide you a direct link that you can click and will take you straight to the file. Neat huh?\r\n\r\nClick the file and confirm if that's the one you're looking for.\r\n\r\n"
     }
   ],
   "ref": "main"
