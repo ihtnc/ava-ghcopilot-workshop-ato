@@ -1,0 +1,15 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "05-Building-a-simple-Data-Analysis-WebApp",
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "## Build a simple Data Analysis App in Python\r\n\r\nIn this demonstration, we will explore the seamless integration of GitHub Copilot in the creation of a simple Data Analysis application using Python, all within the innovative framework of Streamlit. Our objective is to showcase the capabilities of GitHub Copilot as we build, from the ground up, a simple Data Analysis tool.\r\n"
+    },
+    {
+      "title": "What is Streamlit",
+      "description": "## Streamlit\r\n\r\nStreamlit is a rapid development Python framework designed for creating data-centric web apps with minimal code. It streamlines the creation of interactive dashboards, offering a simple API to integrate widgets and visualize data effortlessly. Ideal for data scientists and engineers, Streamlit facilitates sharing insights without the need for extensive web dev skills, relying on pure Python for most operations.\r\n\r\nHere's a basic example of a Python code using the Streamlit Web framework\r\n\r\n### Simple Streamlit Code\r\n\r\n```python\r\nimport streamlit as st\r\n\r\n# Title of the web app\r\nst.title('Square Number Calculator')\r\n\r\n# User input\r\ninput_num = st.number_input('Enter a number', value=0)\r\n\r\n# Calculate square\r\nsquare = input_num ** 2\r\n\r\n# Display the square of the input number\r\nst.write('The square of', input_num, 'is', square)\r\n```"
+    }
+  ],
+  "ref": "main"
+}

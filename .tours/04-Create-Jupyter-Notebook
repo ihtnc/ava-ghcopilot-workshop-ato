@@ -4,11 +4,37 @@
   "steps": [
     {
       "title": "Creating a Jupyter Notebook",
-      "description": "## Creating a Jupyter notebook with Copilot\r\n\r\nIn this exercise, we will create a simple Jupyter notebook with the help of GitHub Copilot Chat.\r\n\r\nNote: In this demo, expect to encounter several issues, in which we will seek Copilot chat's help on resolving them on the fly.\r\n\r\nLet's now ask Copilot to create the Notebook.\r\n\r\n```text\r\n@workspace /newNotebook Create a new Jupyter notebook than analyzes the CSV from file complete\\csv\\usage.csv. Include the steps in installing the require packages as the first step in the Notebook\r\n```\r\n\r\n### Python Virtual Environment\r\n\r\nIt is always recommend that when working with Python notebooks, is to isolate your dependencies using Python venv or Conda.\r\nThis will allow you to work on different versions of Python and modules without impacting your other work.\r\n\r\n```powershell\r\n.\\ghcp\\scripts\\activate (Windows)\r\n```\r\n\r\n```bash\r\nsource ghcp/scripts/activate (Unix)\r\n```"
+      "description": "## Creating a Jupyter notebook with Copilot\r\n\r\nIn this exercise, we will create a simple Jupyter notebook with the help of GitHub Copilot Chat.\r\n\r\nJupyter notebooks are an invaluable tool for developers, mainly due to their:\r\n\r\n- **Interactive Coding:** Execute code in blocks (cells), allowing for step-by-step analysis.\r\n\r\n- **Data Visualization:** Integrate charts and graphs easily to visualize and explore data.\r\n\r\n- **Documentation:** Combine live code with narrative text, equations, and images to create comprehensive reports.\r\n\r\n- **Reproducibility:** Share notebooks with data and code for transparent and repeatable research.\r\n\r\n- **Extensibility:** Support numerous programming languages and plugins.\r\n\r\n- **Education:** Ideal for teaching coding with immediate feedback.\r\n\r\n- **R&D:** Experiment with algorithms and prototypes swiftly before production coding.\r\n\r\n\r\nNote: In this demo, expect to encounter several issues, in which we will seek Copilot chat's help on resolving them on the fly.\r\n\r\n### Python Virtual Environment\r\n\r\nIt is always recommend that when working with Jupyter notebooks written in Python, is to isolate your dependencies using Python Virtual Environment (venv) or Conda.\r\n\r\nThis will allow you to work on different versions of Python and modules without impacting your other work.\r\n\r\n### Windows\r\n```powershell\r\n.\\ghcp\\scripts\\activate\r\n```\r\n\r\n### Unix Systems\r\n```bash\r\nsource ghcp/scripts/activate (Unix)\r\n```"
     },
     {
       "title": "Ask Chat to Create the Notebook",
-      "description": "## Creating a Jupyter notebook with Copilot\r\n\r\nLet's now ask Copilot to create the Notebook. Open Chat Copy and paste below or type them in manually.\r\n\r\n```text\r\n@workspace /newNotebook Create a new Jupyter notebook than analyzes the CSV from file complete\\csv\\usage.csv\r\n```\r\n\r\n"
+      "description": "## Creating a Jupyter notebook with Copilot\r\n\r\nLet's now ask Copilot to create the Notebook.\r\n\r\n```text\r\n@workspace /newNotebook Create a new Jupyter notebook than analyzes the CSV from file complete\\csv\\usage.csv. \r\nInclude the steps in installing the require packages as the first step in the Notebook\r\n```\r\n"
+    },
+    {
+      "title": "Scaffolding suggestion",
+      "description": "### Examine the suggestion\r\n\r\nCopilot will now provide you a suggested scaffolding for the Notebook, similar to this:\r\n\r\nHere's an outline for a Jupyter notebook that analyzes a CSV file:\r\n\r\n* **Install Required Packages**\r\n* **Import Required Libraries**\r\n* **Load CSV Data**\r\n* **Analyze CSV Data**\r\n\r\n> Note: Copilot may provide a slightly different suggestion\r\n\r\nAssuming we are satisfied with the suggestion, let's go ahead and click\r\n\r\n`Create Notebook`\r\n\r\nWatch how Copilot starts creating the Notebook. It will automaticall create an untitled-ipynb file where it will generate the code.\r\n\r\n"
+    },
+    {
+      "title": "Execute the steps in the notebook",
+      "description": "### Execute each cell from the top\r\n\r\nLet's now start executing each cell one-by-one. As mentioned earlier, we may run into issues.\r\nIf we do, we will ask the assistance of Copilot to fix it for us.\r\n\r\n> **Important**: You must have a Python Interpreter: A Python interpreter is needed to run code. Download and install Python if it's not already installed on your system. Ensure it's in your system's PATH.\r\n\r\n(Switch back to the Notebook)\r\n\r\n"
+    },
+    {
+      "title": "Examine the output",
+      "description": "### Examine the output\r\n\r\nAs you work your way down to each of the cell, it is important that you assess the outputs and confirm that it does generate the expected output.\r\n\r\nIf not, this is where the iterative process of conversing with GitHub Copilot Chat can help. \r\n\r\nYou can always go back to Copilot Chat and ask it for more suggestion or to fix an issue.\r\n\r\nHere's an example:\r\nLet's ask Copilot that \r\n\r\n``` text\r\nI need to visualise the breakdown_suggestions_count versus breakdown_acceptances_count using a line chart and display the data on a daily basis.\r\n```\r\n\r\n(Copy the instructions above, ask Copilot Chat and switch back to the Notebook)\r\n\r\n### Under the Analyze Data\r\n\r\nDelete these the entire code and replace it with the suggested code from Copilot\r\n\r\n### Run the cells again starting from \"Import the required libraries\"\r\n\r\nIn case this error comes up:\r\n\r\nThe error message `KeyError: 'date'` indicates that there is no column named 'date' in your DataFrame `data`. \r\n\r\nYou need to ensure that the column you're trying to convert to datetime format actually exists in your DataFrame. \r\n\r\nYou can check the columns in your DataFrame by printing them:\r\n\r\n```python\r\nprint(data.columns)\r\n```\r\n\r\nIf 'date' is not in the output of the above command, you need to replace 'date' with the correct column name in your DataFrame that represents the date. If the date is not in a single column but spread across multiple columns (like 'year', 'month', 'day'), you may need to combine them into a single datetime column first.\r\n\r\nThis is because 'date' is not a valid column in our dataset. Let's replace it with 'day'."
+    },
+    {
+      "title": "Time Saver",
+      "description": "### Time saver\r\n\r\nHow long did that take me? 5 minutes?\r\n\r\nImagine if you have to write all of the cells from scratch. Unless you are a Jupyter Notebook expert (Not Me), It would probably take me a few hours doing research, and performing trial and error on my code to get into a the same result as we have just seen.\r\n\r\n### Reminders\r\n\r\nBecause this was a quick demo, I have purely trusted Copilot's suggestion on fixing or using its suggestion to run each cell in the Notebook successfully. \r\n\r\nIn a real development scenario, it is vital that you 'Trust, but verify' its suggestions. Ensuring that you follows your project's coding standards and leading practices.\r\n",
+      "selection": {
+        "start": {
+          "line": 5,
+          "character": 231
+        },
+        "end": {
+          "line": 5,
+          "character": 237
+        }
+      }
     }
   ]
 }
