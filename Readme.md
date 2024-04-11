@@ -48,7 +48,7 @@ To get started, simply select on the CodeTour in the following order, click the 
 
 ### Unit Test Project
 
-There is a different repository that contains the unit test project where we will continue to use GitHub Copilot to generate Unit Test code snippets. The repository can be found [here.](https://github.com/alvinvinalon/Copilot-node-calculator.git)
+There is a different repository that contains the project where we will continue to use GitHub Copilot to generate Unit Test code snippets. The repository can be found [here.](https://github.com/alvinvinalon/Copilot-node-calculator.git)
 
 https://github.com/alvinvinalon/Copilot-node-calculator.git
 
