@@ -38,7 +38,7 @@ To get started, simply select on the CodeTour in the following order, click the 
 4. 03-Copilot-Chat
 5. 04-Create-Jupyter-Notebook
 6. 05-Building-a-simple-Data-Analysis-WebApp
-7. TBD
+7. 06-Writing-Unit-Tests
 8. TBD
 9. 08-Developer-Preferences
 
