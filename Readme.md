@@ -45,3 +45,13 @@ To get started, simply select on the CodeTour in the following order, click the 
 ### CodeTour Navigation and Controls
 
 <img src="images/code-tour-nav.png" width="80%">
+
+### Unit Test Project
+
+There is a different repository that contains the unit test project where we will continue to use GitHub Copilot to generate Unit Test code snippets. The repository can be found [here.](https://github.com/alvinvinalon/Copilot-node-calculator.git)
+
+https://github.com/alvinvinalon/Copilot-node-calculator.git
+
+TODO: Ranjith to download the zip and upload to GitLab for Optus developers to use.
+
+<img src="images/Copilot-Node-Calculator.png" width="80%">

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "06-Writing-Unit-Tests",
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "## Writing Unit Tests with Copilot\r\n\r\nWe will now shift back to a JavaScript/Node and see how GitHub Copilot can assist you in writing unit tests.\r\n\r\n## Codespaces?\r\n\r\nGitHub Codespaces is a cloud-based development environment that provides instant, ready-to-code workspaces for GitHub projects. Integrated within GitHub, it allows developers to write, run, and debug code directly from their browser, with no setup required.\r\n\r\n>(Switch to Codespaces with the Copilot-Node-Calculator VS Code project, then run the CodeTour guide from there.)"
+    }
+  ],
+  "ref": "main"
+}
