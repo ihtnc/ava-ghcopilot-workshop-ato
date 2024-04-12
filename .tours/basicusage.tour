@@ -33,7 +33,7 @@
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "# Inline Suggestions demo\n\nLet's give GitHub Copilot some context about what we're trying to do. Let's start by adding the following comment to the file line of the demo.js file. \n\n```javascript\n// Generate a function that will accept a string and return the string in reverse\n```\nAccept Copilot's suggestions by pressing `Tab` then `Enter`.\n\nPress Enter until you see the suggestion to output the result using the Console.\n\nPress `Next` to continue 👇",
+      "description": "# Code Complete demo\n\nLet's give GitHub Copilot some context about what we're trying to do. Let's start by adding the following comment to the file line of the demo.js file. \n\n```javascript\n// Generate a function that will accept a string and return the string in reverse\n```\nAccept Copilot's suggestions by pressing `Tab` then `Enter`.\n\nPress Enter until you see the suggestion to output the result using the Console.\n\nPress `Next` to continue 👇",
       "line": 1
     },
     {
@@ -73,7 +73,7 @@
     },
     {
       "title": "Recap",
-      "description": "# Inline Suggestions: Recap\r\n\r\nProviding clear context to GitHub Copilot significantly improves your chances of receiving the most relevant and optimal code suggestions. Context is Key and Precision matters."
+      "description": "# Code Complete: Recap\r\n\r\nProviding clear context to GitHub Copilot significantly improves your chances of receiving the most relevant and optimal code suggestions. Context is Key and Precision matters."
     },
     {
       "file": "exercise/javascript/demo.js",

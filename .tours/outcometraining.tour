@@ -19,7 +19,7 @@
     },
     {
       "file": "instructions/codetours/00-outcometraining.md",
-      "description": "In our final objective, we'll dive into advanced tips and leading practices for maximizing GitHub Copilot's utility. Discover features beyond inline suggestions and chat, like using /slash commands to tailor Copilot's assistance to your precise development tasks.",
+      "description": "In our final objective, we'll dive into advanced tips and leading practices for maximizing GitHub Copilot's utility. Discover features beyond Code Complete and chat, like using /slash commands to tailor Copilot's assistance to your precise development tasks.",
       "line": 13
     },
     {

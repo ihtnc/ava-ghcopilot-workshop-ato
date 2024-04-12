@@ -65,7 +65,7 @@
   - Inline Suggestion: `Alt+\`
   - Additional Suggestions: `Alt+Enter`
 
-# Temporarily Disabling GitHub Copilot Inline Suggestions
+# Temporarily Disabling GitHub Copilot Code Complete
 
 ## Visual Studio Code (VS Code)
 
@@ -73,7 +73,7 @@
 
 1. Open the command palette with `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (MacOS).
 2. Type in `GitHub Copilot: Enable/Disable` and select it.
-3. This toggles Copilot's inline suggestions off and on.
+3. This toggles Copilot's Code Complete off and on.
 
 Documentation: [Settings in VS Code](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode)
 
@@ -83,7 +83,7 @@ Documentation: [Settings in VS Code](https://docs.github.com/en/copilot/using-gi
 
 1. Go to `Tools` > `Options` in the menu bar.
 2. Navigate to `IntelliCode`.
-3. Uncheck the `Show suggestions from GitHub Copilot` option to disable the inline suggestions.
+3. Uncheck the `Show suggestions from GitHub Copilot` option to disable the Code Complete.
 4. To re-enable, check the box again.
 
 Documentation: [Settings in Visual Studio](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot?tool=visualstudio#enabling-or-disabling-github-copilot)
