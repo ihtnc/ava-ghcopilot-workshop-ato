@@ -1,64 +1,42 @@
-provider "azurerm" {
-    features {}
+provider "google" {
+    credentials = file("<PATH_TO_YOUR_SERVICE_ACCOUNT_JSON>")
+    project     = "<YOUR_PROJECT_ID>"
+    region      = "us-central1"
 }
 
-resource "azurerm_resource_group" "example" {
-    name     = "ghcp-demo-rg"
-    location = "West Europe"
+resource "google_compute_network" "vpc_network" {
+    name                    = "ghcp-demo-vpc"
+    auto_create_subnetworks = false
 }
 
-resource "azurerm_virtual_network" "example" {
-    name                = "ghcp-demo-vnet"
-    resource_group_name = azurerm_resource_group.example.name
-    location            = azurerm_resource_group.example.location
-    address_space       = ["10.0.0.0/16"]
+resource "google_compute_subnetwork" "subnet" {
+    name          = "ghcp-demo-subnet"
+    ip_cidr_range = "10.0.0.0/16"
+    region        = "us-central1"
+    network       = google_compute_network.vpc_network.self_link
 }
 
-resource "azurerm_subnet" "example" {
-    name                 = "ghcp-demo-subnet"
-    resource_group_name  = azurerm_resource_group.example.name
-    virtual_network_name = azurerm_virtual_network.example.name
-    address_prefixes     = ["10.0.1.0/24"]
-}
+resource "google_compute_instance" "instance" {
+    count        = 2
+    name         = "ghcp-demo-${count.index}"
+    machine_type = "f1-micro"
+    zone         = "us-central1-a"
 
-resource "azurerm_network_interface" "example" {
-    count               = 2
-    name                = "ghcp-demo-nic-${count.index}"
-    location            = azurerm_resource_group.example.location
-    resource_group_name = azurerm_resource_group.example.name
-
-    ip_configuration {
-        name                          = "internal"
-        subnet_id                     = azurerm_subnet.example.id
-        private_ip_address_allocation = "Dynamic"
-    }
-}
-
-resource "azurerm_linux_virtual_machine" "example" {
-    count                 = 2
-    name                  = "ghcp-demo-vm-${count.index}"
-    resource_group_name   = azurerm_resource_group.example.name
-    location              = azurerm_resource_group.example.location
-    size                  = "Standard_F2"
-    admin_username        = "adminuser"
-    network_interface_id  = azurerm_network_interface.example[count.index].id
-
-    os_disk {
-        caching              = "ReadWrite"
-        storage_account_type = "Standard_LRS"
+    boot_disk {
+        initialize_params {
+            image = "debian-cloud/debian-9"
+        }
     }
 
-    source_image_reference {
-        publisher = "Canonical"
-        offer     = "UbuntuServer"
-        sku       = "16.04-LTS"
-        version   = "latest"
+    network_interface {
+        subnetwork = google_compute_subnetwork.subnet.self_link
+
+        access_config {
+            // Ephemeral IP
+        }
     }
 
-    admin_ssh_key {
-        username   = "adminuser"
-        public_key = file("~/.ssh/id_rsa.pub")
+    service_account {
+        scopes = ["userinfo-email", "compute-ro", "storage-ro"]
     }
-
-    disable_password_authentication = true
 }
