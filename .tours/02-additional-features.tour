@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Introduction",
-      "description": "GitHub Copilot offers interactive features beyond passive code suggestions. Let's explore commands that can accelerate your workflow and handy tools for navigating your project, such as quickly locating files or functions.\r\n\r\n\r\nPress `Next` to continue 👇"
+      "description": "# Introduction to slash commands\r\n\r\nGitHub Copilot offers interactive features beyond passive code suggestions. Let's explore commands that can accelerate your workflow and handy tools for navigating your project, such as quickly locating files or functions.\r\n\r\n\r\nPress `Next` to continue 👇"
     },
     {
       "file": "complete/javascript/demo.js",
@@ -38,41 +38,41 @@
     },
     {
       "title": "Time saver",
-      "description": "Picture grappling with lengthy code riddled with red squiggly lines indicating errors. Typically, you'd painstakingly search for incorrect syntax, missing brackets or colons. With GitHub Copilot, however, you can quickly identify and correct issues by simply requesting assistance, potentially cutting down your debugging time."
+      "description": "## Find syntax errors faster\r\n\r\nPicture grappling with lengthy code riddled with red squiggly lines indicating errors. Typically, you'd painstakingly search for incorrect syntax, missing brackets or colons. With GitHub Copilot, however, you can quickly identify and correct issues by simply requesting assistance, potentially cutting down your debugging time."
     },
     {
       "file": "complete/javascript/demo.js",
-      "description": "# /test\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\nYou can select individual or multiple functions then launching the inline-chat:\r\n\r\nPress `Ctrl+i` then type /tests\r\n\r\nLet's try it out. It may produce some errors, but let's use Copilot to help us fix it on the fly.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
+      "description": "# /test\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\nYou can select individual or multiple functions then launching the inline-chat:\r\n\r\nPress `Ctrl+i` then type /tests\r\n\r\nLet's try it out. It may produce some errors, but let's use Copilot to help us fix it on the fly.\r\n\r\n(Switch to the demo.js)\r\n\r\nPress `Next` to continue 👇",
       "line": 3
     },
     {
       "file": "complete/javascript/demo.js",
-      "description": "Copilot will attempt to create a file that contains code to test the function performOperation.\r\n\r\nLet's see the file demo.test.js\r\n\r\nPress `Next` to continue 👇",
+      "description": "## Suggested Test\r\n\r\nCopilot will attempt to create a file that contains code to test the function performOperation.\r\n\r\nLet's see the file demo.test.js\r\n\r\nPress `Next` to continue 👇",
       "line": 14
     },
     {
       "file": "complete/javascript/demo.test.js",
-      "description": "Copilot will try to suggest multiple variations on how to test the function based on what it knows from the function definition\r\n\r\nPress `Next` to continue 👇",
+      "description": "## Multiple suggestions\r\n\r\nCopilot will try to suggest multiple variations on how to test the function based on what it knows from the function definition\r\n\r\nPress `Next` to continue 👇",
       "line": 1
     },
     {
       "file": "complete/javascript/demo.test.js",
-      "description": "Let's now try if the tests are working.\r\n\r\n```bash\r\ncd to complete/javascript\r\n```\r\n\r\n```bash\r\nnode demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
+      "description": "## Run the test\r\n\r\nLet's now try if the tests are working.\r\n\r\n```bash\r\ncd to complete/javascript\r\n```\r\n\r\n```bash\r\nnode demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
       "line": 12
     },
     {
       "file": "complete/javascript/demo.test.js",
-      "description": "We get an error. But don't worry, i'll show you a sneak peek at GitHub Copilot Chat.\r\n\r\nLet's copy and paste the entire error message to Chat and see what we get from Copilot.\r\n\r\n(Click the Chat icon from the Left navigation bar)\r\n\r\nPress `Next` to continue 👇",
+      "description": "## Ask Copilot for help with errors\r\n\r\nWe get an error. But don't worry, i'll show you a sneak peek at GitHub Copilot Chat.\r\n\r\nLet's copy and paste the entire error message to Chat and see what we get from Copilot.\r\n\r\n(Click the Chat icon from the Left navigation bar)\r\n\r\nPress `Next` to continue 👇",
       "line": 1
     },
     {
       "file": "complete/javascript/demo.test.js",
-      "description": "In case Copilot can provide the correct solution, here are the fix:\r\n\r\nat the top of demo.test.js, add \r\n```javascript\r\nconst { performOperation } = require(\"./demo.js\");\r\n```\r\n\r\nin demo.js, after the performOperation function definition, we need to export the function.\r\n\r\n```javascript\r\nmodule.exports = { performOperation };\r\n```",
+      "description": "## Not 100% guaranteed\r\n\r\nIn case Copilot is not able provide the correct solution, here are the fix:\r\n\r\nat the top of demo.test.js, add \r\n```javascript\r\nconst { performOperation } = require(\"./demo.js\");\r\n```\r\n\r\nin demo.js, after the performOperation function definition, we need to export the function.\r\n\r\n```javascript\r\nmodule.exports = { performOperation };\r\n```",
       "line": 2
     },
     {
       "file": "complete/javascript/demo.test.js",
-      "description": "Let's run the test again.\r\n\r\n```javascript\r\nnode demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
+      "description": "## Run the Test\r\nLet's run the test again.\r\n\r\n```javascript\r\nnode demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
       "line": 1
     },
     {
