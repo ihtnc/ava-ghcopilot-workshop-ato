@@ -39,8 +39,10 @@ To get started, simply select on the CodeTour in the following order, click the 
 5. 04-Create-Jupyter-Notebook
 6. 05-Building-a-simple-Data-Analysis-WebApp
 7. 06-Writing-Unit-Tests
-8. TBD
-9. 08-Developer-Preferences
+8. 07-IaC-Scripts-Samples
+9. 08-Developer-Preferences (WIP)
+10. 09-IntelliJ-xCode-Sample (WIP)
+11. 10-Public-Code-Match (WIP)
 
 ### CodeTour Navigation and Controls
 
