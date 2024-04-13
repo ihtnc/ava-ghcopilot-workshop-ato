@@ -28,12 +28,12 @@
     },
     {
       "file": "complete/javascript/demo.js",
-      "description": "# /fix\r\nLet's simulate a code error by forcing syntax errors in the function and have Copilot suggest the fix by using /fix:\r\n\r\n`Ctrl-i` then typing `/fix`\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
+      "description": "# /fix\r\nLet's simulate a code error by forcing syntax errors in the function and have Copilot suggest the fix by using /fix.\r\n\r\nI'll create syntax error by replacing `switch` with `select` in the function and ask Copilot to fix it.\r\n\r\n`Ctrl-i` then typing `/fix`\r\n\r\nLet's try it out.\r\n\r\nPress `Next` to continue 👇",
       "line": 3
     },
     {
       "file": "complete/javascript/context.js",
-      "description": "# /fix\r\nLet's try out /fix in another file, this time, using the Context Menu.\r\n\r\nRight-click the red squigly line, select Copilot, then select `Fix This`.\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
+      "description": "# /fix\r\nLet's try out /fix in another file, this time, using the Context Menu.\r\n\r\nI'll remove the double equal sign to force a syntax error.\r\n\r\nRight-click the red squigly line, select Copilot, then select `Fix This`.\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
       "line": 3
     },
     {
@@ -53,16 +53,16 @@
     {
       "file": "complete/javascript/demo.test.js",
       "description": "## Multiple suggestions\r\n\r\nCopilot will try to suggest multiple variations on how to test the function based on what it knows from the function definition\r\n\r\nPress `Next` to continue 👇",
-      "line": 1
+      "line": 2
     },
     {
       "file": "complete/javascript/demo.test.js",
-      "description": "## Run the test\r\n\r\nLet's now try if the tests are working.\r\n\r\n```bash\r\ncd to complete/javascript\r\n```\r\n\r\n```bash\r\nnode demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
+      "description": "## Run the test\r\n\r\nLet's now try if the tests are working.\r\n\r\n```bash\r\nnode complete/javascript/demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
       "line": 12
     },
     {
       "file": "complete/javascript/demo.test.js",
-      "description": "## Ask Copilot for help with errors\r\n\r\nWe get an error. But don't worry, i'll show you a sneak peek at GitHub Copilot Chat.\r\n\r\nLet's copy and paste the entire error message to Chat and see what we get from Copilot.\r\n\r\n(Click the Chat icon from the Left navigation bar)\r\n\r\nPress `Next` to continue 👇",
+      "description": "## Ask Copilot for help with errors\r\n\r\n> Due to the probabilistic nature of Copilot suggestgins, we may encounter errors.\r\n\r\nIf we get an error...\r\n\r\nLet's copy and paste the entire error message to Chat and see what we get from Copilot.\r\n\r\n(Click the Chat icon from the Left navigation bar)\r\n\r\nPress `Next` to continue 👇",
       "line": 1
     },
     {
@@ -72,12 +72,12 @@
     },
     {
       "file": "complete/javascript/demo.test.js",
-      "description": "## Run the Test\r\nLet's run the test again.\r\n\r\n```javascript\r\nnode demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
+      "description": "## Run the Test\r\nLet's run the test again.\r\n\r\nFirst option:\r\n```javascript\r\ncd complete\\javascript\r\nnode demo.test.js\r\n```\r\n\r\nOr\r\n```javascript\r\nnode complete\\javascript\\demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
       "line": 1
     },
     {
       "title": "Commit Message",
-      "description": "We will explore more about Writing Unit Tests with the help of Copilot later in this session.\r\n\r\nImagine you've finished crafting a feature and are ready to commit your changes. A good practice is to make small, manageable commits.\r\n\r\nFor generating commit messages with Git, GitHub Copilot can assist you. Here's how to use it:\r\n\r\n- Navigate to Git Source Control.\r\n- Look for the ✨ icon and click it.\r\n- Copilot will suggest a commit message based on your changes.\r\n\r\n**Remember:** If your commit includes multiple changes, Copilot will provide a suggested message that you can review and edit as needed before finalizing your commit.\r\n\r\nPress `Next` to continue 👇"
+      "description": "We will explore more about Writing Unit Tests with the help of Copilot later in this session.\r\n\r\nImagine you've finished crafting a feature and are ready to commit your changes. A good practice is to make small, manageable commits.\r\n\r\nFor generating commit messages with Git, GitHub Copilot can assist you. Here's how to use it:\r\n\r\n- Navigate to Git Source Control.\r\n- Look for the ✨ icon and click it.\r\n- Copilot will suggest a commit message based on your changes.\r\n\r\n**Remember:** If your commit includes multiple changes, Copilot will provide a commit message based recent actions, but if you have several changes, it may not provide an accurate commit message. This is where you need to review and edit as needed before finalizing your commit.\r\n\r\nPress `Next` to continue 👇"
     },
     {
       "title": "Workspace Agent",
