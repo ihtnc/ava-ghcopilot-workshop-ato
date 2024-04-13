@@ -81,11 +81,15 @@
     },
     {
       "title": "Workspace Agent",
-      "description": "## @Workspace\r\n\r\n@workspace provides you the ability to ask Copilot about your current project. You can ask it to explain an entire file or find files based on what you are looking for"
+      "description": "## @Workspace\r\n\r\nThe `@workspace` is a feature within **Visual Studio Code** that leverages AI to provide context-aware assistance to developers. It is a domain expert that can answer queries related to the specific context of your project's workspace. By understanding the files, classes, and components within your workspace, it can provide relevant suggestions, navigation help, and code fixes."
     },
     {
       "title": "Find a file",
       "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\nExampe: In the chat window, type the following:\r\n\r\n```text\r\n@workspace Search for python files where I can find helper functions that validates phone, email and url\r\n```\r\n\r\nHit `Enter` and see what Copilot comes back with."
+    },
+    {
+      "title": "More Workspace Examples",
+      "description": "# Open Copilot-node-calculator\r\n\r\nSwitch to the Copilot node calculator project"
     },
     {
       "title": "Open Chat in Editor",
