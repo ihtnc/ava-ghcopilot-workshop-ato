@@ -25,11 +25,11 @@ The `tankgame.js` exercise file is found in the `exercise\javascript\tank-game` 
 
 > Hint: Before asking Copilot, highlight the entire contents of the `tankgame.js` file. Then start writing you questions in the chat. 
 
-> Remember: If you don't get the response you were expecting, try rephrasing the question or breaking it down into smaller questions.
+> Remember: If you don't get the response you were expecting, try rephrasing the question or breaking it down into smaller questions. Iterate, iterate, iterate!
 
 Here are you challenges:
 
-1.) Add physics to the bullet trajectory with configurable air resistance and gravity. Adding physics to the bullet will make it more realistic and challenging to hit the target. (refer to GIF above.)
+1.) Add physics to the bullet trajectory with configurable air resistance and gravity. Currently, the bullet travels on a straight line. Adding physics to the bullet will make it more realistic and challenging to hit the target. (refer to GIF above.)
 
 > This may sound complex, but it's actually really simple. You can start by asking Copilot how to add physics to the bullet trajectory. Then ask how to add air resistance and gravity to the bullet. 
 
