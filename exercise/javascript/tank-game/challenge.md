@@ -17,6 +17,8 @@ Bullet limit can be adjusted by changing the `bulletCount` property in the `tank
 - `Right Arrow` - Increase the tank's cannon power.
 - `Space Bar` - Shoot the bullet.
 
+## Running the Game
+To run the game, open the `exercise\javascript\tank-game\index.html` file in a browser. The game will start automatically.
 
 ## Coding Challenge
 Complete the following challenges using GitHub Copilot chat to fix or revise the tankgame.js JavaScript code.
@@ -37,7 +39,7 @@ Here are you challenges:
 
 3.) Change the playable canvas area to use the entire browser window. When the window is resized, the canvas should resize accordingly.
 
-4.) Add a background image to the canvas. Image is available at `exercise\javascript\tank-game\image\background.jpg`. 
+4.) Add a background image to the canvas. Image is available at `exercise\javascript\tank-game\image\background.jpg`. Instead of an "X", display the `boom.png` image when the bullet hits the target.
 
 5.) Add a function that detects if the bullet leaves the canvas area. Before displaying "You Lose", the bullet should be off the canvas.
 

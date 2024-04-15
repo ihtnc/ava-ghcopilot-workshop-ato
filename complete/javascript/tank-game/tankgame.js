@@ -1,6 +1,9 @@
 // Global variables
 var gameEnded = false;
 
+let explosionImage = new Image();
+explosionImage.src = "./image/boom.png"; // replace with the path to your image
+
 // Create canvas
 let canvas = document.createElement("canvas");
 let ctx = canvas.getContext("2d");
@@ -101,15 +104,18 @@ function draw() {
   ctx.strokeStyle = "black"; // Reset the line color for other drawings
   ctx.fillStyle = "black"; // Reset the fill color for other drawings
 
-  // Draw target
   if (target.hit) {
-    // Draw X
-    ctx.beginPath();
-    ctx.moveTo(target.x, target.y);
-    ctx.lineTo(target.x + target.width, target.y + target.height);
-    ctx.moveTo(target.x + target.width, target.y);
-    ctx.lineTo(target.x, target.y + target.height);
-    ctx.stroke();
+    // Draw explosion image
+    let explosionWidth = target.width * 2; // double the target's width
+    let explosionHeight = target.height * 2; // double the target's height
+    ctx.drawImage(
+      explosionImage,
+      target.x,
+      target.y,
+      explosionWidth,
+      explosionHeight
+    );
+    gameEnded = true;
   } else {
     // Draw rectangle
     ctx.fillRect(target.x, target.y, target.width, target.height);
