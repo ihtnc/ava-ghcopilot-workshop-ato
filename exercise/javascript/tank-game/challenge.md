@@ -25,7 +25,7 @@ The `tankgame.js` exercise file is found in the `exercise\javascript\tank-game` 
 
 > Hint: Before asking Copilot, highlight the entire contents of the `tankgame.js` file. Then start writing you questions in the chat. 
 
-> Remember: If you don't get the response you were expecting, try rephrasing the question or breaking it down into smaller questions. Iterate, iterate, iterate!
+> Remember: If you don't get the response you were expecting, try rephrasing your prompt. Use specific instructions to achieve one thing at a time, then iterate, iterate, iterate!
 
 Here are you challenges:
 
@@ -41,9 +41,18 @@ Here are you challenges:
 
 5.) Add a function that detects if the bullet leaves the canvas area. Before displaying "You Lose", the bullet should be off the canvas.
 
+## Extra Challenge
+If you're feeling adventurous, you can delete the entire `tankgame.js` file and ask Copilot to write the entire code from scratch. Here's a reference prompt:
+
+`Let's recreate the classic game "Tank" in JavaScript. The objective of the game is to hit a target represented by a black box. The tank is represented by a cicle and a line the extends from the center of the circle outwards. The line represents the cannon and can be adjusted using the up/down arrow. The user can control the cannon angle and the power. Pressing Spacebar will fire the cannon. Display the angle and power at the bottom right corner. Generate the guide to create this step-by-step and the JS code.`
+
+Feel free to change the prompt to your liking. You can even change the game mechanics if you want, like adding a score instead of a bullet limit.
+
+> Note: Due to the probabilistic nature of Copilot, the code generated may not be the same as the original code in this repository. However, the code should be functional and achieve the same goal.
+
 ## Developed using plain English
 
- The complete code of the game is under `completed/javascript/tank-game/tankgame.js` and was developed by asking GitHub Copilot Chat. Only the comments were added manually.
+The complete working code of the game is under `completed/javascript/tank-game/tankgame.js` and was developed by asking GitHub Copilot Chat. Only the comments were added manually.
 
 ## Image by DALL-E 3
 The backround image is created by OpenAI's DALL-E 3 model.
