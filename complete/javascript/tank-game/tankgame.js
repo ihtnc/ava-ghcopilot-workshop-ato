@@ -7,17 +7,24 @@ let ctx = canvas.getContext("2d");
 let bullet = null;
 
 // Constants for physics
-const gravity = 0.1; // The force of gravity
+const gravity = 0.2; // The force of gravity
 const airResistance = 0.01; // The force of air resistance
 
 document.body.appendChild(canvas);
 canvas.width = window.innerWidth - 25;
 canvas.height = window.innerHeight - 25;
 
+// Load and draw the background image
+let img = new Image();
+img.src = "./image/background.png"; // Update the file path of the background image
+img.onload = function () {
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+};
+
 // Tank and target details
 let tank = { x: 50, y: 550, angle: Math.PI / 4, power: 10 };
 let target = {
-  x: Math.random() * (canvas.width / 2) + canvas.width / 2,
+  x: Math.random() * (canvas.width * 0.3) + canvas.width * 0.7,
   y: Math.random() * (canvas.height - 50),
   width: 50,
   height: 50,
@@ -27,6 +34,9 @@ let target = {
 function draw() {
   // Clear canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw the background image
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
   // Draw boundary
   ctx.beginPath();
@@ -39,6 +49,10 @@ function draw() {
   ctx.fillText("Reset", 20, canvas.height - 20);
   ctx.fillStyle = "black";
 
+  // Set the font color to white and increase the font size
+  ctx.fillStyle = "white";
+  ctx.font = "20px Arial";
+
   // Draw angle and power meter
   ctx.fillText(
     "Angle: " + Math.round(tank.angle * (180 / Math.PI)),
@@ -50,25 +64,42 @@ function draw() {
     canvas.width - 100,
     canvas.height - 30
   );
+  // Draw bullet count
+  ctx.fillText(
+    "Bullets: " + tank.bulletCount,
+    canvas.width - 100,
+    canvas.height - 10
+  );
+
+  // Reset the font color and size for other drawings
+  ctx.fillStyle = "black";
+  ctx.font = "10px Arial";
 
   // Draw tank as a circle inside a rectangle
   ctx.beginPath();
   ctx.rect(tank.x - 30, canvas.height / 2 - 20, 60, 40); // Draw wider rectangle for the tank body
+  ctx.fillStyle = "green"; // Set the fill color to green
+  ctx.fill(); // Fill the rectangle
   ctx.lineWidth = 5; // Make the line thicker
   ctx.strokeStyle = "green"; // Change the line color to green
   ctx.stroke();
 
   ctx.beginPath(); // Start a new path for the circle
   ctx.arc(tank.x + 10, canvas.height / 2, 20, 0, 2 * Math.PI); // Draw circle inside the rectangle closer to the right edge
+  ctx.fillStyle = "darkgrey"; // Set the fill color to dark grey
+  ctx.fill(); // Fill the circle
   ctx.moveTo(tank.x + 10, canvas.height / 2); // Move to center of circle
   ctx.lineTo(
     tank.x + 10 + 50 * Math.cos(tank.angle),
     canvas.height / 2 - 50 * Math.sin(tank.angle)
-  ); // Draw line for the tank gun
+  );
+
+  // Draw line for the tank gun
   ctx.stroke();
 
   ctx.lineWidth = 1; // Reset the line width for other drawings
   ctx.strokeStyle = "black"; // Reset the line color for other drawings
+  ctx.fillStyle = "black"; // Reset the fill color for other drawings
 
   // Draw target
   if (target.hit) {
@@ -92,13 +123,6 @@ function draw() {
     ctx.fill();
     ctx.fillStyle = "black"; // Reset the fill color for other
   }
-
-  // Draw bullet count
-  ctx.fillText(
-    "Bullets: " + tank.bulletCount,
-    canvas.width - 100,
-    canvas.height - 10
-  );
 
   // Draw game over message
   if (gameEnded && !target.hit) {
@@ -148,13 +172,13 @@ function update() {
         tank.power--;
         break;
       case "ArrowUp": // up arrow
-        tank.angle += 0.1;
+        tank.angle += 0.05;
         break;
       case "ArrowRight": // right arrow
         tank.power++;
         break;
       case "ArrowDown": // down arrow
-        tank.angle -= 0.1;
+        tank.angle -= 0.05;
         break;
       case "Space": // spacebar
         if (!gameEnded) {
@@ -204,8 +228,8 @@ function resetGame() {
     bulletCount: 3,
   };
   target = {
-    x: Math.random() * (canvas.width - target.width),
-    y: Math.random() * (canvas.height - target.height),
+    x: Math.random() * (canvas.width * 0.3) + canvas.width * 0.7,
+    y: Math.random() * (canvas.height - 50),
     width: 50,
     height: 50,
     hit: false,
