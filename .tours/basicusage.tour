@@ -9,7 +9,7 @@
     {
       "file": "exercise/python/demo.py",
       "description": "# Context is Key\nContext provides the necessary backdrop that informs the purpose and function of the code. \n\nWhen someone asks you \"Hey, can you help me with something?\". Often times, we respond back \"Sure\", then you find out that the other person is asking you to carry 50 Kilograms of luggage over 5 flights of stairs. You need to know the context first so you'll know if you can really help or not.\n\nFor GitHub Copilot, context comes from comments, code structure, and opened files that guide its AI to generate relevant and useful suggestions. \n\nBy feeding it descriptive comments and clear code patterns from other files, Copilot can better understand the intent behind code segments and assist in crafting suggestions tailored to your needs.\n\nLet's dive into a simple yet insightful example that showcases how Copilot interprets our comments to provide intelligent completions.\n\n> Tip: You can hide this CodeTour instructions by clicking the Collapse ^ icon, at the top right corner, beside the pencil icon. Simply click the chat icon to the left, beside the Line number to show the instructions again.\n\nLet's begin with a straightforward Q&A comment in our demo.py file. I will write simple Q&A written in python comments and let Github Copilot suggest an answer.\n\n```python\n# Question: What are the popular JavaScript frameworks?\n# Answer:\n```\n\nAfter pasting the comment, put your cursor after the colon in \"Answer:\" and press the `Spacebar`\n\nCopilot's suggestion will appear in a translucent text, usually referred to as \"Ghost Text\". Simply press `Tab` to accept the suggestion.\n\nPress `Next` to continue 👇",
-      "line": 12,
+      "line": 13,
       "selection": {
         "start": {
           "line": 15,
@@ -24,7 +24,7 @@
     {
       "file": "exercise/python/demo.py",
       "description": "## Context continued\n\nLet's write another question, this time asking about popular databases. \nDelete your previous comment and replace it with this one.\n\n```python\n# Question: What are the popular web databases?\n# Answer:\n```\n\n\nSometimes it will take a couple of seconds to get a suggestion. The GitHub Copilot icon at the bottom left corner of VS Code will change into a circulating icon, which means it's still gathering relevant suggestions.\n\nWhile GitHub Copilot operates across various programming languages, remember to use the language-specific commenting character, such as # for Python or double slash `//` for JavaScript, to provide context. This ensures Copilot accurately interprets your intent and offers the most suitable suggestions for your code.\n\nPress `Next` to continue 👇",
-      "line": 13,
+      "line": 14,
       "title": "QnA comment"
     },
     {
@@ -34,7 +34,7 @@
     {
       "file": "exercise/javascript/demo.js",
       "description": "# Code Complete demo\n\nLet's give GitHub Copilot some context about what we're trying to do. Let's start by adding the following comment to the file line of the demo.js file. \n\n```javascript\n// Generate a function that will accept a string and return the string in reverse\n```\nAccept Copilot's suggestions by pressing `Tab` then `Enter`.\n\nPress Enter until you see the suggestion to output the result using the Console.\n\n```javascript\nconsole.log(reverseString('hello')); // olleh\n```\n\nPress `Next` to continue 👇\n",
-      "line": 1
+      "line": 8
     },
     {
       "file": "exercise/javascript/demo.js",

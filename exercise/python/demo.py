@@ -1,21 +1,2 @@
-# Generate a function that will accept two numbers and an arithmetic operator. The function will perform the operation between the numbers and return the result.
-
-def arithmetic(num1, num2, operator):
-    try:
-        if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):
-            raise ValueError("Invalid number")
-        if operator not in ['+', '-', '*', '/']:
-            raise ValueError("Invalid operator")
-
-        if operator == '+':
-            return num1 + num2
-        elif operator == '-':
-            return num1 - num2
-        elif operator == '*':
-            return num1 * num2
-        elif operator == '/':
-            if num2 == 0:
-                raise ZeroDivisionError("Cannot divide by zero")
-            return num1 / num2
-    except (ValueError, ZeroDivisionError) as e:
-        return str(e)
+# Question: What are the popular web databases?
+# Answer: MySQL, PostgreSQL, SQLite, MongoDB, Redis, Cassandra, CouchDB, Neo4j, HBase, Couchbase, OrientDB, ArangoDB, RethinkDB, MariaDB, Memcached, DynamoDB, Amazon RDS, Amazon Redshift, Amazon Aurora, Amazon DynamoDB, Amazon ElastiCache, Amazon Neptune, Amazon DocumentDB, Amazon Keyspaces, Amazon Timestream, Amazon QLDB, Amazon Managed Blockchain, Amazon Quantum Ledger Database, Amazon RDS on VMware, Amazon RDS on Outposts, Amazon RDS Proxy, Amazon RDS Performance Insights, Amazon RDS Multi-AZ, Amazon RDS Read Replicas, Amazon RDS Data API, Amazon RDS IAM Database Authentication, Amazon RDS Enhanced Monitoring, Amazon RDS Event Notifications, Amazon RDS Maintenance Windows

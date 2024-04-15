@@ -11,14 +11,14 @@ const gravity = 0.1; // The force of gravity
 const airResistance = 0.01; // The force of air resistance
 
 document.body.appendChild(canvas);
-canvas.width = 800;
-canvas.height = 600;
+canvas.width = window.innerWidth - 25;
+canvas.height = window.innerHeight - 25;
 
 // Tank and target details
 let tank = { x: 50, y: 550, angle: Math.PI / 4, power: 10 };
 let target = {
-  x: Math.random() * 700 + 50,
-  y: Math.random() * 500 + 50,
+  x: Math.random() * (canvas.width / 2) + canvas.width / 2,
+  y: Math.random() * (canvas.height - 50),
   width: 50,
   height: 50,
 };
@@ -51,15 +51,24 @@ function draw() {
     canvas.height - 30
   );
 
-  // Draw tank as a circle with a line
+  // Draw tank as a circle inside a rectangle
   ctx.beginPath();
-  ctx.arc(tank.x, canvas.height / 2, 20, 0, 2 * Math.PI); // Draw circle for the tank body
-  ctx.moveTo(tank.x, canvas.height / 2); // Move to center of circle
+  ctx.rect(tank.x - 30, canvas.height / 2 - 20, 60, 40); // Draw wider rectangle for the tank body
+  ctx.lineWidth = 5; // Make the line thicker
+  ctx.strokeStyle = "green"; // Change the line color to green
+  ctx.stroke();
+
+  ctx.beginPath(); // Start a new path for the circle
+  ctx.arc(tank.x + 10, canvas.height / 2, 20, 0, 2 * Math.PI); // Draw circle inside the rectangle closer to the right edge
+  ctx.moveTo(tank.x + 10, canvas.height / 2); // Move to center of circle
   ctx.lineTo(
-    tank.x + 50 * Math.cos(tank.angle),
+    tank.x + 10 + 50 * Math.cos(tank.angle),
     canvas.height / 2 - 50 * Math.sin(tank.angle)
   ); // Draw line for the tank gun
   ctx.stroke();
+
+  ctx.lineWidth = 1; // Reset the line width for other drawings
+  ctx.strokeStyle = "black"; // Reset the line color for other drawings
 
   // Draw target
   if (target.hit) {
@@ -79,7 +88,9 @@ function draw() {
   if (bullet) {
     ctx.beginPath();
     ctx.arc(bullet.x, bullet.y, 5, 0, 2 * Math.PI);
+    ctx.fillStyle = "red"; // Change the bullet color to red
     ctx.fill();
+    ctx.fillStyle = "black"; // Reset the fill color for other
   }
 
   // Draw bullet count
@@ -90,7 +101,7 @@ function draw() {
   );
 
   // Draw game over message
-  if (gameEnded) {
+  if (gameEnded && !target.hit) {
     var oldFont = ctx.font; // Save current font
     ctx.font = "30px Arial"; // Change font size
     ctx.fillText("You lose", canvas.width / 2, canvas.height / 2); // Draw text
@@ -146,7 +157,9 @@ function update() {
         tank.angle -= 0.1;
         break;
       case "Space": // spacebar
-        shoot();
+        if (!gameEnded) {
+          shoot();
+        }
         break;
     }
   };
@@ -188,11 +201,11 @@ function resetGame() {
     y: canvas.height / 2,
     power: 10,
     angle: Math.PI / 4,
-    bulletCount: 5,
+    bulletCount: 3,
   };
   target = {
-    x: Math.random() * 700 + 50,
-    y: Math.random() * 500 + 50,
+    x: Math.random() * (canvas.width - target.width),
+    y: Math.random() * (canvas.height - target.height),
     width: 50,
     height: 50,
     hit: false,
@@ -210,6 +223,13 @@ canvas.addEventListener("click", function (event) {
   if (x > 10 && x < 90 && y > canvas.height - 40 && y < canvas.height - 10) {
     resetGame();
   }
+});
+
+// Event listener for window resize
+window.addEventListener("resize", function () {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  resetGame(); // Reset the game to adjust the tank and target positions
 });
 
 // Start game
