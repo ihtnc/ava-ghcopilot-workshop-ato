@@ -29,7 +29,9 @@ The `tankgame.js` exercise file is found in the `exercise\javascript\tank-game` 
 
 > Remember: If you don't get the response you were expecting, try rephrasing your prompt. Use specific instructions to achieve one thing at a time, then iterate, iterate, iterate!
 
-Here are you challenges:
+## Main Challenge:
+
+> Optional: Use a timer application to track the time spent completing the main challenge.
 
 1.) Add physics to the bullet trajectory with configurable air resistance and gravity. Currently, the bullet travels on a straight line. Adding physics to the bullet will make it more realistic and challenging to hit the target. (refer to GIF above.)
 
@@ -54,7 +56,9 @@ Feel free to change the prompt to your liking. You can even change the game mech
 
 ## Developed using plain English
 
-The complete working code of the game is under `completed/javascript/tank-game/tankgame.js` and was developed by asking GitHub Copilot Chat. Only the comments were added manually.
+The complete working code of the game is under `completed/javascript/tank-game/tankgame.js` and was developed primarily **with the assistance of GitHub Copilot Chat**. Only the comments were added manually.
+
+Time taken to develop: 1 hour 30 minutes (approx.)
 
 ## Image by DALL-E 3
 The backround image is created by OpenAI's DALL-E 3 model.
