@@ -134,13 +134,13 @@ function draw() {
   if (target.hit) {
     var oldFont = ctx.font; // Save current font
     ctx.font = "30px Arial"; // Change font size
-    ctx.fillText("Great Job!", canvas.width / 2, canvas.height / 2); // Draw text
+    ctx.fillText("Victory!", canvas.width / 2, canvas.height / 2); // Draw text
     ctx.font = oldFont; // Restore old font
   } // Draw game over message
   else if (gameEnded && !target.hit && bulletHitEdge()) {
     var oldFont = ctx.font; // Save current font
     ctx.font = "30px Arial"; // Change font size
-    ctx.fillText("You lose", canvas.width / 2, canvas.height / 2); // Draw text
+    ctx.fillText("Try again", canvas.width / 2, canvas.height / 2); // Draw text
     ctx.font = oldFont; // Restore old font
   }
 }
