@@ -88,6 +88,10 @@
       "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\nExampe: In the chat window, type the following:\r\n\r\n```text\r\n@workspace Search for python files where I can find helper functions that validates phone, email and url\r\n```\r\n\r\nHit `Enter` and see what Copilot comes back with."
     },
     {
+      "title": "Analyze the project",
+      "description": "# @workspace - Analyze project\r\n\r\nThe @workspace command is more than a file finder.\r\n\r\nSuppose you've just cloned a new project to work on, and you're eager to understand its core components—like the programming languages utilized and the functionalities it provides.\r\n\r\nYou can get a quick overview by using GitHub Copilot's chat feature. Simply input the following query:\r\n\r\n```text\r\n@workspace analyze this project. Tell me the programming langauges used and the functionalities available.\r\n```\r\n\r\nLet's try it out on a different project.\r\n\r\n> Swith to nextjs-ecommerce-tempate"
+    },
+    {
       "title": "More Workspace Examples",
       "description": "# Open Copilot-node-calculator\r\n\r\nSwitch to the Copilot node calculator project"
     },
