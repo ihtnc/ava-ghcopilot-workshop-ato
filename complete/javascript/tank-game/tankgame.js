@@ -11,8 +11,8 @@ const gravity = 0.2; // The force of gravity
 const airResistance = 0.01; // The force of air resistance
 
 document.body.appendChild(canvas);
-canvas.width = window.innerWidth - 25;
-canvas.height = window.innerHeight - 25;
+canvas.width = window.innerWidth - 20;
+canvas.height = window.innerHeight - 21;
 
 // Load and draw the background image
 let img = new Image();
@@ -124,19 +124,17 @@ function draw() {
     ctx.fillStyle = "black"; // Reset the fill color for other
   }
 
-  // Draw game over message
-  if (gameEnded && !target.hit) {
-    var oldFont = ctx.font; // Save current font
-    ctx.font = "30px Arial"; // Change font size
-    ctx.fillText("You lose", canvas.width / 2, canvas.height / 2); // Draw text
-    ctx.font = oldFont; // Restore old font
-  }
-
   // Draw success message
   if (target.hit) {
     var oldFont = ctx.font; // Save current font
     ctx.font = "30px Arial"; // Change font size
     ctx.fillText("Great Job!", canvas.width / 2, canvas.height / 2); // Draw text
+    ctx.font = oldFont; // Restore old font
+  } // Draw game over message
+  else if (gameEnded && !target.hit && bulletHitEdge()) {
+    var oldFont = ctx.font; // Save current font
+    ctx.font = "30px Arial"; // Change font size
+    ctx.fillText("You lose", canvas.width / 2, canvas.height / 2); // Draw text
     ctx.font = oldFont; // Restore old font
   }
 }
@@ -235,6 +233,15 @@ function resetGame() {
     hit: false,
   };
   gameEnded = false;
+}
+
+function bulletHitEdge() {
+  if (bullet) {
+    if (bullet.x < 0 || bullet.x > canvas.width || bullet.y > canvas.height) {
+      return true;
+    }
+  }
+  return false;
 }
 
 // Event listener for clicks
