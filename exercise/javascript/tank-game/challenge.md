@@ -1,14 +1,15 @@
 # Tank Game Challenge:
 
-The goal of this challenge is to apply what you've learned with using GitHub Copilot chat. Your task is to come up with the right questions to ask Copilot to help you complete this basic JavaScript game based on an old game "Tanks".
+The goal of this challenge is to apply what you've learned by using GitHub Copilot chat. Your task is to come up with the right questions to ask Copilot to help you complete this basic JavaScript game based on an old game "Tanks".
 
 ## The Game 
 ![Tank Game](image/Copilot-Tank-Game.gif)
 
 ## Objective of the game:
-To play the game, the player must use the up/down keys to move the angle of the tank's cannon, left/right to adjust the power, and pressing space bar to shoot. The goal is to hit the black box (target) before the bullets run out (3 by default).
+To play the game, the player must use the Up/Down keys to move the angle of the tank's cannon, the Left/Right keys to adjust the power, and press the Space Bar to shoot. The goal is to hit the black box (the target) before the bullets run out (3 by default).
 
-Bullet limit can be adjusted by changing the `bulletCount` property in the `tank` object, found in the `resetGame()` function. 
+The bullet limit can be adjusted by changing the `bulletCount` property in the tank object, found in the `resetGame()` function.
+
 
 ## Controls:
 - `Up Arrow` - Move the tank cannon angle up.

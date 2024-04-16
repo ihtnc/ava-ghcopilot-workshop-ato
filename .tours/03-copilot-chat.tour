@@ -49,6 +49,10 @@
     {
       "title": "GitHub Doc Languages",
       "description": "### Works with other languages\r\nDespite focusing on JavaScript and Python in today's demonstrations, the methods highlighted are broadly applicable across other languages with GitHub Copilot. Its training on extensive public codebases enables support in most languages you might use. \r\n\r\nAccording to GitHub Documentation, Copilot excels in languages such as Python, JavaScript, TypeScript, Ruby, Go, C#, and C++, and it's adept at crafting database queries as well.\r\n\r\nhttps://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot\r\n\r\n### Use it now in your daily workflow\r\nTo fully realize the capabilities of GitHub Copilot, incorporating it into your daily development routine is essential. This practice allows you to experience its full potential and enhance your coding process."
+    },
+    {
+      "title": "Chat as Learning tool",
+      "description": "# A Learning Tool\r\n\r\nGitHub Copilot Chat, as the name implies, is an AI Chat Interface.\r\n\r\nIt works the same way as ChatGPT, except that it is \"engineered\" to respond to I.T. related questions, with primary focus on Code assistance.\r\n\r\n"
     }
   ],
   "ref": "main"
