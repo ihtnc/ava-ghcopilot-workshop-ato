@@ -1,22 +1,22 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "11-Developer-Preferences",
+  "title": "08-Developer-Preferences",
   "steps": [
     {
       "file": "instructions/codetours/developerpreferences.md",
-      "description": "Before we proceed further in the demos, let's see how you can configure your environment on how to interact with GitHub Copilot.\r\n\r\nIf, for any reason, you need to disable GitHub Copilot, here are the steps.\r\n\r\n(Collapse this tour)\r\n\r\nPress `Next` to continue 👇\r\n",
+      "description": "# Setting Developer Preferences\r\n\r\n## Disable / Enable GitHub Copilot\r\n\r\nIf you want to disable it for any reason, you can easily do so in Visual Studio Code.\r\n\r\nHere's how you can disable or enable GitHub Copilot in Visual Studio Code:\r\n\r\n1. Open Visual Studio Code.\r\n2. Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac) to open the command palette.\r\n3. Type `Preferences: Open Settings (UI)` and select it from the list of options.\r\n4. In the settings window, search for `GitHub Copilot`.\r\n5. You will see an option to enable or disable GitHub Copilot. Toggle the switch to enable or disable it as needed.\r\n6. Close the settings window.\r\n\r\n> TODO: Check why GitHub Copilot Disable/Enable does not work in Visual Studio Code.\r\n\r\n## Disabling by using the GitHub Copilot Icon at the bottom right corner.\r\n\r\n1. Open Visual Studio Code.\r\n2. Click the GitHub Copilot status icon in the bottom panel of the Visual Studio Code window.\r\n3. When prompted, select 'Disable Globally' to disable GitHub Copilot globally. Alternatively, you can select 'Disable for LANGUAGE' to disable GitHub Copilot for the specified language.\r\n\r\nPress `Next` to continue 👇\r\n",
       "line": 1
     },
     {
       "file": "instructions/codetours/developerpreferences.md",
-      "description": "And the steps for JetBrains IDE is similar\r\n\r\n(Collapse this tour)\r\n\r\nPress `Next` to continue 👇",
+      "description": "# Toggling GitHub Copilot on and off for JetBrains IDEs\r\n\r\n1. Open your JetBrains IDE.\r\n2. Click the GitHub Copilot status icon in the bottom panel of the JetBrains window.\r\n3. If you are disabling GitHub Copilot, you will be asked whether you want to disable it globally, or for the language of the file you are currently editing. To disable globally, click Disable Completions. Alternatively, click the language-specific button to disable GitHub Copilot for the specified language.",
       "line": 22
     },
     {
       "file": "instructions/codetours/developerpreferences.md",
-      "description": "Rebinding Keyboard shortcuts can also help speed up your interactions with GitHub Copilot.\r\n\r\n(Collapse this tour)\r\n\r\nPress `Next` to continue 👇",
+      "description": "# Customizing your Key Bindings for GitHub Copilot\r\n\r\nYou can customize key bindings for GitHub Copilot commands in Visual Studio Code by rebinding the shortcuts in the Keyboard Shortcuts editor using your preferred keyboard shortcuts for each specific command. Here are the steps to do so:\r\n\r\n1. In the menu bar, click Code, click Preferences, then click Keyboard Shortcuts.\r\n2. In the \"Keyboard Shortcuts\" editor, search for the command name of the keyboard shortcut you want to change.\r\n3. Next to the command you want to change, click the pencil icon.\r\n4. Type the keystrokes you want to use for the command, then press Enter/Return.\r\n5. Ensure that the key combination you select does not conflict with any other key bindings in Visual Studio Code.\r\n\r\n## Example\r\n\r\n1. Rebind `/explain` to Ctrl+E, X (Pressing Ctrl+E followed by X)\r\n2. Rebind `/fix` to Ctrl+E, F (Pressing Ctrl+E followed by F)\r\n\r\nThese key bindings are useful if you frequently use any of these slash commands.\r\n\r\n> Keyboard Shortcuts demo:\r\n\r\n```text\r\nCtrl+E, X (/explain)\r\n```\r\n\r\n```text\r\nCtrl+E, F (/fix)\r\n```",
       "line": 28
     }
   ],
-  "ref": "95694ed7eedbe09fed18c6030d18463b3af37c7e"
+  "ref": "main"
 }
