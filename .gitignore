@@ -19,4 +19,7 @@ api/
 # Exclude __pycache__ folders
 __pycache__/
 
+# Node modules
+node_modules/
+
 
