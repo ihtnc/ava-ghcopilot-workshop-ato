@@ -2,6 +2,10 @@
 
 The goal of this challenge is to apply what you've learned by using GitHub Copilot chat. Your task is to come up with the right questions to ask Copilot to help you complete this basic JavaScript game based on an old game "Tanks".
 
+## Why Do This Challenge?
+
+Dive into this tank game challenge to sharpen your skills in guiding GitHub Copilot, your AI pair programmer. Just like building any app, the game involves a user interface, input handling, and event outcomes. This isn't just about coding—it's about learning to communicate effectively with AI to enhance your development process. Perfect your prompts, get precise suggestions, and translate this practice into tackling real-world projects with increased efficiency.
+
 ## The Game 
 ![Tank Game](image/Copilot-Tank-Game.gif)
 

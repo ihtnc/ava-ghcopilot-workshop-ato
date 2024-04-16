@@ -1,0 +1,12 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "09-Coding-Challenge",
+  "steps": [
+    {
+      "file": "exercise/javascript/tank-game/challenge.md",
+      "description": "# Coding Challenge\r\n\r\n**View the Preview of the Markdown file**",
+      "line": 2
+    }
+  ],
+  "ref": "main"
+}
