@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "09-Coding-Challenge",
+  "title": "11-Coding-Challenge",
   "steps": [
     {
       "file": "exercise/javascript/tank-game/challenge.md",

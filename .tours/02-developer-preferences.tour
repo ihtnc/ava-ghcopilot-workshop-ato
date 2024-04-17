@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "08-Developer-Preferences",
+  "title": "05-Developer-Preferences",
   "steps": [
     {
       "file": "instructions/codetours/developerpreferences.md",
