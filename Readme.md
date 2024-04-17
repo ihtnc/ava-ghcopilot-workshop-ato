@@ -26,7 +26,7 @@ This repository also contains CodeTour files that you can use to get a guided to
 
 Once CodeTour is installed, you will see a new CODETOUR section under the VS Code activity bar.
 
-<img src="images/code-tour-activity-bar.png" width="50%">
+<img src="images/code-tour-activity-bar.png" width="30%">
 
 ### Order of CodeTour
 
