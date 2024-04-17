@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "07-IaC-Scripts-Samples",
+  "title": "IaC-Scripts-Samples",
   "steps": [
     {
       "title": "Introduction",

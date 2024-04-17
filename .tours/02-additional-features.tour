@@ -67,41 +67,33 @@
     },
     {
       "title": "Workspace Agent",
-      "description": "## @Workspace\r\n\r\nThe `@workspace` is a feature within **Visual Studio Code** that leverages AI to provide context-aware assistance to developers. It is a domain expert that can answer queries related to the specific context of your project's workspace. By understanding the files, classes, and components within your workspace, it can provide relevant suggestions, navigation help, and code fixes."
+      "description": "## @Workspace\r\n\r\nThe `@workspace` is a feature within **Visual Studio Code** that leverages AI to provide context-aware assistance to developers. It is a domain expert that can answer queries related to the specific context of your project's workspace. By understanding the files, classes, and components within your workspace, it can provide relevant suggestions, navigation help, and or ask for basic recommendations."
     },
     {
       "title": "Find a file",
-      "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\nLet's try it out.\r\n\r\n(Open the Chat window)\r\n\r\n```text\r\n@workspace Search for python files where I can find helper functions that validates phone, email and url\r\n```\r\n\r\nHit `Enter` and see what Copilot comes back with."
+      "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\nLet's try it out.\r\n\r\n(Open the Chat window)\r\n\r\n> `@workspace Search for python files where I can find helper functions that validates phone, email and url`\r\n\r\n\r\nHit `Enter` and see what Copilot comes back with."
     },
     {
       "title": "Analyze the project",
-      "description": "# @workspace - Analyze project\r\n\r\nThe @workspace command is more than a file finder.\r\n\r\nSuppose you've just cloned a new project to work on, and you're eager to understand its core components—like the programming languages utilized and the functionalities it provides.\r\n\r\nYou can get a quick overview by using GitHub Copilot's chat feature. Simply input the following query:\r\n\r\n&nbsp;\r\n\r\n> Swith to nextjs-ecommerce-tempate\r\n\r\n&nbsp;\r\n\r\n```text\r\n@workspace Analyze this workspace. Tell me the programming langauges used and the functionalities available.\r\n```\r\n\r\nLet's try it out on a different project.\r\n\r\n",
+      "description": "# @workspace - Analyze project\r\n\r\nThe @workspace command is more than a file finder.\r\n\r\nSuppose you've just cloned a new project to work on, and you're eager to understand its core components—like the programming languages utilized and the functionalities it provides.\r\n\r\nYou can get a quick overview by using GitHub Copilot's chat feature. Simply input the following query:\r\n\r\n&nbsp;\r\n\r\n> Project: nextjs-ecommerce-tempate\r\n\r\n&nbsp;\r\n\r\n> `@workspace Analyze this workspace. Tell me the programming langauges used and the functionalities available.`\r\n\r\nLet's try it out on a different project.\r\n\r\n> Switch to nextjs-ecommerce-tempate",
       "selection": {
         "start": {
-          "line": 7,
+          "line": 13,
           "character": 1
         },
         "end": {
-          "line": 15,
-          "character": 36
+          "line": 13,
+          "character": 7
         }
       }
     },
     {
       "title": "Quick Recommendations",
-      "description": "# Quick Recommendations\r\n\r\nYou can also ask with @workspace on basic recommendations.\r\n\r\n> `@workspace based on leading practices, what are your recommendations that developers may need to follow to improve this application?`\r\n\r\nLet's try it out again on the nextjs-ecommerce-template project\r\n\r\n> Swith to nextjs-ecommerce-tempate\r\n\r\n### Should not replace a full Code Analysis tool and the developer's intuition about the project\r\n\r\nCopilot will provide this response if it cannot comply with your instructions\r\n\r\n\r\n>> Without seeing the actual code, it's hard to provide a comprehensive review. It would be beneficial to review the actual code files, check for code comments, consistent coding style, error handling, and other best practices.\r\n\r\n\r\nPress `Next` to continue\r\n"
+      "description": "# Quick Recommendations\r\n\r\nYou can also ask with @workspace on basic recommendations.\r\n\r\n> `@workspace based on leading practices, what are your recommendations that developers may need to follow to improve this application?`\r\n\r\nLet's try it out again on the nextjs-ecommerce-template project\r\n\r\n> Swith to nextjs-ecommerce-tempate\r\n\r\n### Should not replace a full Code Analysis tool and the developer's intuition about the project\r\n\r\nCopilot will provide this response if it cannot comply with your instructions\r\n\r\n\r\n>> Without seeing the actual code, it's hard to provide a comprehensive review. It would be beneficial to review the actual code files, check for code comments, consistent coding style, error handling, and other best practices.\r\n\r\n### Related Optus Engineering Principle:\r\n\r\n>> Trust but verify - We embrace external review, assurance, and audit activities as opportunities to learn, improve, and validate our work.\r\n\r\nPress `Next` to continue\r\n"
     },
     {
-      "title": "More Workspace Examples",
-      "description": "# Open Copilot-node-calculator\r\n\r\nSwitch to the Copilot node calculator project"
-    },
-    {
-      "title": "Open Chat in Editor",
-      "description": "## Opening Chat as a Tab\r\n\r\nYou can place the Chat interface as a Tab if you need more real estate.\r\n\r\nSimple click ellipses found in the chat window. When you hover over it, a tool tip will say \"Views and More Actions...\"\r\n\r\nClick \"Open Chat in Editor\""
-    },
-    {
-      "title": "Find a file continued",
-      "description": "### @Workspace - Find\r\n\r\nExamine the response from GitHub Copilot. If it finds the file you are looking for, it will provide you a direct link that you can click and will take you straight to the file. Neat huh?\r\n\r\nClick the file and confirm if that's the one you're looking for.\r\n\r\n"
+      "title": "Terminal and VS Code",
+      "description": "# @terminal and @vscode\r\n\r\nDomain specific helpers from GitHub Copilot\r\n\r\n@vscode - Ask questions about VS Code\r\n\r\n> `@vscode how do I disable the GitHub Copilot extension?`\r\n\r\n@terminal - Ask how to do something in the terminal\r\n\r\n> `@terminal how do I copy a file from one folder to another using the terminal?`\r\n\r\nThese handy helpers can provide you answers to questions relevant to VS Code or executing commands from the Terminal window."
     }
   ],
   "ref": "main"
