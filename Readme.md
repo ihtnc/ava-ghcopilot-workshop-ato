@@ -36,24 +36,19 @@ To get started, simply select on the CodeTour in the following order, click the 
 2. 01-Basic-Usage
 3. 02-Additional-Features
 4. 03-Copilot-Chat
-5. 04-Create-Jupyter-Notebook
-6. 05-Building-a-simple-Data-Analysis-WebApp
-7. 06-Writing-Unit-Tests
-8. 07-IaC-Scripts-Samples
-9. 08-Developer-Preferences (WIP)
-10. 09-IntelliJ-xCode-Sample (WIP)
-11. 10-Public-Code-Match (WIP)
+5. 04-Developer-Preferences
+6. 05-Live-Exercise
+7. Building-a-simple-Data-Analysis-WebApp
+8. Create-Jupyter-Notebook
+9. IaC-Scripts-Samples
+10. Self-Paced-Coding-Challenge
 
 ### CodeTour Navigation and Controls
 
 <img src="images/code-tour-nav.png" width="80%">
 
-### Unit Test Project
+## Self-Paced Coding Challenge
 
-There is a different repository that contains the project where we will continue to use GitHub Copilot to generate Unit Test code snippets. The repository can be found [here.](https://github.com/alvinvinalon/Copilot-node-calculator.git)
+At the end of the training, participants will be given a self-paced coding challenge. This challenge will test their understanding of GitHub Copilot and their ability to use it to generate code snippets.
 
-https://github.com/alvinvinalon/Copilot-node-calculator.git
-
-TODO: Ranjith to download the zip and upload to GitLab for Optus developers to use.
-
-<img src="images/Copilot-Node-Calculator.png" width="80%">
+Follow the instructions provided in `exercise\javascript\tank-game\challenge.md` to complete the coding challenge.

@@ -25,6 +25,12 @@ The bullet limit can be adjusted by changing the `bulletCount` property in the t
 ## Running the Game
 To run the game, open the `exercise\javascript\tank-game\index.html` file in a browser. The game will start automatically.
 
+## Before you start
+
+- Clone this repository from GitLab to your local machine and create a new branch.
+- Suggested branch name: ghcp-tank-challenge/your-name
+- Make sure that you commit your changes to your branch.
+
 ## Coding Challenge
 Complete the following challenges using GitHub Copilot chat to fix or revise the tankgame.js JavaScript code.
 
