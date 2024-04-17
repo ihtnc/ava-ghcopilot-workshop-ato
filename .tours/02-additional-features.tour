@@ -33,22 +33,23 @@
     },
     {
       "file": "complete/javascript/context.js",
-      "description": "# /fix\r\nLet's try out /fix in another file, this time, using the Context Menu.\r\n\r\nI'll remove the double equal sign to force a syntax error.\r\n\r\nRight-click the red squigly line, select Copilot, then select `Fix This`.\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
-      "line": 3
-    },
-    {
-      "title": "Time saver",
-      "description": "## Find syntax errors faster\r\n\r\nPicture grappling with lengthy code riddled with red squiggly lines indicating errors. Typically, you'd painstakingly search for incorrect syntax, missing brackets or colons. With GitHub Copilot, however, you can quickly identify and correct issues by simply requesting assistance, potentially cutting down your debugging time."
-    },
-    {
-      "file": "complete/javascript/demo.js",
-      "description": "# /test\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\nYou can select individual or multiple functions then launching the inline-chat:\r\n\r\nPress `Ctrl+i` then type /tests\r\n\r\nLet's try it out. It may produce some errors, but let's use Copilot to help us fix it on the fly.\r\n\r\n(Switch to the demo.js)\r\n\r\nPress `Next` to continue 👇",
+      "description": "# /fix from Context menu\r\n\r\nLet's try out /fix in another file, this time, using the Context Menu.\r\n\r\nI'll remove the double equal sign to force a syntax error.\r\n\r\nRight-click the red squigly line, select Copilot, then select `Fix This`.\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
       "line": 3
     },
     {
       "file": "complete/javascript/demo.js",
-      "description": "## Suggested Test\r\n\r\nCopilot will attempt to create a file that contains code to test the function performOperation.\r\n\r\nLet's see the file demo.test.js\r\n\r\nPress `Next` to continue 👇",
-      "line": 14
+      "description": "# /test\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\nTo generate tests for all functions in the file, place your cursor anywhere in the file (do not highlight anything).\r\n\r\nFor testing a function, highlight the code.\r\n\r\n`Press `Ctrl+i` then type /tests`\r\n\r\n## Unit Test Suggestions\r\n\r\nCopilot will attempt to create a file that contains code to test the functions.\r\n\r\nLet's see the file demo.test.js\r\n\r\nPress `Next` to continue 👇\r\n",
+      "line": 3,
+      "selection": {
+        "start": {
+          "line": 4,
+          "character": 112
+        },
+        "end": {
+          "line": 4,
+          "character": 113
+        }
+      }
     },
     {
       "file": "complete/javascript/demo.test.js",
@@ -57,27 +58,12 @@
     },
     {
       "file": "complete/javascript/demo.test.js",
-      "description": "## Run the test\r\n\r\nLet's now try if the tests are working.\r\n\r\n```bash\r\nnode complete/javascript/demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
+      "description": "## Run the test\r\n\r\nLet's now try if the tests are working.\r\n\r\n```bash\r\nnpx jest complete/javascript/demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
       "line": 12
     },
     {
-      "file": "complete/javascript/demo.test.js",
-      "description": "## Ask Copilot for help with errors\r\n\r\n> Due to the probabilistic nature of Copilot suggestgins, we may encounter errors.\r\n\r\nIf we get an error...\r\n\r\nLet's copy and paste the entire error message to Chat and see what we get from Copilot.\r\n\r\n(Click the Chat icon from the Left navigation bar)\r\n\r\nPress `Next` to continue 👇",
-      "line": 1
-    },
-    {
-      "file": "complete/javascript/demo.test.js",
-      "description": "## Not 100% guaranteed\r\n\r\nIn case Copilot is not able provide the correct solution, here are the fix:\r\n\r\nat the top of demo.test.js, add \r\n```javascript\r\nconst { performOperation } = require(\"./demo.js\");\r\n```\r\n\r\nin demo.js, after the performOperation function definition, we need to export the function.\r\n\r\n```javascript\r\nmodule.exports = { performOperation };\r\n```",
-      "line": 2
-    },
-    {
-      "file": "complete/javascript/demo.test.js",
-      "description": "## Run the Test\r\nLet's run the test again.\r\n\r\nFirst option:\r\n```javascript\r\ncd complete\\javascript\r\nnode demo.test.js\r\n```\r\n\r\nOr\r\n```javascript\r\nnode complete\\javascript\\demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
-      "line": 1
-    },
-    {
       "title": "Commit Message",
-      "description": "We will explore more about Writing Unit Tests with the help of Copilot later in this session.\r\n\r\nImagine you've finished crafting a feature and are ready to commit your changes. A good practice is to make small, manageable commits.\r\n\r\nFor generating commit messages with Git, GitHub Copilot can assist you. Here's how to use it:\r\n\r\n- Navigate to Git Source Control.\r\n- Look for the ✨ icon and click it.\r\n- Copilot will suggest a commit message based on your changes.\r\n\r\n**Remember:** If your commit includes multiple changes, Copilot will provide a commit message based recent actions, but if you have several changes, it may not provide an accurate commit message. This is where you need to review and edit as needed before finalizing your commit.\r\n\r\nPress `Next` to continue 👇"
+      "description": "# One-Click Commit Message\r\n\r\nEver struggled on what to write as a commit message? With Copilot, it can help suggest draft commit messages for you.\r\n\r\n- Navigate to Git Source Control.\r\n- Look for the ✨ icon and click it.\r\n- Copilot will suggest a commit message based on your changes.\r\n\r\n**Remember:** If your commit includes multiple changes, Copilot will provide a commit message based recent changes but may not always suggest the best one. This is where you need to review and edit as needed before finalizing your commit.\r\n\r\nPress `Next` to continue 👇"
     },
     {
       "title": "Workspace Agent",
@@ -85,11 +71,11 @@
     },
     {
       "title": "Find a file",
-      "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\nExampe: In the chat window, type the following:\r\n\r\n```text\r\n@workspace Search for python files where I can find helper functions that validates phone, email and url\r\n```\r\n\r\nHit `Enter` and see what Copilot comes back with."
+      "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\nLet's try it out.\r\n\r\n(Open the Chat window)\r\n\r\n```text\r\n@workspace Search for python files where I can find helper functions that validates phone, email and url\r\n```\r\n\r\nHit `Enter` and see what Copilot comes back with."
     },
     {
       "title": "Analyze the project",
-      "description": "# @workspace - Analyze project\r\n\r\nThe @workspace command is more than a file finder.\r\n\r\nSuppose you've just cloned a new project to work on, and you're eager to understand its core components—like the programming languages utilized and the functionalities it provides.\r\n\r\nYou can get a quick overview by using GitHub Copilot's chat feature. Simply input the following query:\r\n\r\n```text\r\n@workspace analyze this project. Tell me the programming langauges used and the functionalities available.\r\n```\r\n\r\nLet's try it out on a different project.\r\n\r\n> Swith to nextjs-ecommerce-tempate",
+      "description": "# @workspace - Analyze project\r\n\r\nThe @workspace command is more than a file finder.\r\n\r\nSuppose you've just cloned a new project to work on, and you're eager to understand its core components—like the programming languages utilized and the functionalities it provides.\r\n\r\nYou can get a quick overview by using GitHub Copilot's chat feature. Simply input the following query:\r\n\r\n&nbsp;\r\n\r\n> Swith to nextjs-ecommerce-tempate\r\n\r\n&nbsp;\r\n\r\n```text\r\n@workspace Analyze this workspace. Tell me the programming langauges used and the functionalities available.\r\n```\r\n\r\nLet's try it out on a different project.\r\n\r\n",
       "selection": {
         "start": {
           "line": 7,
@@ -103,7 +89,7 @@
     },
     {
       "title": "Quick Recommendations",
-      "description": "# Quick Recommendations\r\n\r\nYou can also ask with @workspace on basic recommendations.\r\n\r\n```text\r\n@workspace based on leading practices, what are your recommendations that developers may need to follow to improve this application?\r\n```\r\n\r\nLet's try it out again on the nextjs-ecommerce-template project\r\n\r\n### Please be aware though that the suggestions are merely guidance and will not replace a full Code Analysis tool and the developer's intuition about the project.\r\n\r\nCopilot will normally provide this statement at the end of its response:\r\n\r\n```text\r\nWithout seeing the actual code, it's hard to provide a comprehensive review. \r\nIt would be beneficial to review the actual code files, check for code comments, consistent coding style, error handling, and other best practices.\r\n```\r\n\r\n> Swith to nextjs-ecommerce-tempate"
+      "description": "# Quick Recommendations\r\n\r\nYou can also ask with @workspace on basic recommendations.\r\n\r\n> `@workspace based on leading practices, what are your recommendations that developers may need to follow to improve this application?`\r\n\r\nLet's try it out again on the nextjs-ecommerce-template project\r\n\r\n> Swith to nextjs-ecommerce-tempate\r\n\r\n### Should not replace a full Code Analysis tool and the developer's intuition about the project\r\n\r\nCopilot will provide this response if it cannot comply with your instructions\r\n\r\n\r\n>> Without seeing the actual code, it's hard to provide a comprehensive review. It would be beneficial to review the actual code files, check for code comments, consistent coding style, error handling, and other best practices.\r\n\r\n\r\nPress `Next` to continue\r\n"
     },
     {
       "title": "More Workspace Examples",
