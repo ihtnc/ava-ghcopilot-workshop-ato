@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "04-Create-Jupyter-Notebook",
+  "title": "09-Create-Jupyter-Notebook",
   "steps": [
     {
       "title": "Creating a Jupyter Notebook",

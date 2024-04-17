@@ -1,0 +1,16 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "05-Live-Exercise",
+  "steps": [
+    {
+      "title": "Introduction",
+      "description": "# Live Exercise\r\n\r\nLet's now use what you have learned about GitHub Copilot by completing this exercise.\r\n\r\n## Instructions\r\n\r\nexercise\\javascript\\registration\\registration-exercise.md\r\n\r\n"
+    },
+    {
+      "file": "exercise/javascript/registration/registration-exercise.md",
+      "description": "# Instructions\r\n\r\nThis is an excercise to complete a simple developer registration form exercise using GitHub Copilot. The objective is to build a simple form featuring a registration form with client-side validation and corresponding unit tests by asking GitHub Copilot for help.\r\n\r\n> Switch to Preview mode, Full screen",
+      "line": 3
+    }
+  ],
+  "ref": "main"
+}

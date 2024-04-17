@@ -2,14 +2,16 @@
 
 This is an excercise to complete a simple developer registration form exercise using GitHub Copilot. The objective is to build a simple form featuring a registration form with client-side validation and corresponding unit tests by asking GitHub Copilot for help.
 
-![Form](images/simple-form.png)
+## What you will build
 
-![Values](images/show-values.png)
+<img src="images/simple-form.png" alt="Form" width="400">
+
+<img src="images/show-values.png" alt="Values" width="400">
 
 
 ## Getting Started
 
-- Clone this repository to your local machine and create a new branch.
+- Clone this repository from GitLab to your local machine and create a new branch.
 - Suggested branch name: ghcp-exercise/your-name
 
 ## Time Required: 15 to 30 minutes

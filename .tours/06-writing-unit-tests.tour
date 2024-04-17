@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "06-Writing-Unit-Tests",
+  "title": "04-Writing-Unit-Tests",
   "steps": [
     {
       "title": "Introduction",
