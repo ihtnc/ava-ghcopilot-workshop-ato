@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Introduction",
-      "description": "# Introduction to slash commands\r\n\r\nGitHub Copilot offers interactive features beyond passive code suggestions. Let's explore commands that can accelerate your workflow and handy tools for navigating your project, such as quickly locating files or functions.\r\n\r\n\r\nPress `Next` to continue 👇"
+      "description": "# Introduction to slash commands\r\n\r\nGitHub Copilot offers interactive features beyond passive code suggestions. Let's explore commands that can accelerate your workflow and handy tools for quick documentations, explaining code snippets, and locating files or functions.\r\n\r\n\r\nPress `Next` to continue 👇"
     },
     {
       "file": "complete/javascript/demo.js",
@@ -32,13 +32,13 @@
       "line": 3
     },
     {
-      "file": "complete/javascript/context.js",
-      "description": "# /fix from Context menu\r\n\r\nLet's try out /fix in another file, this time, using the Context Menu.\r\n\r\nI'll remove the double equal sign to force a syntax error.\r\n\r\nRight-click the red squigly line, select Copilot, then select `Fix This`.\r\n\r\nLet's try it out.\r\n\r\n(Switch to the unlocked demo.js)\r\n\r\nPress `Next` to continue 👇",
+      "file": "complete/javascript/functions.js",
+      "description": "# /fix from sub-menu\r\n\r\nLet's try out /fix in another file, this time, using the sub-menu.\r\n\r\nI'll remove the double equal sign to force a syntax error.\r\n\r\nRight-click the red squigly line, select Copilot, then select `Fix This`.\r\n\r\nLet's try it out.\r\n\r\nPress `Next` to continue 👇",
       "line": 3
     },
     {
-      "file": "complete/javascript/demo.js",
-      "description": "# /test\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\nTo generate tests for all functions in the file, place your cursor anywhere in the file (do not highlight anything).\r\n\r\nFor testing a function, highlight the code.\r\n\r\n`Press `Ctrl+i` then type /tests`\r\n\r\n## Unit Test Suggestions\r\n\r\nCopilot will attempt to create a file that contains code to test the functions.\r\n\r\nLet's see the file demo.test.js\r\n\r\nPress `Next` to continue 👇\r\n",
+      "file": "exercise/javascript/testme.js",
+      "description": "# /test\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\nTo generate tests for all functions in the file, place your cursor anywhere in the file without highlight anything, press `Ctrl+i`, type `/fix` .\r\n\r\nFor testing a single function, highlight the code. `Press `Ctrl+i` then type /tests`\r\n\r\n## Unit Test Suggestions\r\n\r\nCopilot will attempt to create a file that contains code to test the functions.\r\n\r\nLet's see the file testme.test.js\r\n\r\nPress `Next` to continue 👇\r\n",
       "line": 3,
       "selection": {
         "start": {
@@ -52,13 +52,13 @@
       }
     },
     {
-      "file": "complete/javascript/demo.test.js",
+      "file": "exercise/javascript/testme.test.js",
       "description": "## Multiple suggestions\r\n\r\nCopilot will try to suggest multiple variations on how to test the function based on what it knows from the function definition\r\n\r\nPress `Next` to continue 👇",
       "line": 2
     },
     {
-      "file": "complete/javascript/demo.test.js",
-      "description": "## Run the test\r\n\r\nLet's now try if the tests are working.\r\n\r\n```bash\r\nnpx jest complete/javascript/demo.test.js\r\n```\r\n\r\nPress `Next` to continue 👇",
+      "file": "exercise/javascript/testme.test.js",
+      "description": "## Run the test\r\n\r\nFor running unit test, I will be using **Jest** to execute the tests.\r\n\r\nLet's now try if the tests are working.\r\n\r\n> `npx jest exercise/javascript/testme.test.js`\r\n\r\nIf every goes well, you see the test results in the terminal.\r\n\r\nPress `Next` to continue 👇",
       "line": 12
     },
     {
