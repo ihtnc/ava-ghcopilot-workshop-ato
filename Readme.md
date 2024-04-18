@@ -12,7 +12,7 @@ In order to follow along with the instructions provided in this repository, you 
 
 - [Git](https://git-scm.com/downloads)
 - [GitHub Copilot](https://copilot.github.com/)
-- [CodeTour VS Extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour)
+- [CodeTour VS Extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour) - For Optus Trainers Only
 - [Python](https://www.python.org/downloads/) for Python code
 - [Node.js](https://nodejs.org/en/download/) for JavaScript/TypeScript code
 

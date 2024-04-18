@@ -92,7 +92,7 @@ Hide the form when the submission is successful and display a div element with t
 ```
 
 
-## Exercise 5: Generate Unit Tests for the Validation Functions
+## Exercise 6: Generate Unit Tests for the Validation Functions
 
 Requirement:
 
@@ -109,7 +109,7 @@ Ask Copilot: What do I need in order to run Jest tests for the form validation f
 ```
 
 
-## Exercise 6: Execute the Test and Review the results
+## Exercise 7: Execute the Test and Review the results
 
 ```
 Run the tests to ensure all validations are working as expected. Review the form in a web browser, test its functionality, and resolve any issues that arise.

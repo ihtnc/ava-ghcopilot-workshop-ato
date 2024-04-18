@@ -4,7 +4,7 @@
   "steps": [
     {
       "title": "Introduction",
-      "description": "# GitHub Copilot Chat\r\n\r\nLet's now explore the benefits of GitHub Copilot Chat, a conversational interface that allows developers to interact with GitHub Copilot in natural language and get instant feedback and suggestions for your code challenges or needs. \r\n\r\nLearn how GitHub Copilot Chat can enhance your productivity, creativity, and learning as a developer by providing you with a responsive and reliable AI pair programmer."
+      "description": "# GitHub Copilot Chat\r\n\r\n>> 2mins (Demo)\r\n\r\nLet's now explore the benefits of GitHub Copilot Chat, a conversational interface that allows developers to interact with GitHub Copilot in natural language and get instant feedback and suggestions for your code challenges or needs. \r\n\r\nLearn how GitHub Copilot Chat can enhance your productivity, creativity, and learning as a developer by providing you with a responsive and reliable AI pair programmer."
     },
     {
       "title": "Prompt crafting Principles",
