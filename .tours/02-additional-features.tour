@@ -89,7 +89,17 @@
     },
     {
       "title": "Quick Recommendations",
-      "description": "# Quick Recommendations\r\n\r\nYou can also ask with @workspace on basic recommendations.\r\n\r\n> `@workspace based on leading practices, what are your recommendations that developers may need to follow to improve this application?`\r\n\r\nLet's try it out again on the nextjs-ecommerce-template project\r\n\r\n> Swith to nextjs-ecommerce-tempate\r\n\r\n### Should not replace a full Code Analysis tool and the developer's intuition about the project\r\n\r\nCopilot will provide this response if it cannot comply with your instructions\r\n\r\n\r\n>> Without seeing the actual code, it's hard to provide a comprehensive review. It would be beneficial to review the actual code files, check for code comments, consistent coding style, error handling, and other best practices.\r\n\r\n### Related Optus Engineering Principle:\r\n\r\n>> Trust but verify - We embrace external review, assurance, and audit activities as opportunities to learn, improve, and validate our work.\r\n\r\nPress `Next` to continue\r\n"
+      "description": "# Quick Recommendations\r\n\r\n>> 3mins (Demo)\r\n\r\nYou can also ask with @workspace on basic recommendations.\r\n\r\n> `@workspace based on leading practices, what are your recommendations that developers may need to follow to improve this application?`\r\n\r\nLet's try it out again on the nextjs-ecommerce-template project\r\n\r\n> Swith to nextjs-ecommerce-tempate\r\n\r\n### Reminder: Should not replace a full Code Analysis tool and the developer's intuition about the project\r\n\r\nCopilot will provide this response if it cannot comply with your instructions\r\n\r\n>> Without seeing the actual code, it's hard to provide a comprehensive review. It would be beneficial to review the actual code files, check for code comments, consistent coding style, error handling, and other best practices.\r\n\r\n### Related Optus Engineering Principle:\r\n\r\n>> Trust but verify - We embrace external review, assurance, and audit activities as opportunities to learn, improve, and validate our work.\r\n\r\nPress `Next` to continue\r\n",
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 4
+        },
+        "end": {
+          "line": 7,
+          "character": 137
+        }
+      }
     },
     {
       "title": "Terminal and VS Code",

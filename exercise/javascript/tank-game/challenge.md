@@ -1,6 +1,6 @@
 # Tank Game Challenge:
 
-The goal of this challenge is to apply what you've learned by using GitHub Copilot chat. Your task is to come up with the right questions to ask Copilot to help you complete this basic JavaScript game based on an old game "Tanks".
+The goal of this challenge is to apply what you've learned from the GitHub Copilot training session. Your task is to come up with the right questions to ask Copilot to help you complete this basic JavaScript game based on an old game "Tanks".
 
 ## Why Do This Challenge?
 
