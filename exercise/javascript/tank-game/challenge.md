@@ -36,13 +36,11 @@ Complete the following challenges using GitHub Copilot chat to fix or revise the
 
 The `tankgame.js` exercise file is found in the `exercise\javascript\tank-game` directory.
 
-> Hint: Before asking Copilot, highlight the entire contents of the `tankgame.js` file. Then start writing you questions in the chat. 
-
 > Remember: If you don't get the response you were expecting, try rephrasing your prompt. Use specific instructions to achieve one thing at a time, then iterate, iterate, iterate!
 
 ## Main Challenge:
 
-> Optional: Use a timer application to track the time spent completing the main challenge.
+> Optional: Use a Stopwatch application to track the time spent completing the main challenge. (e.g., Clock app in Windows and MacOS)
 
 1.) Add physics to the bullet trajectory with configurable air resistance and gravity. Currently, the bullet travels on a straight line. Adding physics to the bullet will make it more realistic and challenging to hit the target. (refer to GIF above.)
 
