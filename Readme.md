@@ -1,6 +1,6 @@
 # GitHub Copilot Training
 
-This repository is used for the GitHub Copilot Developer Training at Optus.
+This repository is used for the GitHub Copilot Developer Training Conducted by Avanade.
 
 The repository contains code snippets that can be used to demonstrate the capabilities of GitHub Copilot.
 

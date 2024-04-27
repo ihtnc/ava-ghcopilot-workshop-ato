@@ -1,10 +1,10 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "00-Reminders",
+  "title": "ZZ-NA-Reminders",
   "steps": [
     {
       "title": "Training Introduction",
-      "description": "# Training Introduction\r\n\r\nPresent the GitHub Copilot Developer's trianing deck\r\n\r\n>> 2mins\r\n\r\n# Introduction Videos\r\n\r\nIf you've yet to watch the introductory videos, I strongly encourage you to do so. They provide an overview of GitHub Copilot, including details specific to Optus that are pertinent to effectively leveraging the tool in your projects.\r\n\r\n# Codetour\r\n\r\nFor this training, I will be using Codetour, a separate VS Code extension that allows me to use a guided flow for this training. It is not related in any way to GitHub Copilot.\r\n\r\n# Hands-On Demo Practice\r\n\r\nDuring the training, you'll have the opportunity to actively engage in the demos. I'll encourage you to perform the exercises independently to observe the outputs firsthand.\r\n",
+      "description": "# Training Introduction\r\n\r\nPresent the GitHub Copilot Developer's trianing deck\r\n\r\n>> 2mins\r\n\r\n# Introduction Videos\r\n\r\nIf you've yet to watch the introductory videos, I strongly encourage you to do so. They provide an overview of GitHub Copilot, including details specific to your group that are pertinent to effectively leveraging the tool in your projects.\r\n\r\n# Codetour\r\n\r\nFor this training, I will be using Codetour, a separate VS Code extension that allows me to use a guided flow for this training. It is not related in any way to GitHub Copilot.\r\n\r\n# Hands-On Demo Practice\r\n\r\nDuring the training, you'll have the opportunity to actively engage in the demos. I'll encourage you to perform the exercises independently to observe the outputs firsthand.\r\n",
       "selection": {
         "start": {
           "line": 14,
@@ -18,7 +18,7 @@
     },
     {
       "title": "Restrictions on GitHub",
-      "description": "# GitHub Restrictions at Optus\r\n\r\n>> 2min\r\n\r\nThe use of GitHub Copilot does not grant you access to GitHub's repository hosting or other features.\r\n\r\n## Restricted features in GitHub:\r\n- Create new repositories on GitHub\r\n- Cloning repositories \r\n- GitHub Actions for CI/CD \r\n- Access to Codespaces, GitHub's online development environment\r\n- Any additional features exclusive to GitHub, outside of GitHub Copilot\r\n\r\nOptus' SCM tools of choice remain GitLab and Stash.\r\n\r\n## Public Code Matching\r\n\r\n**Public Code Block is enabled at Optus**\r\n\r\n> Reminder: Public Code blocking is enabled in your organization. You may receive a message saying \"Sorry, the response matched public code so it was blocked...\"\r\n\r\nThis is expected when Copilot detects that what its about to suggest is a Copyrighted code.\r\n\r\nOne solution is to rephrase your prompt by providing a different field names, for example, renaming 'username' to 'developername' and 'email' to 'developeremail.' Get creative with your solutions and share any successful methods with the community.",
+      "description": "# GitHub Restrictions at your group\r\n\r\n>> 2min\r\n\r\nThe use of GitHub Copilot does not grant you access to GitHub's repository hosting or other features.\r\n\r\n## Restricted features in GitHub:\r\n- Create new repositories on GitHub\r\n- Cloning repositories \r\n- GitHub Actions for CI/CD \r\n- Access to Codespaces, GitHub's online development environment\r\n- Any additional features exclusive to GitHub, outside of GitHub Copilot\r\n\r\nthe client' SCM tools of choice remain GitLab and Stash.\r\n\r\n## Public Code Matching\r\n\r\n**Public Code Block is enabled at your organization**\r\n\r\n> Reminder: Public Code blocking is enabled in your organization. You may receive a message saying \"Sorry, the response matched public code so it was blocked...\"\r\n\r\nThis is expected when Copilot detects that what its about to suggest is a Copyrighted code.\r\n\r\nOne solution is to rephrase your prompt by providing a different field names, for example, renaming 'username' to 'developername' and 'email' to 'developeremail.' Get creative with your solutions and share any successful methods with the community.",
       "selection": {
         "start": {
           "line": 15,
