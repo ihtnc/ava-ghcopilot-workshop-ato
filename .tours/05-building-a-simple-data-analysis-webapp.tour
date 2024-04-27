@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "Building-a-simple-Data-Analysis-WebApp",
+  "title": "06-Python-Live-Exercise",
   "steps": [
     {
       "title": "Introduction",
@@ -9,6 +9,11 @@
     {
       "title": "What is Streamlit",
       "description": "## Streamlit\r\n\r\nStreamlit is a rapid development Python framework designed for creating data-centric web apps with minimal code. It streamlines the creation of interactive dashboards, offering a simple API to integrate widgets and visualize data effortlessly. Ideal for data scientists and engineers, Streamlit facilitates sharing insights without the need for extensive web dev skills, relying on pure Python for most operations.\r\n\r\nHere's a basic example of a Python code using the Streamlit Web framework\r\n\r\n### Simple Streamlit Code\r\n\r\n```python\r\nimport streamlit as st\r\n\r\n# Title of the web app\r\nst.title('Square Number Calculator')\r\n\r\n# User input\r\ninput_num = st.number_input('Enter a number', value=0)\r\n\r\n# Calculate square\r\nsquare = input_num ** 2\r\n\r\n# Display the square of the input number\r\nst.write('The square of', input_num, 'is', square)\r\n```"
+    },
+    {
+      "file": "exercise/python/streamlit/python-exercise.md",
+      "description": "## Exerices Instructions",
+      "line": 2
     },
     {
       "title": "Create a Streamlit file",
@@ -20,19 +25,19 @@
     },
     {
       "title": "Copy the code",
-      "description": "### Copy the Code\r\n\r\nNow, let's switch back to analysedata.py and let's copy the code. \r\n\r\n> Tip: Rather than selecting the entire code, copy and pasting, you can use Copy Icon or the Insert at Cursor button to copy the entire code block into the file.\r\n\r\nLet's try it out.\r\n\r\n(Switch to analysedata.py)\r\n\r\nPress `Next` to continue"
+      "description": "### Copy the Code\r\n\r\nNow, let's switch back to app.py and let's copy the code. \r\n\r\n> Tip: Rather than selecting the entire code, copy and pasting, you can use Copy Icon or the Insert at Cursor button to copy the entire code block into the file.\r\n\r\nLet's try it out.\r\n\r\n(Switch to app.py)\r\n\r\nPress `Next` to continue"
     },
     {
       "title": "Basic Streamlit app",
-      "description": "### Basic Streamlit App\r\n\r\nYou've now created a simple Streamlit application. \r\nLet's now see it in action.\r\n\r\nTo run a streamlit app, simply execute below in the Terminal:\r\n\r\n(Open PowerShell Terminal window in VS Code)\r\n\r\n&nbsp;\r\n\r\n> Tip: Pressing Ctrl+` will open the Terminal\r\n\r\n&nbsp;\r\n\r\n### Activate Python Virtual Environment\r\nLet's activate first our venv. You need to be in the root project directory to execute this.\r\n&nbsp;\r\n```powershell\r\n.\\ghcp\\scripts\\activate\r\n```\r\n\r\n&nbsp;\r\n\r\n```powershell\r\ncd exercise\\python\\streamlit\r\nstreamlit run analysedata.py\r\n```\r\n\r\nPress `Next` to continue"
+      "description": "### Basic Streamlit App\r\n\r\nYou've now created a simple Streamlit application. \r\nLet's now see it in action.\r\n\r\nTo run a streamlit app, simply execute below in the Terminal:\r\n\r\n(Open PowerShell Terminal window in VS Code)\r\n\r\n&nbsp;\r\n\r\n> Tip: Pressing Ctrl+` will open the Terminal\r\n\r\n&nbsp;\r\n\r\n### Activate Python Virtual Environment\r\nLet's activate first our venv. You need to be in the root project directory to execute this.\r\n&nbsp;\r\n```powershell\r\n.\\streamenv\\Scripts\\activate\r\n```\r\n\r\n&nbsp;\r\n\r\n```powershell\r\ncd exercise\\python\\streamlit\r\nstreamlit run app.py\r\n```\r\n\r\nPress `Next` to continue"
     },
     {
       "title": "Browse for the file",
-      "description": "### Browse for the file\r\n\r\nLet's now browse for the file that we need to use. It's found under `C:\\Projects\\ghcpdemo\\complete\\csv`\r\n\r\nBefore we send our file to the application, let's have quick peek of the usage.csv file.\r\n\r\n(Open usage.csv - right click open on the side)\r\n\r\n### What's the data about?\r\nThis dataset represents usage statistics from GitHub Copilot's API, detailing interactions with the tool across different programming languages and editors on specified dates. It includes counts of total suggestions made by Copilot, the number of those suggestions accepted by users, lines of code suggested and accepted, and the number of active users. This breakdown is provided for each language-editor combination.\r\n\r\n### Load the data\r\n\r\nNow that we know what our data is about, let's feed it into our application.\r\n\r\nSwitch to the browser where the app is running, then click Browse files and select usage.csv\r\n\r\n\r\n\r\n"
+      "description": "### Browse for the file\r\n\r\nLet's now browse for the file that we need to use. It's found under `\\complete\\csv`\r\n\r\nBefore we send our file to the application, let's have quick peek of the usage.csv file.\r\n\r\n(Open usage.csv - right click open on the side)\r\n\r\n### What's the data about?\r\nThis dataset represents usage statistics from GitHub Copilot's API, detailing interactions with the tool across different programming languages and editors on specified dates. It includes counts of total suggestions made by Copilot, the number of those suggestions accepted by users, lines of code suggested and accepted, and the number of active users. This breakdown is provided for each language-editor combination.\r\n\r\n### Load the data\r\n\r\nNow that we know what our data is about, let's feed it into our application.\r\n\r\nSwitch to the browser where the app is running, then click Browse files and select usage.csv\r\n\r\n\r\n\r\n"
     },
     {
       "title": "Add features",
-      "description": "### Add Features\r\n\r\nOk, great. Now that our application can succesfully read and display the contents of the CSV file, let's now ask Copilot to add a feature.\r\n\r\nWe want to display a chart that visualizes the aggregated suggestion versus acceptance by day. \r\n\r\nIn this scenario, we need to be very clear and concise on what we need Copilot to suggest for us. Let's try this out:\r\n\r\n&nbsp;\r\n\r\n```text\r\nI want to add a line chart that visualises the suggestions versus acceptance counts by day\r\n```\r\n&nbsp;\r\nBefore asking Copilot Chat, remember that the analysedata.py file is open. We expect that Copilot will use this as context for its suggestion. \r\n\r\nOk, let's see what Copilot gives us with this prompt.\r\n\r\n&nbsp;\r\n\r\n(Make the analysedata.py the active tab, then switch to Copilot chat)\r\n\r\n&nbsp;\r\n\r\nLet's review the code then copy it over into our analysedata.py.\r\n\r\n(Switch to analysedata.py, while having Chat opened as well)\r\n\r\n&nbsp;\r\n\r\nSelect all text from analysedata.py, then overwrite it with the code from Copilot Chat.\r\nRe-run the application after copying the code. Streamlit provides a built-in re-run that executes the file from the beginning when you make any changes to it.\r\n\r\nPress `Next` to Continue"
+      "description": "### Add Features\r\n\r\nOk, great. Now that our application can succesfully read and display the contents of the CSV file, let's now ask Copilot to add a feature.\r\n\r\nWe want to display a chart that visualizes the aggregated suggestion versus acceptance by day. \r\n\r\nIn this scenario, we need to be very clear and concise on what we need Copilot to suggest for us. Let's try this out:\r\n\r\n&nbsp;\r\n\r\n```text\r\nI want to add a line chart that visualises the suggestions versus acceptance counts by day\r\n```\r\n&nbsp;\r\nBefore asking Copilot Chat, remember that the app.py file is open. We expect that Copilot will use this as context for its suggestion. \r\n\r\nOk, let's see what Copilot gives us with this prompt.\r\n\r\n&nbsp;\r\n\r\n(Make the app.py the active tab, then switch to Copilot chat)\r\n\r\n&nbsp;\r\n\r\nLet's review the code then copy it over into our app.py.\r\n\r\n(Switch to app.py, while having Chat opened as well)\r\n\r\n&nbsp;\r\n\r\nSelect all text from app.py, then overwrite it with the code from Copilot Chat.\r\nRe-run the application after copying the code. Streamlit provides a built-in re-run that executes the file from the beginning when you make any changes to it.\r\n\r\nPress `Next` to Continue"
     },
     {
       "title": "Fixing the error",
@@ -40,12 +45,12 @@
     },
     {
       "title": "More Context better results",
-      "description": "### With good context comes good suggestions\r\n\r\nAs you can see, Copilot was smart enough to infer that breakdown_suggestions_count and breakdown_acceptance count are the columns to be used in generating the chart, even though we only mentioned \"suggestion\" and \"acceptance\".\r\n\r\nThis is the power of Context. With enough context, Copilot chat will take care of connecting the dots as best as it can.\r\n\r\nProviding an example data structure will enable Copilot to suggest more relevant results based that example.\r\n\r\nLet's now overwrite the contents of analysedata.py with this new suggestion and try it out.\r\n\r\n(Copy the code, save then re-run the application)\r\n\r\nPress `Next` to continue"
+      "description": "### With good context comes good suggestions\r\n\r\nAs you can see, Copilot was smart enough to infer that breakdown_suggestions_count and breakdown_acceptance count are the columns to be used in generating the chart, even though we only mentioned \"suggestion\" and \"acceptance\".\r\n\r\nThis is the power of Context. With enough context, Copilot chat will take care of connecting the dots as best as it can.\r\n\r\nProviding an example data structure will enable Copilot to suggest more relevant results based that example.\r\n\r\nLet's now overwrite the contents of app.py with this new suggestion and try it out.\r\n\r\n(Copy the code, save then re-run the application)\r\n\r\nPress `Next` to continue"
     },
     {
       "title": "Date format error",
       "description": "### Asking help about errors\r\n\r\nIn case there are more errors that occur, simply copying and pasting the error message in the chat window will allow Copilot to assist you in identifying and suggesting potential solutions.\r\n\r\nTake note though of this term called the `Context Window` in every Large Language Models, including OpenAI. This is the limit that Copilot chat can handle. \r\n\r\nAs of this writing, 4096 tokens is the context window, or around 4,000+ words. This is enough to write a short story, but remember the three S's in our prompt crafting session? Simple, Short and Specific.\r\n\r\nSo be cautious of copying large amounts of error logs into Copilot chat as it may hallucinate or provide inaccurate suggestions due to the large amount of context you provide it.\r\n\r\nUse your best judgement and only provide the relevant error stack that you need Copilot chat help with.\r\n\r\n"
     }
   ],
-  "ref": "main"
+  "ref": "copilot-training/code-tour-updates"
 }

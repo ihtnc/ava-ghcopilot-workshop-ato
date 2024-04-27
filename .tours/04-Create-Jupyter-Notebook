@@ -36,5 +36,6 @@
         }
       }
     }
-  ]
+  ],
+  "ref": "copilot-training/code-tour-updates"
 }

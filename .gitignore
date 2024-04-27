@@ -22,4 +22,11 @@ __pycache__/
 # Node modules
 node_modules/
 
+# Test files
+coverage/
+
+# Exclude python virtual environment
+streamenv/
+
+
 

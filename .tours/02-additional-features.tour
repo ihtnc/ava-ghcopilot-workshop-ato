@@ -7,8 +7,8 @@
       "description": "# Introduction to slash commands\r\n\r\n>> 1min\r\n\r\nGitHub Copilot offers interactive features beyond passive code suggestions. Let's explore commands that can accelerate your workflow and handy tools for quick documentations, explaining code snippets, and locating files or functions.\r\n\r\n\r\nPress `Next` to continue 👇"
     },
     {
-      "file": "complete/javascript/demo.js",
-      "description": "# /doc\n\n>> 2mins (Demo)\n\nQuickly add documentation in the form of comments quickly just by highlighting an entire lines of code or fuction and pressing:\n\n`Ctrl-i` then typing `/doc`\n\nLet's try it out.\n\n(Switch to the unlocked demo.js)\n\nPress `Next` to continue 👇",
+      "file": "exercise/javascript/slashdemo.js",
+      "description": "# /doc\n\n>> 2mins (Demo)\n\n## Try it out\n\nQuickly add documentation in the form of comments quickly just by highlighting an entire lines of code or fuction and pressing:\n\n`Ctrl-i` then typing `/doc`\n\n1. Highlight the getRandomInt function\n1. Press Ctrl + i then in the inline chat, type /doc\n1. Observe the suggestions\n\nPress `Next` to continue 👇",
       "line": 3,
       "selection": {
         "start": {
@@ -22,23 +22,23 @@
       }
     },
     {
-      "file": "complete/javascript/demo.js",
-      "description": "# /explain\r\n\r\n>> 2mins (Demo)\r\n\r\nAsk Copilot to explain a code snippet or entire function by launching the inline-chat:\r\n\r\n`Ctrl-i` then typing `/explain`\r\n\r\nLet's try it out.\r\n\r\nSwitch to the completed demo.js\r\n\r\nPress `Next` to continue 👇",
-      "line": 18
+      "file": "exercise/javascript/slashdemo.js",
+      "description": "# /explain\r\n\r\n>> 2mins (Demo)\r\n\r\n## Try it out\r\n\r\nAsk Copilot to explain a code snippet or entire function by launching the inline-chat:\r\n\r\n`Ctrl-i` then typing `/explain`\r\n\r\nLet's try it out.\r\n\r\n1. Highlight the function calculateCircleArea\r\n1. Press Ctrl + i then type /explain\r\n1. Copilot will launch the Chat window where it will display the explanation\r\n\r\nPress `Next` to continue 👇",
+      "line": 11
     },
     {
-      "file": "complete/javascript/demo.js",
-      "description": "# /fix\r\n\r\n>> 3mins (Demo)\r\n\r\nLet's simulate a code error by forcing syntax errors in the function and have Copilot suggest the fix by using /fix.\r\n\r\nI'll create syntax error by replacing `switch` with `select` in the function and ask Copilot to fix it.\r\n\r\n`Ctrl-i` then typing `/fix`\r\n\r\nLet's try it out.\r\n\r\nPress `Next` to continue 👇",
-      "line": 3
+      "file": "exercise/javascript/slashdemo.js",
+      "description": "# /fix\r\n\r\n>> 3mins (Demo)\r\n\r\nThere are errors with the parseJsonString function in this file. Can you identify what they are? (Survey the group if anyone knows the answer)\r\n\r\n## Try it out\r\n\r\nLet's ask Copilot to identify and fix it.\r\n\r\n1. Highlight the function\r\n1. Press Ctrl + i, then type /fix\r\n1. Review the suggestion from Copilot\r\n1. Accept\r\n\r\n\r\nPress `Next` to continue 👇",
+      "line": 28
     },
     {
-      "file": "complete/javascript/functions.js",
-      "description": "# /fix from sub-menu\r\n\r\n>> 2mins (Demo)\r\n\r\nLet's try out /fix in another file, this time, using the sub-menu.\r\n\r\nI'll remove the double equal sign to force a syntax error.\r\n\r\nRight-click the red squigly line, select Copilot, then select `Fix This`.\r\n\r\nLet's try it out.\r\n\r\nPress `Next` to continue 👇",
-      "line": 3
+      "file": "exercise/javascript/slashdemo.js",
+      "description": "# /fix from sub-menu\r\n\r\n>> 2mins (Demo)\r\n\r\nYou can also invoke the /fix helper by right-clicking a line of code that has a syntax error (squigly red line), and selecting Copilot -> Fix This from the sub-menu.\r\n\r\n## Try it out\r\n\r\nTry it out on the the function findLargestNumber()\r\n\r\n1. Highlight the function\r\n1. Right-click, find Copilot, then select Fix This\r\n\r\n>> Tip: You will see \"Toggle changes\" button beside the Discard button.  Clicking this will show you the proposed changes.\r\n\r\n\r\nPress `Next` to continue 👇",
+      "line": 39
     },
     {
-      "file": "exercise/javascript/testme.js",
-      "description": "# /test\r\n\r\n>> 5mins (Demo)\r\n\r\n### File to test\r\n>> File: Testme.js\r\n\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\nTo generate tests for all functions in the file, place your cursor anywhere in the file without highlight anything, press `Ctrl+i`, type `/tests` .\r\n\r\nFor testing a single function, highlight the code. `Press `Ctrl+i` then type /tests`\r\n\r\n## Unit Test Suggestions\r\n\r\nCopilot will attempt to create a file that contains code to test the functions. It will automatically create a file called testme.test.js after clicking \"Accept\" from the inline-chat pop-up window.\r\n\r\nLet's review the file testme.test.js\r\n\r\nMake sure testme.test.js is created before clicking `Next`\r\n",
+      "file": "exercise/javascript/utilities.js",
+      "description": "# /test\r\n\r\n### Related Optus Engineering Principle:\r\n\r\n**We cover all changes with automated tests, responsibly**\r\n\r\n_\"Having extensive test coverage finds defects early and allows us to safely and effectively deliver changes in our code base at scale, something that would not be possible without automation.\"_\r\n\r\n>> 5mins (Demo)\r\n\r\n### File to test\r\n>> File: Utilities.js\r\n\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\n## Try it out\r\n\r\n1. Make sure that functions in utilities.js are exported for testing \r\n    - Type a comment at the end of the file `//Export the functions for testing`\r\n1. Option 1: In utilities.js, right-click anywhere, then select Copilot -> Generate Tests\r\n1. Option 2: In utilities.js, press Ctrl + i, then type /tests in the inline chat\r\n1. Copilot will start suggesting the code and create the unit test file.\r\n1. Click \"Create\", then \"Accept\". Copilot will automatically create the utilities.test.js file for you.\r\n\r\n\r\n## Review the Unit Test file\r\n\r\nLet's now review the unit test file created by Copilot\r\n\r\nPress `Next` to go to utilities.test.js\r\n",
       "line": 3,
       "selection": {
         "start": {
@@ -52,14 +52,9 @@
       }
     },
     {
-      "file": "exercise/javascript/testme.test.js",
-      "description": "## Multiple suggestions\r\n\r\n>> 2mins (Demo)\r\n\r\nReview testme.test.js\r\n\r\nCopilot will try to suggest a scaffolding of the unit test file with multiple variations on how to test the function based on what it knows from the function definition.\r\n\r\n### Related Optus Engineering Principle:\r\n\r\n**We cover all changes with automated tests, responsibly**\r\n\r\n_\"Having extensive test coverage finds defects early and allows us to safely and effectively deliver changes in our code base at scale, something that would not be possible without automation.\"_\r\n\r\n\r\nPress `Next` to continue 👇",
+      "file": "exercise/javascript/utilities.test.js",
+      "description": "## Generated Unit Test\r\n\r\n>> 2mins (Demo)\r\n\r\nReview utilities.test.js\r\n\r\n### Run the tests\r\n\r\n>> Requires JEST package\r\n\r\nIf you don't have JEST, please run this command\r\n\r\n```\r\nnpm init -y && npm install --save-dev jest\r\n```\r\n\r\n### Execute the test\r\n\r\nLet's run the unit test using JEST by executing this command from the Terminal\r\n\r\n\r\n```\r\nnpx jest --coverage utilities.test.js\r\n```\r\n\r\n### --coverage\r\nInstructs Jest to report code coverage\r\n\r\n\r\nPress `Next` to continue 👇",
       "line": 2
-    },
-    {
-      "file": "exercise/javascript/testme.test.js",
-      "description": "## Run the test\r\n\r\n>> 3mins (Demo)\r\n\r\nFor running unit test, I will be using **Jest** to execute the tests.\r\n\r\nLet's now try if the tests are working.\r\n\r\n> `npx jest exercise/javascript/testme.test.js`\r\n\r\nIf every goes well, you see the test results in the terminal.\r\n\r\nPress `Next` to continue 👇",
-      "line": 12
     },
     {
       "title": "Commit Message",
@@ -67,15 +62,19 @@
     },
     {
       "title": "Workspace Agent",
-      "description": "## @Workspace\r\n\r\n>> 1min\r\n\r\nThe `@workspace` is a feature within **Visual Studio Code** and **GitHub Copilot Chat** that leverages AI to provide context-aware assistance to developers. It is a domain expert that can answer queries related to the specific context of your project's workspace. By understanding the files, classes, and components within your workspace, it can provide relevant suggestions, navigation help, and or ask for basic recommendations."
+      "description": "## @Workspace\r\n\r\n>> 1min\r\n\r\nThe @workspace feature in Visual Studio Code and GitHub Copilot Chat uses AI to offer context-specific assistance, such as project-relevant suggestions and navigation tips by analyzing your project's files and components."
     },
     {
       "title": "Find a file",
-      "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\n>> 3mins (Demo)\r\n\r\nLet's try it out.\r\n\r\n(Open the Chat window)\r\n\r\n> `@workspace Search for python files where I can find helper functions that validates phone, email and url`\r\n\r\nHit `Enter` and see what Copilot comes back with."
+      "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\n>> 3mins (Demo)\r\n\r\n## Try it out\r\n\r\n(Open the Chat window)\r\n\r\n> `@workspace Search for python files where I can find helper functions that validates phone, email and url`\r\n\r\nHit `Enter` and see what Copilot comes back with."
+    },
+    {
+      "title": "Reference a file",
+      "description": "# @workspace - #file\r\n\r\n>> 2mins (Demo)\r\n\r\nAnother feature under the @workspace helper is the `#file`, which allows you to reference a file when asking a query to Copilot Chat.\r\n\r\n## Try it out\r\n\r\n**_Do not copy and paste. Once you've typed #file: you'll be asked to select the file. Search for utilities.js and select it._**\r\n\r\n>> @workspace explain the contents of the #file:utilities.js \r\n\r\nHere's another example\r\n\r\n>> @workspace Generate a shopping cart html prototype using the pattern found in #file:demo.html\r\n\r\n(choose complete\\javascript\\demo.html)\r\n\r\nReview chat's response"
     },
     {
       "title": "Analyze the project",
-      "description": "# @workspace - Analyze project\r\n\r\n>> 3mins (Demo)\r\n\r\nThe @workspace command is more than a file finder.\r\n\r\nSuppose you've just cloned a new project to work on, and you're eager to understand its core components—like the programming languages utilized and the functionalities it provides.\r\n\r\nYou can get a quick overview by using GitHub Copilot's chat feature. Simply input the following query:\r\n\r\n&nbsp;\r\n\r\n> Project: nextjs-ecommerce-tempate\r\n\r\n&nbsp;\r\n\r\n> `@workspace Analyze this workspace. Tell me the programming langauges used and the functionalities available.`\r\n\r\nLet's try it out on a different project.\r\n\r\n> Switch to nextjs-ecommerce-tempate",
+      "description": "# @workspace - Analyze project\r\n\r\n>> 3mins (Demo)\r\n\r\nThe @workspace command is more than a file finder.\r\n\r\nSuppose you've just cloned a new project to work on, and you're eager to understand its core components—like the programming languages utilized and the functionalities it provides.\r\n\r\nYou can get a quick overview by using GitHub Copilot's chat feature. Simply input the following query:\r\n\r\n## Try it out\r\n\r\n1. Under the File menu in VS Code, select New Window\r\n1. Open the folder `nextjs-ecommerce-template`\r\n1. In the Chat window, type the following:\r\n\r\n>> @workspace analyze this project. Provide a summary of the programming languages utilized and outline the available functionalities.\r\n\r\nPress `Next` to continue",
       "selection": {
         "start": {
           "line": 13,
@@ -89,7 +88,7 @@
     },
     {
       "title": "Quick Recommendations",
-      "description": "# Quick Recommendations\r\n\r\n>> 3mins (Demo)\r\n\r\nYou can also ask with @workspace on basic recommendations.\r\n\r\n> `@workspace based on leading practices, what are your recommendations that developers may need to follow to improve this application?`\r\n\r\nLet's try it out again on the nextjs-ecommerce-template project\r\n\r\n> Swith to nextjs-ecommerce-tempate\r\n\r\n### Reminder: Should not replace a full Code Analysis tool and the developer's intuition about the project\r\n\r\nCopilot will provide this response if it cannot comply with your instructions\r\n\r\n>> Without seeing the actual code, it's hard to provide a comprehensive review. It would be beneficial to review the actual code files, check for code comments, consistent coding style, error handling, and other best practices.\r\n\r\n### Related Optus Engineering Principle:\r\n\r\n**Trust but verify** \r\n\r\n_\"We embrace external review, assurance, and audit activities as opportunities to learn, improve, and validate our work.\"_\r\n\r\nPress `Next` to continue\r\n",
+      "description": "# Quick Recommendations\r\n\r\n>> 3mins (Demo)\r\n\r\nYou can also ask with @workspace on basic recommendations.\r\n\r\n> `@workspace based on leading practices, what are your recommendations that developers may need to follow to improve this application?`\r\n\r\nLet's try it out again on the nextjs-ecommerce-template project\r\n\r\n> Swith to nextjs-ecommerce-tempate\r\n\r\n### Reminder: Copilot should not replace a full Code Analysis tool and the developer's intuition about the project\r\n\r\nCopilot will provide this response if it cannot comply with your instructions\r\n\r\n>> Without seeing the actual code, it's hard to provide a comprehensive review. It would be beneficial to review the actual code files, check for code comments, consistent coding style, error handling, and other best practices.\r\n\r\n### Related Optus Engineering Principle:\r\n\r\n**Trust but verify** \r\n\r\n_\"We embrace external review, assurance, and audit activities as opportunities to learn, improve, and validate our work.\"_\r\n\r\nPress `Next` to continue\r\n",
       "selection": {
         "start": {
           "line": 7,
@@ -104,7 +103,21 @@
     {
       "title": "Terminal and VS Code",
       "description": "# @terminal and @vscode\r\n\r\n>> 2 mins (Demo)\r\nDomain specific helpers from GitHub Copilot\r\n\r\n@vscode - Ask questions about VS Code\r\n\r\n> `@vscode how do I disable the GitHub Copilot extension?`\r\n\r\n@terminal - Ask how to do something in the terminal\r\n\r\n> `@terminal how do I copy a file from one folder to another using the terminal?`\r\n\r\nThese handy helpers can provide you answers to questions relevant to VS Code or executing commands from the Terminal window."
+    },
+    {
+      "title": "Additional Features Questions",
+      "description": "# Additional Features Q&A\r\n\r\n>> 5 mins Q&A\r\n\r\n## Check time/Break",
+      "selection": {
+        "start": {
+          "line": 5,
+          "character": 1
+        },
+        "end": {
+          "line": 5,
+          "character": 20
+        }
+      }
     }
   ],
-  "ref": "main"
+  "ref": "copilot-training/code-tour-updates"
 }

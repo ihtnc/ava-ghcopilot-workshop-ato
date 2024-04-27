@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "05-Live-Exercise",
+  "title": "05-JavaScript-Live-Exercise",
   "steps": [
     {
       "title": "Introduction",
@@ -12,5 +12,5 @@
       "line": 3
     }
   ],
-  "ref": "main"
+  "ref": "copilot-training/code-tour-updates"
 }

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Closing-Remarks",
+  "steps": [
+    {
+      "title": "Closing",
+      "description": "# Closing Remarks\r\n\r\n>> 2mins\r\n\r\n## Not a Complete Solution\r\nGitHub Copilot is a sophisticated AI code assistant, but it doesn't replace peer code reviews or security/code analysis tools. It can suggest code completions but isn’t designed to evaluate overall project security or code quality.\r\n\r\n## Know the Limits\r\nThe AI behind GitHub Copilot is trained on a dataset only up to a specific date (as of April 2023). It may not reflect the latest updates, so always verify using official SDK documentation. Copilot excels at suggesting common syntax for popular programming languages.\r\n\r\n## Collaborate with Copilot\r\nWorking with GitHub Copilot is a give-and-take process. You may need to fine-tune prompts or tweak code suggestions. This collaborative refinement ensures that the end result meets your standards and project goals.\r\n\r\n## You're in Command\r\nGitHub Copilot is your digital coding assistant, not the pilot. You're in charge of making key decisions and ensuring the code quality. Use Copilot to boost your productivity, but remember you steer the project's direction.\r\n\r\n\r\n>> A software engineer once told me \"I wish Copilot can generate an entire, production ready project with a single prompt\". I just smiled and said \"Be careful what you wish for\".\r\n",
+      "selection": {
+        "start": {
+          "line": 14,
+          "character": 1
+        },
+        "end": {
+          "line": 16,
+          "character": 137
+        }
+      }
+    }
+  ],
+  "ref": "copilot-training/code-tour-updates"
+}

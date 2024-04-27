@@ -1,6 +1,6 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "Self-Paced-Coding-Challenge",
+  "title": "Tank Game Self-Paced-Coding-Challenge",
   "steps": [
     {
       "file": "exercise/javascript/tank-game/challenge.md",
@@ -8,5 +8,5 @@
       "line": 2
     }
   ],
-  "ref": "main"
+  "ref": "copilot-training/code-tour-updates"
 }

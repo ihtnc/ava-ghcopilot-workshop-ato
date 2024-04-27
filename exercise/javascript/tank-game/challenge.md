@@ -7,7 +7,7 @@ The goal of this challenge is to apply what you've learned from the GitHub Copil
 Dive into this tank game challenge to sharpen your skills in guiding GitHub Copilot, your AI pair programmer. Just like building any app, the game involves a user interface, input handling, and event outcomes. This isn't just about coding—it's about learning to communicate effectively with AI to enhance your development process. Perfect your prompts, get precise suggestions, and translate this practice into tackling real-world projects with increased efficiency.
 
 ## The Game 
-![Tank Game](image/Copilot-Tank-Game.gif)
+<img src="./image/Copilot-Tank-Game.gif" alt="Tank Game">
 
 ## Objective of the game:
 To play the game, the player must use the Up/Down keys to move the angle of the tank's cannon, the Left/Right keys to adjust the power, and press the Space Bar to shoot. The goal is to hit the black box (the target) before the bullets run out (3 by default).
