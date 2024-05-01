@@ -3,13 +3,13 @@
   "title": "01-Basic-Usage",
   "steps": [
     {
-      "title": "Introduction",
+      "title": "Introduction - Code Completion",
       "description": "# Basic Usage\r\n\r\n>> 2mins\r\n\r\n## Demos\r\n\r\nIn this first demo, we're going to explore the core functionality of GitHub Copilot, which is Code Completion. \r\n\r\nWe are going to learn the basics of how you can leverage this AI-powered tool to enhance your coding experience.\r\n\r\n\r\nPress `Next` to continue 👇"
     },
     {
-      "file": "exercise/python/demo.py",
-      "description": "# Context is Key\n\n>> 3mins (Demo)\n\nContext provides the necessary backdrop that informs the purpose and function of the code. \n\nThis \"context\" helps GitHub Copilot anticipate the most likely suggestions that align with your overall goal.\n\nFor GitHub Copilot, context comes from comments, code structure, and opened files that guide its AI to generate relevant and useful suggestions. \n\nLet's begin with a straightforward Q&A comment in our demo.py file. I will write simple Q&A written in python comments and let Github Copilot suggest an answer.\n\n### Try it out\n\n```python\n# Question: What are the popular Python data visualisation modules?\n# Answer:\n```\n\nAfter pasting the comment, put your cursor after the colon in \"Answer:\" and press the `Spacebar`\n\nCopilot's suggestion will appear in a translucent text, usually referred to as \"Ghost Text\". Simply press `Tab` to accept the suggestion.\n\n>> The Question in your comment and the word \"Answer\" gave the necessary context to Copilot which predicted that you have asked a question and looking for an aswer.\n\n&nbsp;\n\n> Remember to use the language-specific commenting symbols. This ensures you don't get syntax errors and Copilot can accurately interpret your intent and offer the most suitable suggestions for your code.\n\nPress `Next` to continue 👇",
-      "line": 16,
+      "file": "exercise/javascript/demo.js",
+      "description": "# Context is Key\n\n>> 3mins (Demo)\n\nContext provides the necessary backdrop that informs the purpose and function of the code. \n\nThis \"context\" helps GitHub Copilot anticipate the most likely suggestions that align with your overall goal.\n\nFor GitHub Copilot, context comes from comments, code structure, and opened files that guide its AI to generate relevant and useful suggestions. \n\nLet's begin with a straightforward Q&A comment in our demo.js file. I will write simple Q&A written in javascript comments and let Github Copilot suggest an answer.\n\n### Try it out\n\n```javascript\n//Question: What are the popular database frameworks?\n//Answer:\n```\n\nAfter pasting the comment, put your cursor after the colon in \"Answer:\" and press the `Spacebar`\n\nCopilot's suggestion will appear in a translucent text, usually referred to as \"Ghost Text\". Simply press `Tab` to accept the suggestion.\n\n>> The Question in your comment and the word \"Answer\" gave the necessary context to Copilot which predicted that you have asked a question and looking for an answer.\n\n&nbsp;\n\n> Remember to use the language-specific commenting symbols. This ensures you don't get syntax errors and Copilot can accurately interpret your intent and offer the most suitable suggestions for your code.\n\nPress `Next` to continue 👇",
+      "line": 17,
       "selection": {
         "start": {
           "line": 15,
@@ -38,7 +38,7 @@
     },
     {
       "file": "exercise/javascript/tasks.js",
-      "description": "# Clear Comments\n\n>> 3mins (Demo)\n\nLet's see some more code completions. Let's give GitHub Copilot clearer context on what we're trying to do by adding the following comment to the file line of the tasks.js file. \n\n## Try it out\n\n> `// A simple task list manager in JavaScript that allows users to add, mark complete, and delete tasks.`\n\nPress `Enter` twice after the comment.\n\nThen accept Copilot's suggestions by pressing the `Tab` then `Enter` key as you see the suggestions come up.\n\nPress these key combinations until you see this suggestion.\n\n```\n// Print the tasks array\nprintTasks();\n```\n\n## Testing the function\n\n### Node.JS required\n\nLet's run and test what Copilot suggested in the terminal. \n\n> Option 1\n\n\n`node exercise\\javascript\\tasks.js`\n\n> Option 2\n\n`cd exercise\\javascript`\n\n`node tasks.js`\n\nRemember to Save the File before executing the above command in the terminal.\n\n### Complete a task\n\nAfter the last addTask() line, press `Enter` twice then start typing `compl`, Copilot will suggest the completeTask() function including a task to complete. Accept this then run the code again.\n\n>> Key take away: Providing a clear context or \"goal\" for Copilot will increase the chances of yeilding the most relevant suggestions.\n\nPress `Next` to continue 👇\n",
+      "description": "# Clear Comments\n\n>> 3mins (Demo)\n\nLet's see some more code completions. Let's give GitHub Copilot clearer context on what we're trying to do by adding the following comment to the file line of the tasks.js file. \n\n## Try it out\n\n> // Generate a function that will perform an arithmetic operation on 2 numbers anr return the results\n\nPress `Enter` twice after the comment.\n\nThen accept Copilot's suggestions by pressing the `Tab` then `Enter` key as you see the suggestions come up.\n\n\n## Testing the function\n\n### Node.JS required\n\nLet's run and test what Copilot suggested in the terminal. \n\n> Option 1\n\n\n`node exercise\\javascript\\tasks.js`\n\n> Option 2\n\n`cd exercise\\javascript`\n\n`node tasks.js`\n\nRemember to Save the File before executing the above command in the terminal.\n\n\n>> Key take away: Providing a clear context or \"goal\" for Copilot will increase the chances of yeilding the most relevant suggestions.\n\nPress `Next` to continue 👇\n",
       "line": 15,
       "selection": {
         "start": {
@@ -72,17 +72,17 @@
       }
     },
     {
-      "file": "exercise/python/errorhandler.py",
-      "description": "## Ask help with error handling\r\n\r\n>> 3mins (Demo)\r\n\r\n### Error Handling\r\n\r\nThis python code reads the contents of the config.json file located in the same folder.\r\nBut right now, it will only work on a \"Happy path\". If the file doesn't exist of the json is malformed, the function won't be able to handle it gracefully.\r\n\r\n### Show errors (Trainer)\r\n\r\n**Malformed JSON**\r\n1. Open config.json and add a stray comma at the end (to make it malformed). Save.\r\n1. change dir to exercise\\python\r\n1. Execute `python errorhanlder.py` from the terminal\r\n\r\nThis will produce an error related to the malformed json.\r\n\r\n**Unknown filename**\r\n1. Correct config.json by removing the stray comma\r\n1. Inside errorhandler.py, change config.json to configs.json (with an 's')\r\n1. Execute the code\r\n\r\nThis will produce a file not found error.\r\n\r\n## Try it out\r\n\r\nNow, let’s see how to ask GitHub Copilot to suggest error handling:\r\n\r\n1. Highlight the entire read_config function.\r\n1. Activate GitHub Copilot's inline chat feature.\r\n1. Ask Copilot, \"Add error handling to this function to manage non-existent file paths and handle invalid JSON content gracefully\"\r\n\r\nAccept the suggestion, then test the code again with the following scenarios:\r\n\r\n- Malformed config.json\r\n- Correct config.json, but wrong filename\r\n\r\nPress `Next` to continue",
+      "file": "exercise/javascript/errorhandler.js",
+      "description": "## Ask help with error handling\r\n\r\n>> 3mins (Demo)\r\n\r\n### Error Handling\r\n\r\nThis javascript code reads the contents of the config.json file located in the same folder.\r\nBut right now, it will only work on a \"Happy path\". If the file doesn't exist of the json is malformed, the function won't be able to handle it gracefully.\r\n\r\n### Show errors (Trainer)\r\n\r\n**Malformed JSON**\r\n1. Open config.json and add a stray comma at the end (to make it malformed). Save.\r\n1. change dir to exercise\\javascript\r\n1. Execute `node errorhandler.js` from the terminal\r\n\r\nThis will produce an error related to the malformed json.\r\n\r\n**Unknown filename**\r\n1. Correct config.json by removing the stray comma\r\n1. Inside errorhandler.js, change config.json to configs.json (with an 's')\r\n1. Execute the code\r\n\r\nThis will produce a file not found error.\r\n\r\n## Try it out\r\n\r\nNow, let’s see how to ask GitHub Copilot to suggest error handling:\r\n\r\n1. Highlight the entire read_config function.\r\n1. Activate GitHub Copilot's inline chat feature.\r\n1. Ask Copilot, \"Add error handling to this function to manage non-existent file paths and handle invalid JSON content gracefully\"\r\n\r\nAccept the suggestion, then test the code again with the following scenarios:\r\n\r\n- Malformed config.json\r\n- Correct config.json, but wrong filename\r\n\r\nPress `Next` to continue",
       "line": 2,
       "selection": {
         "start": {
-          "line": 37,
+          "line": 32,
           "character": 18
         },
         "end": {
-          "line": 37,
-          "character": 144
+          "line": 33,
+          "character": 1
         }
       }
     },
@@ -102,12 +102,12 @@
       }
     },
     {
-      "file": "exercise/python/demo.py",
+      "file": "exercise/javascript/demo.js",
       "description": "## Context from files\r\n\r\n>> 1min\r\n\r\n## Files as Context\r\n\r\nGitHub Copilot can provide better suggestions the more context you provide it. Besides using clear comments, meaningful names for functions and variables, having related files open can also help GitHub Copilot to generate more relevant suggestions, which we will see in the next demo.\r\n\r\nPress `Next` to Continue\r\n\r\n",
       "line": 21
     },
     {
-      "file": "complete/javascript/utilities.js",
+      "file": "exercise/javascript/utilities.js",
       "description": "# Context file\r\n\r\n>> 2mins (Demo)\r\n\r\n`utilities.js` is a sample javascript file with helper functions. \r\n\r\nInstead of just the function definition, each functions are defined with the appropriate documentation, such comments about the parameters and the return value.\r\n\r\nLet's open demo.js again and repeat the previous demo where we've asked Copilot to produce a function the performs a calculation between two numbers.\r\n\r\nPress `Next` to continue",
       "line": 1,
       "selection": {
@@ -150,5 +150,5 @@
       "description": "# Basic Usage Questions\r\n\r\n>> 5 mins Q&A"
     }
   ],
-  "ref": "main"
+  "ref": "ava-ghcopilot-workshop-base"
 }

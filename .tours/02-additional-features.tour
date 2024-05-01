@@ -8,7 +8,7 @@
     },
     {
       "file": "exercise/javascript/slashdemo.js",
-      "description": "# /doc\n\n>> 2mins (Demo)\n\n## Try it out\n\nQuickly add documentation in the form of comments quickly just by highlighting an entire lines of code or fuction and pressing:\n\n`Ctrl-i` then typing `/doc`\n\n1. Highlight the getRandomInt function\n1. Press Ctrl + i then in the inline chat, type /doc\n1. Observe the suggestions\n\nPress `Next` to continue 👇",
+      "description": "# /doc\n\n>> 2mins (Demo)\n\n## Try it out\n\nQuickly add documentation in the form of comments quickly just by highlighting an entire lines of code or fuction and pressing:\n\n`Ctrl-i` then typing `/doc`\n\n1. Highlight the getRandomInt function\n2. Press Ctrl + i then in the inline chat, type /doc\n3. Observe the suggestions\n\nTry another example with a classic asp page (choose exercise\\CSharp\\oldASP.asp)\n\n\nPress `Next` to continue 👇",
       "line": 3,
       "selection": {
         "start": {
@@ -17,13 +17,13 @@
         },
         "end": {
           "line": 15,
-          "character": 28
+          "character": 80
         }
       }
     },
     {
       "file": "exercise/javascript/slashdemo.js",
-      "description": "# /explain\r\n\r\n>> 2mins (Demo)\r\n\r\n## Try it out\r\n\r\nAsk Copilot to explain a code snippet or entire function by launching the inline-chat:\r\n\r\n`Ctrl-i` then typing `/explain`\r\n\r\nLet's try it out.\r\n\r\n1. Highlight the function calculateCircleArea\r\n1. Press Ctrl + i then type /explain\r\n1. Copilot will launch the Chat window where it will display the explanation\r\n\r\nPress `Next` to continue 👇",
+      "description": "# /explain\r\n\r\n>> 2mins (Demo)\r\n\r\n## Try it out\r\n\r\nAsk Copilot to explain a code snippet or entire function by launching the inline-chat:\r\n\r\n`Ctrl-i` then typing `/explain`\r\n\r\nLet's try it out.\r\n\r\n1. Highlight the function calculateCircleArea\r\n2. Press Ctrl + i then type /explain\r\n3. Copilot will launch the Chat window where it will display the explanation\r\n\r\nTry another example with a classic asp page (choose exercise\\CSharp\\oldASP.asp)\r\n\r\nPress `Next` to continue 👇",
       "line": 11
     },
     {
@@ -38,7 +38,7 @@
     },
     {
       "file": "exercise/javascript/utilities.js",
-      "description": "# /test\r\n\r\n>> 5mins (Demo)\r\n\r\n### File to test\r\n>> File: Utilities.js\r\n\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\n## Try it out\r\n\r\n1. Make sure that functions in utilities.js are exported for testing \r\n    - Type a comment at the end of the file `//Export the functions for testing`\r\n1. Option 1: In utilities.js, right-click anywhere, then select Copilot -> Generate Tests\r\n1. Option 2: In utilities.js, press Ctrl + i, then type /tests in the inline chat\r\n1. Copilot will start suggesting the code and create the unit test file.\r\n1. Click \"Create\", then \"Accept\". Copilot will automatically create the utilities.test.js file for you.\r\n\r\n\r\n## Review the Unit Test file\r\n\r\nLet's now review the unit test file created by Copilot\r\n\r\nPress `Next` to go to utilities.test.js\r\n",
+      "description": "# /test\r\n\r\n>> 5mins (Demo)\r\n\r\n### File to test\r\n>> File: Utilities.js\r\n\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\n## Try it out\r\n\r\n1. Make sure that functions in utilities.js are exported for testing \r\n    - Type a comment at the end of the file `//Export the functions for testing`\r\n1. Option 1: In utilities.js, right-click anywhere, then select Copilot -> Generate Tests\r\n1. Option 2: In utilities.js, press Ctrl + i, then type /tests in the inline chat\r\n1. Copilot will start suggesting the code and create the unit test file.\r\n1. Click \"Create\", then \"Accept\". Copilot will automatically create the utilities.test.js file for you.\r\n\r\n\r\n## Review the Unit Test file\r\n\r\nLet's now review the unit test file created by Copilot\r\n\r\nPress `Next` to go to utilities.test.js\r\n\r\n## Generated Unit Test\r\n\r\n>> 2mins (Demo)\r\n\r\nReview utilities.test.js\r\n\r\n### Run the tests\r\n\r\n>> Requires JEST package\r\n\r\nIf you don't have JEST, please run this command\r\n\r\n```\r\nnpm init -y && npm install --save-dev jest\r\n```\r\n\r\n### Execute the test\r\n\r\nLet's run the unit test using JEST by executing this command from the Terminal\r\n\r\n\r\n```\r\nnpx jest --coverage utilities.test.js\r\n```\r\n\r\n### --coverage\r\nInstructs Jest to report code coverage\r\n\r\n\r\nPress `Next` to continue 👇",
       "line": 3,
       "selection": {
         "start": {
@@ -52,13 +52,23 @@
       }
     },
     {
-      "file": "exercise/javascript/utilities.test.js",
-      "description": "## Generated Unit Test\r\n\r\n>> 2mins (Demo)\r\n\r\nReview utilities.test.js\r\n\r\n### Run the tests\r\n\r\n>> Requires JEST package\r\n\r\nIf you don't have JEST, please run this command\r\n\r\n```\r\nnpm init -y && npm install --save-dev jest\r\n```\r\n\r\n### Execute the test\r\n\r\nLet's run the unit test using JEST by executing this command from the Terminal\r\n\r\n\r\n```\r\nnpx jest --coverage utilities.test.js\r\n```\r\n\r\n### --coverage\r\nInstructs Jest to report code coverage\r\n\r\n\r\nPress `Next` to continue 👇",
-      "line": 2
+      "file": "exercise/CSharp/functions.cs",
+      "title": "/test continued",
+      "description": "# /test\r\n\r\n>> 5mins (Demo)\r\n\r\n### File to test\r\n>> File: functions.cs\r\n\r\nLet's try with another example using C#\r\n\r\n## Try it out\r\n\r\nDelete any existing code and comment in this file. \r\n\r\n// Generate a Person class with functions that say Hello and Goodbye.\r\n\r\nGenerate a unit test using /tests command.\r\n\r\n## Review the Unit Test file\r\n\r\nLet's now review the unit test file created by Copilot\r\n\r\n## Generated Unit Test\r\n\r\nReview functionsTest.cs\r\n\r\n### Run the tests\r\n\r\nLet's run the unit test by executing this command from the Terminal\r\n\r\nNavigate to \\exercise\\CSharp folder\r\n\r\n```\r\ndotnet test\r\n```\r\n\r\nPress `Next` to continue 👇"
     },
     {
       "title": "Commit Message",
-      "description": "# One-Click Commit Message\r\n\r\n>> 1min (Demo)\r\n\r\nEver struggled on what to write as a commit message? With Copilot, it can help suggest draft commit messages for you.\r\n\r\n- Navigate to Git Source Control.\r\n- Look for the ✨ icon and click it.\r\n- Copilot will suggest a commit message based on your changes.\r\n\r\n**Remember:** If your commit includes multiple changes, Copilot will provide a commit message based recent changes but may not always suggest the best one. This is where you need to review and edit as needed before finalizing your commit.\r\n\r\nPress `Next` to continue 👇"
+      "description": "# One-Click Commit Message\r\n\r\n>> 1min (Demo)\r\n\r\nEver struggled on what to write as a commit message? With Copilot, it can help suggest draft commit messages for you.\r\n\r\n- Navigate to Git Source Control.\r\n- Look for the ✨ icon and click it.\r\n- Copilot will suggest a commit message based on your changes.\r\n\r\n**Remember:** If your commit includes multiple changes, Copilot will provide a commit message based recent changes but may not always suggest the best one. This is where you need to review and edit as needed before finalizing your commit.\r\n\r\nPress `Next` to continue 👇",
+      "selection": {
+        "start": {
+          "line": 13,
+          "character": 1
+        },
+        "end": {
+          "line": 13,
+          "character": 28
+        }
+      }
     },
     {
       "title": "Workspace Agent",
@@ -66,11 +76,21 @@
     },
     {
       "title": "Find a file",
-      "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\n>> 3mins (Demo)\r\n\r\n## Try it out\r\n\r\n(Open the Chat window)\r\n\r\n> `@workspace Search for python files where I can find helper functions that validates phone, email and url`\r\n\r\nHit `Enter` and see what Copilot comes back with."
+      "description": "## Ask Copilot to find a file or files based on your needs\r\n\r\n>> 3mins (Demo)\r\n\r\n## Try it out\r\n\r\n(Open the Chat window)\r\n\r\n> `@workspace Search for js files where I can find helper functions that constructs full name from given first and last names`\r\n\r\nHit `Enter` and see what Copilot comes back with."
     },
     {
       "title": "Reference a file",
-      "description": "# @workspace - #file\r\n\r\n>> 2mins (Demo)\r\n\r\nAnother feature under the @workspace helper is the `#file`, which allows you to reference a file when asking a query to Copilot Chat.\r\n\r\n## Try it out\r\n\r\n**_Do not copy and paste. Once you've typed #file: you'll be asked to select the file. Search for utilities.js and select it._**\r\n\r\n>> @workspace explain the contents of the #file:utilities.js \r\n\r\nHere's another example\r\n\r\n>> @workspace Generate a shopping cart html prototype using the pattern found in #file:demo.html\r\n\r\n(choose complete\\javascript\\demo.html)\r\n\r\nReview chat's response"
+      "description": "# @workspace - #file\r\n\r\n>> 2mins (Demo)\r\n\r\nAnother feature under the @workspace helper is the `#file`, which allows you to reference a file when asking a query to Copilot Chat.\r\n\r\n## Try it out\r\n\r\n**_Do not copy and paste. Once you've typed #file: you'll be asked to select the file. Search for utilities.js and select it._**\r\n\r\n>> @workspace explain the contents of the #file:utilities.js \r\n\r\nHere's another example\r\n\r\n>> @workspace Generate a shopping cart html prototype using the pattern found in #file:demo.html\r\n\r\n(choose exercise\\html\\sample.html)\r\n\r\nReview chat's response",
+      "selection": {
+        "start": {
+          "line": 17,
+          "character": 1
+        },
+        "end": {
+          "line": 17,
+          "character": 35
+        }
+      }
     },
     {
       "title": "Analyze the project",
@@ -119,5 +139,5 @@
       }
     }
   ],
-  "ref": "main"
+  "ref": "ava-ghcopilot-workshop-base"
 }

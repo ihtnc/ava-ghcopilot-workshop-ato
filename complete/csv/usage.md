@@ -1,6 +1,0 @@
-### Sample data that you can provide to Copilot Chat as additional context
-
-| breakdown_language | breakdown_editor | breakdown_suggestions_count | breakdown_acceptances_count | breakdown_lines_suggested | breakdown_lines_accepted | breakdown_active_users | day        | total_suggestions_count | total_acceptances_count | total_lines_suggested | total_lines_accepted | total_active_users |
-| ------------------ | ---------------- | --------------------------- | --------------------------- | ------------------------- | ------------------------ | ---------------------- | ---------- | ----------------------- | ----------------------- | --------------------- | -------------------- | ------------------ |
-| polyglot-notebook  | vscode           | 11                          | 3                           | 12                        | 3                        | 2                      | 10/03/2024 | 451                     | 82                      | 896                   | 137                  | 6                  |
-| python             | vscode           | 15                          | 2                           | 23                        | 2                        | 2                      | 10/03/2024 | 451                     | 82                      | 896                   | 137                  | 6                  |

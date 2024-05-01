@@ -28,5 +28,10 @@ coverage/
 # Exclude python virtual environment
 streamenv/
 
+#Ignore .Net files
+bin/
+obj/
+
+
 
 

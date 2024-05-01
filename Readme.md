@@ -14,9 +14,9 @@ In order to follow along with the instructions provided in this repository, you 
 - [Git](https://git-scm.com/downloads)
 - [GitHub Copilot Access](https://copilot.github.com/)
 - GitHub Copilot Extension for Visual Studio Code
-- [Python](https://www.python.org/downloads/) for Python code and exercises
 - [Node.js](https://nodejs.org/en/download/) for JavaScript/TypeScript code and exercises
 - Jest for Unit Testing JavaScript/TypeScript code - `npm install --save-dev jest`
+- .NET SDK (https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) for C# exercises
 - [CodeTour VS Extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour) - (Recommended if you want to perform the demos and exercises later on)
 
 ## Getting Started
