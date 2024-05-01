@@ -11,7 +11,7 @@ This is an excercise to complete a simple developer registration form exercise u
 
 ## Getting Started
 
-- Clone this repository from GitLab to your local machine and create a new branch.
+- Clone this repository from GitHub to your local machine and create a new branch.
 - Suggested branch name: ghcp-exercise/your-name
 
 ## Time Required: 15 to 30 minutes
@@ -36,8 +36,8 @@ Requirement:
 Create an HTML scaffolding with a form that accepts inputs for username, email, password, and a submit button.
 ```
 
-### Public Code Block is enabled your organization (If applicable)
-> Reminder: Public Code blocking is enabled in your organization. You may receive a message saying "Sorry, the response matched public code so it was blocked..."
+### Public Code Block (If applicable)
+> Reminder: If Public Code blocking is enabled in your GitHub organization, you may receive a message saying "Sorry, the response matched public code so it was blocked..."
 
 A simple solution is to rephrase and change some of the names of the fields in your prompt. For example, you can change "username" to "developername" and "email" to "developeremail". This is just one way to work around the issue. Try to be creative and come up with your own ideas, and if successful, don't forget to share them with the community!
 

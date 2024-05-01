@@ -27,7 +27,7 @@ To run the game, open the `exercise\javascript\tank-game\index.html` file in a b
 
 ## Before you start
 
-- Clone this repository from GitLab to your local machine and create a new branch.
+- Clone this repository from GitHub to your local machine and create a new branch.
 - Suggested branch name: ghcp-tank-challenge/your-name
 - Make sure that you commit your changes to your branch.
 
