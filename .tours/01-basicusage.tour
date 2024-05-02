@@ -23,22 +23,22 @@
     },
     {
       "file": "exercise/javascript/demo.js",
-      "description": "## Vague or unclear comments\n\nUsing vague or unclear comments can cause Copilot to suggest unexpected code.\n\n>> 3 mins (Demo)\n\n## Try it out\n\nDelete any existing code and comment in this file. We'll test  how GitHub Copilot responds with vague requests.\n\n> `// Generate a function that will perform calculations`\n\nPress `Enter` twice start from the end of the comment. Press `Tab` once you see Copilot's suggestion then `Enter`. Continue pressing `Tab` then `Enter` until Copilot completes the function definition.\n\nBecause the comment lacks additional context, it will suggest the most likely code based on its knowledge.\n\n> Note: Suggestions may differ from others\n\nNotice that vague comments may yield unexpected suggestions from GitHub Copilot. For precise, useful code generation, always provide clear, specific comments to guide its suggestion.\n\nPress `Next` to continue 👇\n\n\n",
+      "description": "## Vague or unclear comments\n\nUsing vague or unclear comments can cause Copilot to suggest unexpected code.\n\n>> 3 mins (Demo)\n\n## Try it out\n\nDelete any existing code and comment in this file. We'll test  how GitHub Copilot responds with vague requests.\n\n> `// Generate a class\n\nPress `Enter` twice start from the end of the comment. Press `Tab` once you see Copilot's suggestion then `Enter`. Continue pressing `Tab` then `Enter` until Copilot completes the function definition.\n\nBecause the comment lacks additional context, it will suggest the most likely code based on its knowledge.\n\n> Note: Suggestions may differ from others\n\nNotice that vague comments may yield unexpected suggestions from GitHub Copilot. For precise, useful code generation, always provide clear, specific comments to guide its suggestion.\n\nPress `Next` to continue 👇\n\n\n",
       "line": 1,
       "selection": {
         "start": {
-          "line": 7,
-          "character": 3
+          "line": 11,
+          "character": 23
         },
         "end": {
-          "line": 7,
-          "character": 58
+          "line": 11,
+          "character": 63
         }
       }
     },
     {
       "file": "exercise/javascript/tasks.js",
-      "description": "# Clear Comments\n\n>> 3mins (Demo)\n\nLet's see some more code completions. Let's give GitHub Copilot clearer context on what we're trying to do by adding the following comment to the file line of the tasks.js file. \n\n## Try it out\n\n> // Generate a function that will perform an arithmetic operation on 2 numbers anr return the results\n\nPress `Enter` twice after the comment.\n\nThen accept Copilot's suggestions by pressing the `Tab` then `Enter` key as you see the suggestions come up.\n\n\n## Testing the function\n\n### Node.JS required\n\nLet's run and test what Copilot suggested in the terminal. \n\n> Option 1\n\n\n`node exercise\\javascript\\tasks.js`\n\n> Option 2\n\n`cd exercise\\javascript`\n\n`node tasks.js`\n\nRemember to Save the File before executing the above command in the terminal.\n\n\n>> Key take away: Providing a clear context or \"goal\" for Copilot will increase the chances of yeilding the most relevant suggestions.\n\nPress `Next` to continue 👇\n",
+      "description": "# Clear Comments\n\n>> 3mins (Demo)\n\nLet's see some more code completions. Let's give GitHub Copilot clearer context on what we're trying to do by adding the following comment to the file line of the tasks.js file. \n\n## Try it out\n\n> // Generate a Person class with properties name and age and a method calculate that returns the age of the person in 10 years.\n\nPress `Enter` twice after the comment.\n\nThen accept Copilot's suggestions by pressing the `Tab` then `Enter` key as you see the suggestions come up.\n\n\n## Testing the function\n\n### Node.JS required\n\nLet's run and test what Copilot suggested in the terminal. \n\n> Option 1\n\n\n`node exercise\\javascript\\tasks.js`\n\n> Option 2\n\n`cd exercise\\javascript`\n\n`node tasks.js`\n\nRemember to Save the File before executing the above command in the terminal.\n\n\n>> Key take away: Providing a clear context or \"goal\" for Copilot will increase the chances of yeilding the most relevant suggestions.\n\nPress `Next` to continue 👇\n",
       "line": 15,
       "selection": {
         "start": {
@@ -88,7 +88,7 @@
     },
     {
       "file": "exercise/html/demo.html",
-      "description": "## Other language support\r\n\r\n>> 3mins (Demo)\r\n\r\nCode suggestions for other languages.\r\n\r\n>> Tip: Viewing the HTML - Right click the Tab with title \"demo.html\", then select \"Reveal in File Explorer. Double click demo.html.\r\n\r\n## Try it out\r\n\r\nLet's try the code completions again, this time with an HTML.\r\n\r\n> `<!--Generate an HTML scaffolding with. Add a simple top nav, a hero banner and a Call to action using Tailwind CSS. Include dummy texts-->`\r\n\r\n### Commenting symbol\r\n\r\n>> Notice the comment symbol <!---->. Because we're using a HTML file, we need to use the correct commenting symbol.\r\n\r\nPress `Enter` at the end of the comment, review and accept the suggestions until complete.\r\n\r\n> Tip: If Copilot does not provide a complete code suggestion, or it's taking a while to Tab and Enter, simply highlight the code, including your comments at the top, press Ctrl + i then type `Complete this HTML`. \r\n\r\nOnce Copilot completes the HTML, save the file the view the HTML in a browser. \r\n\r\n>> Right click the Tab with title `demo.html`, then select `Reveal in File Explorer`. Double click demo.html.\r\n\r\nPress `Next` to Continue.\r\n",
+      "description": "## Other language support\r\n\r\n>> 3mins (Demo)\r\n\r\nCode suggestions for other languages.\r\n\r\n>> Tip: Viewing the HTML - Right click the Tab with title \"demo.html\", then select \"Reveal in File Explorer. Double click demo.html.\r\n\r\n## Try it out\r\n\r\nLet's try the code completions again, this time with an HTML.\r\n\r\n> `<!--Create a basic HTML page boilerplate that uses external CSS stylesheet named \"styles.css\", and a script tag for a JavaScript file named \"scripts.js\" placed at the end of the body. Within the body, include a header section with a navigation bar containing placeholder links for \"Home\" and \"Contact Us\". Also, add a main content area with a sample article that includes a heading, two paragraphs of Lorem Ipsum text, and an image with alt text. Finally, include a footer with a copyright notice.-->`\r\n\r\n### Commenting symbol\r\n\r\n>> Notice the comment symbol <!---->. Because we're using a HTML file, we need to use the correct commenting symbol.\r\n\r\nPress `Enter` at the end of the comment, review and accept the suggestions until complete.\r\n\r\n> Tip: If Copilot does not provide a complete code suggestion, or it's taking a while to Tab and Enter, simply highlight the code, including your comments at the top, press Ctrl + i then type `Generate the full HTML code with tailwind CSS requirement I have provided.`. \r\n\r\nOnce Copilot completes the HTML, save the file the view the HTML in a browser. \r\n\r\n>> Right click the Tab with title `demo.html`, then select `Reveal in File Explorer`. Double click demo.html.\r\n\r\nPress `Next` to Continue.\r\n",
       "line": 1,
       "selection": {
         "start": {
@@ -102,28 +102,8 @@
       }
     },
     {
-      "file": "exercise/javascript/demo.js",
-      "description": "## Context from files\r\n\r\n>> 1min\r\n\r\n## Files as Context\r\n\r\nGitHub Copilot can provide better suggestions the more context you provide it. Besides using clear comments, meaningful names for functions and variables, having related files open can also help GitHub Copilot to generate more relevant suggestions, which we will see in the next demo.\r\n\r\nPress `Next` to Continue\r\n\r\n",
-      "line": 21
-    },
-    {
       "file": "exercise/javascript/utilities.js",
-      "description": "# Context file\r\n\r\n>> 2mins (Demo)\r\n\r\n`utilities.js` is a sample javascript file with helper functions. \r\n\r\nInstead of just the function definition, each functions are defined with the appropriate documentation, such comments about the parameters and the return value.\r\n\r\nLet's open demo.js again and repeat the previous demo where we've asked Copilot to produce a function the performs a calculation between two numbers.\r\n\r\nPress `Next` to continue",
-      "line": 1,
-      "selection": {
-        "start": {
-          "line": 9,
-          "character": 50
-        },
-        "end": {
-          "line": 9,
-          "character": 54
-        }
-      }
-    },
-    {
-      "file": "exercise/javascript/demo.js",
-      "description": "## Using Files as Context\n\n>> 3mins (Demo)\n\n### Try it out\n\nLet's first delete the existing code inside demo.js (if any). Copy and paste the comment below inside the demo.js.\n\n> `// Generate a function that calcualtes the volume of a cylinder given its radius and height. Include the measurement units as part of the output.`\n\n1. Hit Enter twice starting at the end of the comment.\n1. Review and Accept the suggestions provided by Copilot.\n\nRemember how Copilot suggested the function definition\n\n### Use Neighboring files as Context\n\n1. Open utilities.js in this same directory\n1. Keep it open (Right-click \"Pin\" so it will stay opened)\n1. Go back to `demo.js` then delete the function, but keep the comment.\n1. Press Enter twice starting at the end of the comment.\n1. Review the suggestion\n\n### Suggestions based on other files\n\nCopilot will now suggest a function with a similar pattern from the opened file `utilities.js`.\n\nPress `Next` to continue 👇\n\n\n",
+      "description": "## Files as Context\n\nGitHub Copilot can provide better suggestions the more context you provide it. Besides using clear comments, meaningful names for functions and variables, having related files open can also help GitHub Copilot to generate more relevant suggestions, which we will see in the next demo.\n\n### Use Neighboring files as Context\n\nutilities.js is a sample javascript file with helper functions.\n\nInstead of just the function definition, each functions are defined with the appropriate documentation, such comments about the parameters and the return value.\n\n\n### Try it out\n\n1. Keep utilities.js open (Right-click \"Pin\" so it will stay opened)\n1. Go to `demo.js`, delete code (if any) and copy paste comment below.\n\n> `// Generate a function that calcualtes the volume of a cylinder given its radius and height. Include the measurement units as part of the output.`\n\n1. Press Enter twice starting at the end of the comment.\n1. Review the suggestion\n\nCopilot will now suggest a function with a similar pattern from the opened file `utilities.js`.\n\n### Neighboring Tabs or opened files\n\nNotice how GitHub Copilot used the pattern from the open file on suggesting how to write the function. Without explicitly asking it to do so, it suggested documentation (comments) about the function. Copilot uses opened file or also known as \"neighboring tabs\" as additional context to recommend suggestions.\n\n\n## What if you want to override the suggestion?\n\nSimple: Reject the suggestion and start typing how you want the code to look like, then Copilot will start suggesting again based on what you've written.\n\nSo, if you don't want Copilot to use a specific way of writing code, you will have to take the wheel and drive.\n\nPress `Next` to continue 👇\n\n\n",
       "line": 1,
       "selection": {
         "start": {
@@ -135,11 +115,6 @@
           "character": 149
         }
       }
-    },
-    {
-      "file": "exercise/javascript/demo.js",
-      "description": "## Suggestions based on Context\n\n>> 3mins\n\n### Neighboring Tabs or opened files\n\nNotice how GitHub Copilot used the pattern from the open file on suggesting how to write the function. Without explicitly asking it to do so, it suggested documentation (comments) about the function. Copilot uses opened file or also known as \"neighboring tabs\" as additional context to recommend suggestions.\n\nIf you recall our first demo, it immediately went on to suggest the function definition without describing the parameters and the output.\n\n## What if you want to override the suggestion?\n\nSimple: Reject the suggestion and start typing how you want the code to look like, then Copilot will start suggesting again based on what you've written.\n\nSo, if you don't want Copilot to use a specific way of writing code, you will have to take the wheel and drive.\n\nPress `Next` to continue\n",
-      "line": 12
     },
     {
       "title": "Recap",

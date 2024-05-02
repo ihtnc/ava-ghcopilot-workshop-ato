@@ -32,11 +32,6 @@
       "line": 28
     },
     {
-      "file": "exercise/javascript/slashdemo.js",
-      "description": "# /fix from sub-menu\r\n\r\n>> 2mins (Demo)\r\n\r\nYou can also invoke the /fix helper by right-clicking a line of code that has a syntax error (squigly red line), and selecting Copilot -> Fix This from the sub-menu.\r\n\r\n## Try it out\r\n\r\nTry it out on the the function findLargestNumber()\r\n\r\n1. Highlight the function\r\n1. Right-click, find Copilot, then select Fix This\r\n\r\n>> Tip: You will see \"Toggle changes\" button beside the Discard button.  Clicking this will show you the proposed changes.\r\n\r\n\r\nPress `Next` to continue 👇",
-      "line": 39
-    },
-    {
       "file": "exercise/javascript/utilities.js",
       "description": "# /test\r\n\r\n>> 5mins (Demo)\r\n\r\n### File to test\r\n>> File: Utilities.js\r\n\r\nGitHub Copilot can also help you save time by suggesting Unit Tests for you.\r\n\r\n## Try it out\r\n\r\n1. Make sure that functions in utilities.js are exported for testing \r\n    - Type a comment at the end of the file `//Export the functions for testing`\r\n1. Option 1: In utilities.js, right-click anywhere, then select Copilot -> Generate Tests\r\n1. Option 2: In utilities.js, press Ctrl + i, then type /tests in the inline chat\r\n1. Copilot will start suggesting the code and create the unit test file.\r\n1. Click \"Create\", then \"Accept\". Copilot will automatically create the utilities.test.js file for you.\r\n\r\n\r\n## Review the Unit Test file\r\n\r\nLet's now review the unit test file created by Copilot\r\n\r\nPress `Next` to go to utilities.test.js\r\n\r\n## Generated Unit Test\r\n\r\n>> 2mins (Demo)\r\n\r\nReview utilities.test.js\r\n\r\n### Run the tests\r\n\r\n>> Requires JEST package\r\n\r\nIf you don't have JEST, please run this command\r\n\r\n```\r\nnpm init -y && npm install --save-dev jest\r\n```\r\n\r\n### Execute the test\r\n\r\nLet's run the unit test using JEST by executing this command from the Terminal\r\n\r\n\r\n```\r\nnpx jest --coverage utilities.test.js\r\n```\r\n\r\n### --coverage\r\nInstructs Jest to report code coverage\r\n\r\n\r\nPress `Next` to continue 👇",
       "line": 3,
