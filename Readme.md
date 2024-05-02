@@ -43,7 +43,7 @@ Once CodeTour is installed, you will see a new CODETOUR section under the VS Cod
 Exercises are available for the following languages:
 
 - JavaScript Readme - [JavaScript Exercise](./exercise/javascript/registration/registration-exercise.md)
-- Python Readme - [Python Exercise](./exercise/python/streamlit/python-exercise.md)
+
 
 ## Self-Paced Coding Challenge
 
