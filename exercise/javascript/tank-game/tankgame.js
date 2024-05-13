@@ -564,7 +564,11 @@ function checkBounds() {
     bullet.stopped = true;
 
     if (isDelayOver()) {
-      adjustDifficulty();
+      // move target after every attempt on higher difficulty
+      if (game.difficulty > 0) {
+        initTarget();
+      }
+
       initBullet();
       return;
     }
@@ -634,11 +638,6 @@ function drawGameOver(addHighScore = false) {
 function adjustDifficulty() {
   if (game.score > 0 && game.score % 5 === 0) {
     game.difficulty += 1;
-  }
-
-  if (game.difficulty > 0) {
-    // move target after every shot
-    initTarget();
   }
 
   if (game.difficulty >= 4) {
