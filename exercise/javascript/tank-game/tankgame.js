@@ -37,8 +37,13 @@ var tankBarrel = {
 var target = {
   x: 0,
   y: 0,
+  originalX: 0,
+  originalY: 0,
   width: 50,
-  height: 50
+  height: 50,
+  movementRange: 100,
+  movementSpeedMultiplier: 0.75,
+  currentDirection: ''
 };
 
 // create a bullet object
@@ -55,6 +60,13 @@ var bullet = {
   height: 10,
   degreeMultiplier: -1
 };
+
+var rank = {
+  width: 20,
+  height: 25,
+  offsetX: -5,
+  offsetY: 15
+}
 
 var trajectory = {
   lineWidthMultiplier: 0.333,
@@ -83,7 +95,9 @@ var game = {
   maxAngle: 70,
   minAngle: -15,
   maxPower: 20,
-  minPower: 5
+  minPower: 5,
+  difficulty: 4,
+  aireResistanceModifier: 0.05
 };
 
 var controls = {
@@ -143,6 +157,8 @@ var arrowImage = new Image();
 arrowImage.src = "./image/arrow.svg";
 var shootImage = new Image();
 shootImage.src = "./image/shoot.svg";
+var rankImage = new Image();
+rankImage.src = "./image/rank.svg";
 
 // event listeners
 document.addEventListener("keydown", handleKeyDown);
@@ -202,11 +218,13 @@ function initBarrel() {
 
 // move target's position
 function initTarget() {
-  var allowedArea = canvas.width * 0.6;
+  var allowedArea = canvas.width * 0.6 - target.movementRange;
   var targetStartX = canvas.width - allowedArea - target.width - canvasPadding;
-  var targetAllowedY = canvas.height - target.height - canvasPadding;
+  var targetAllowedY = canvas.height - target.height - canvasPadding - target.movementRange * 2;
   target.x = targetStartX + Math.floor(Math.random() * (allowedArea)) + canvasPadding;
-  target.y = Math.floor(Math.random() * (targetAllowedY)) + canvasPadding;
+  target.y = Math.floor(Math.random() * (targetAllowedY)) + canvasPadding + target.movementRange;
+  target.originalX = target.x;
+  target.originalY = target.y;
 }
 
 // reset bullet to initial state
@@ -269,6 +287,9 @@ function drawStats() {
   colY += scoreSize.height;
 
   drawBulletsLeft(col1X, colY);
+  colY += bullet.height;
+
+  drawRankLevel(col1X, colY);
 };
 
 // draw the bullets left
@@ -287,6 +308,13 @@ function drawBulletsLeft(x, y) {
   ctx.restore();
 }
 
+function drawRankLevel(x, y) {
+  if (!rankImage.complete) { return; }
+
+  for (var i = 0; i < game.difficulty; i++) {
+    ctx.drawImage(rankImage, x + rank.width * i + rank.offsetX, y + rank.offsetY, rank.width, rank.height);
+  }
+}
 // draw the controls
 function drawControls() {
   if (!arrowImage.complete || !shootImage.complete) { return; }
@@ -393,6 +421,7 @@ function drawBullet() {
 function updateGame() {
   checkCommand();
   updateBullet();
+  updateTarget();
   checkHit();
   checkBounds();
   checkGameOver();
@@ -414,6 +443,73 @@ function updateBullet() {
   bullet.y += bullet.velocityY;
 };
 
+// update the target's position based on difficulty
+function updateTarget() {
+  if (game.difficulty <= 1 || (bullet.fired && bullet.stopped)) { return; }
+
+  if (target.currentDirection === '') {
+    var vertical = Math.random() > 0.5 ? true : false;
+    target.currentDirection = Math.random() > 0.5 ? (vertical ? 'up' : 'left') : (vertical ? 'down' : 'right');
+  }
+
+  var newDirection = false;
+
+  if (target.currentDirection === 'up') {
+    target.y -= target.movementSpeedMultiplier;
+    if (target.y <= target.originalY - target.movementRange) {
+      newDirection = true;
+    }
+  } else if (target.currentDirection === 'down') {
+    target.y += target.movementSpeedMultiplier;
+    if (target.y >= target.originalY + target.movementRange) {
+      newDirection = true;
+    }
+  } else if (target.currentDirection === 'left') {
+    target.x -= target.movementSpeedMultiplier;
+    if (target.x <= target.originalX - target.movementRange) {
+      newDirection = true;
+    }
+  } else if (target.currentDirection === 'right') {
+    target.x += target.movementSpeedMultiplier;
+    if (target.x >= target.originalX + target.movementRange) {
+      newDirection = true;
+    }
+  }
+
+  var direction = '';
+  if (newDirection) {
+    switch (target.currentDirection) {
+      case 'up':
+        direction = 'down';
+        break;
+      case 'down':
+        direction = 'up';
+        break;
+      case 'left':
+        direction = 'right';
+        break;
+      case 'right':
+        direction = 'left';
+        break;
+    }
+
+    var changeOrientation = (game.difficulty <= 2) ? false : (Math.random() > 0.5 ? true : false);
+    if (changeOrientation) {
+      if (direction === 'up' || direction === 'down') {
+        direction = Math.random() > 0.5 ? 'left' : 'right';
+      } else if (direction === 'left' || direction === 'right'){
+        direction = Math.random() > 0.5 ? 'up' : 'down';
+      }
+    }
+
+    newDirection = false;
+  }
+
+  if (direction !== '') {
+    target.currentDirection = direction;
+  }
+}
+
 // check if the bullet hits the target
 function checkHit() {
   if (bullet.fired === false) { return; }
@@ -424,7 +520,14 @@ function checkHit() {
 
     if (isDelayOver()) {
       tank.bullets += 1;
-      game.score += 1;
+
+      if (game.difficulty <= 1) {
+        game.score += 1;
+      } else {
+        game.score += 2 * (game.difficulty - 1);
+      }
+
+      adjustDifficulty();
       initTarget();
       initBullet();
       return;
@@ -461,6 +564,7 @@ function checkBounds() {
     bullet.stopped = true;
 
     if (isDelayOver()) {
+      adjustDifficulty();
       initBullet();
       return;
     }
@@ -526,6 +630,23 @@ function drawGameOver(addHighScore = false) {
 
   ctx.restore();
 };
+
+function adjustDifficulty() {
+  if (game.score > 0 && game.score % 5 === 0) {
+    game.difficulty += 1;
+  }
+
+  if (game.difficulty > 0) {
+    // move target after every shot
+    initTarget();
+  }
+
+  if (game.difficulty >= 4) {
+    // randomize whether to add or subtract air resistance
+    var modifier = aireResistanceModifier * game.difficulty / 4;
+    game.airResistance += Math.random() > 0.5 ? modifier : -modifier;
+  }
+}
 
 // provides a delay before proceeding
 function isDelayOver(frameDelay = 60 * 3) {
