@@ -89,8 +89,8 @@ var explosion = {
 // create a game object
 var game = {
   score: 0,
-  gravity: 4.75,
-  airResistance: 0.01,
+  gravity: 30,
+  airResistance: 0.05,
   powerMultiplier: 10,
   maxAngle: 70,
   minAngle: -15,
