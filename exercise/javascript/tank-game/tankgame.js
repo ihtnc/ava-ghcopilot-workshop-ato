@@ -96,8 +96,8 @@ var game = {
   minAngle: -15,
   maxPower: 20,
   minPower: 5,
-  difficulty: 4,
-  aireResistanceModifier: 0.05
+  difficulty: 0,
+  airResistanceModifier: 0.05
 };
 
 var controls = {
@@ -643,7 +643,7 @@ function adjustDifficulty() {
 
   if (game.difficulty >= 4) {
     // randomize whether to add or subtract air resistance
-    var modifier = aireResistanceModifier * game.difficulty / 4;
+    var modifier = game.airResistanceModifier * game.difficulty / 4;
     game.airResistance += Math.random() > 0.5 ? modifier : -modifier;
   }
 }
