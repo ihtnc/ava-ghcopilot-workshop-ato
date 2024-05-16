@@ -116,31 +116,43 @@ var controls = {
     x: 0,
     y: 0,
     offsetX: 0,
-    offsetY: 0
+    offsetY: 0,
+    sizeMultiplier: 1
   },
   powerDown: {
     x: 0,
     y: 0,
     offsetX: 0,
-    offsetY: 0
+    offsetY: 0,
+    sizeMultiplier: 1
   },
   angleUp: {
     x: 0,
     y: 0,
     offsetX: -10,
-    offsetY: 20
+    offsetY: 20,
+    sizeMultiplier: 1
   },
   angleDown: {
     x: 0,
     y: 0,
     offsetX: -10,
-    offsetY: -20
+    offsetY: -20,
+    sizeMultiplier: 1
   },
   fire: {
     x: 0,
     y: 0,
     offsetX: 0,
-    offsetY: 0
+    offsetY: 0,
+    sizeMultiplier: 1
+  },
+  shoot: {
+    x: 0,
+    y: 0,
+    offsetX: 0,
+    offsetY: 0,
+    sizeMultiplier: 2
   }
 };
 
@@ -256,14 +268,16 @@ function initBullet() {
 
 // initialise the controls
 function initControls() {
-  controls.powerDown.x = tank.x - controls.width - controls.padding + controls.powerDown.offsetX;
-  controls.powerDown.y = tank.y + tank.height / 2 - controls.height / 2 + controls.powerDown.offsetY;
+  controls.powerDown.x = tank.x - controls.width * controls.powerDown.sizeMultiplier - controls.padding + controls.powerDown.offsetX;
+  controls.powerDown.y = tank.y + tank.height / 2 - controls.height * controls.powerDown.sizeMultiplier / 2 + controls.powerDown.offsetY;
   controls.powerUp.x = tank.x + tank.width + controls.padding + controls.powerUp.offsetX;
-  controls.powerUp.y = tank.y + tank.height / 2 - controls.height / 2 + controls.powerUp.offsetY;
-  controls.angleUp.x = tank.x + tank.width / 2 - controls.width / 2 + controls.angleUp.offsetX;
-  controls.angleUp.y = tank.y - controls.height - controls.padding + controls.angleUp.offsetY;
-  controls.angleDown.x = tank.x + tank.width / 2 - controls.width / 2 + controls.angleDown.offsetX;
+  controls.powerUp.y = tank.y + tank.height / 2 - controls.height * controls.powerUp.sizeMultiplier / 2 + controls.powerUp.offsetY;
+  controls.angleUp.x = tank.x + tank.width / 2 - controls.width * controls.angleUp.sizeMultiplier / 2 + controls.angleUp.offsetX;
+  controls.angleUp.y = tank.y - controls.height * controls.angleUp.sizeMultiplier - controls.padding + controls.angleUp.offsetY;
+  controls.angleDown.x = tank.x + tank.width / 2 - controls.width * controls.angleDown.sizeMultiplier / 2 + controls.angleDown.offsetX;
   controls.angleDown.y = tank.y + tank.height + controls.padding + controls.angleDown.offsetY;
+  controls.shoot.x = game.width - controls.width * controls.shoot.sizeMultiplier - canvasPadding - controls.width - controls.padding + controls.shoot.offsetX;
+  controls.shoot.y = tank.y + tank.height / 2 - controls.height * controls.shoot.sizeMultiplier / 2 - canvasPadding + controls.shoot.offsetY;
 
   relocateFireControl();
 }
@@ -333,6 +347,7 @@ function drawRankLevel(x, y) {
     ctx.drawImage(rankImage, x + rank.width * i + rank.offsetX, y + rank.offsetY, rank.width, rank.height);
   }
 }
+
 // draw the controls
 function drawControls() {
   if (!arrowImage.complete || !shootImage.complete) { return; }
@@ -370,6 +385,7 @@ function drawControls() {
   ctx.globalAlpha = (controls.currentCommand === 'fire') ? 1 : 0.5;
 
   ctx.drawImage(shootImage, controls.fire.x, controls.fire.y, controls.width, controls.height);
+  ctx.drawImage(shootImage, controls.shoot.x, controls.shoot.y, controls.width * controls.shoot.sizeMultiplier, controls.height * controls.shoot.sizeMultiplier)
   ctx.restore();
 }
 
@@ -780,20 +796,23 @@ function handlePointerDown(event) {
   var x = event.clientX - rect.left;
   var y = event.clientY - rect.top;
 
-  if (x >= controls.powerUp.x && x <= controls.powerUp.x + controls.width &&
-    y >= controls.powerUp.y && y <= controls.powerUp.y + controls.height) {
+  if (x >= controls.powerUp.x && x <= controls.powerUp.x + controls.width * controls.powerUp.sizeMultiplier &&
+    y >= controls.powerUp.y && y <= controls.powerUp.y + controls.height * controls.powerUp.sizeMultiplier) {
     controls.currentCommand = "powerUp";
-  } else if (x >= controls.powerDown.x && x <= controls.powerDown.x + controls.width &&
-    y >= controls.powerDown.y && y <= controls.powerDown.y + controls.height) {
+  } else if (x >= controls.powerDown.x && x <= controls.powerDown.x + controls.width * controls.powerDown.sizeMultiplier &&
+    y >= controls.powerDown.y && y <= controls.powerDown.y + controls.height * controls.powerDown.sizeMultiplier) {
     controls.currentCommand = "powerDown";
-  } else if (x >= controls.angleUp.x && x <= controls.angleUp.x + controls.width &&
-    y >= controls.angleUp.y && y <= controls.angleUp.y + controls.height) {
+  } else if (x >= controls.angleUp.x && x <= controls.angleUp.x + controls.width * controls.angleUp.sizeMultiplier &&
+    y >= controls.angleUp.y && y <= controls.angleUp.y + controls.height * controls.angleUp.sizeMultiplier) {
     controls.currentCommand = "angleUp";
-  } else if (x >= controls.angleDown.x && x <= controls.angleDown.x + controls.width &&
-    y >= controls.angleDown.y && y <= controls.angleDown.y + controls.height) {
+  } else if (x >= controls.angleDown.x && x <= controls.angleDown.x + controls.width * controls.angleDown.sizeMultiplier &&
+    y >= controls.angleDown.y && y <= controls.angleDown.y + controls.height * controls.angleDown.sizeMultiplier) {
     controls.currentCommand = "angleDown";
-  } else if (x >= controls.fire.x && x <= controls.fire.x + controls.width &&
-    y >= controls.fire.y && y <= controls.fire.y + controls.height) {
+  } else if (x >= controls.fire.x && x <= controls.fire.x + controls.width * controls.fire.sizeMultiplier &&
+    y >= controls.fire.y && y <= controls.fire.y + controls.height * controls.fire.sizeMultiplier) {
+    controls.currentCommand = "fire";
+  } else if (x >= controls.shoot.x && x <= controls.shoot.x + controls.width * controls.shoot.sizeMultiplier &&
+    y >= controls.shoot.y && y <= controls.shoot.y + controls.height * controls.shoot.sizeMultiplier) {
     controls.currentCommand = "fire";
   }
 
