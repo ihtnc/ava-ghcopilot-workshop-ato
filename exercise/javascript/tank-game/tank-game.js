@@ -97,7 +97,11 @@ var game = {
   maxPower: 20,
   minPower: 5,
   difficulty: 0,
-  airResistanceModifier: 0.05
+  hitsPerDifficulty: 5,
+  totalHits: 0,
+  airResistanceModifier: 0.05,
+  width: 0,
+  height: 0
 };
 
 var controls = {
@@ -161,11 +165,11 @@ var rankImage = new Image();
 rankImage.src = "./image/rank.svg";
 
 // event listeners
-document.addEventListener("keydown", handleKeyDown);
-document.addEventListener("keyup", cancelCommand);
-document.addEventListener("pointerdown", handlePointerDown);
-document.addEventListener("pointerup", cancelCommand);
-document.addEventListener("pointerout", cancelCommand);
+canvas.addEventListener("keydown", handleKeyDown);
+canvas.addEventListener("keyup", cancelCommand);
+canvas.addEventListener("pointerdown", handlePointerDown);
+canvas.addEventListener("pointerup", cancelCommand);
+canvas.addEventListener("pointerout", cancelCommand);
 window.addEventListener("resize", drawGame);
 
 // prevent context menu
@@ -179,11 +183,14 @@ var dpr = window.devicePixelRatio || 1;
 // initialise game
 function init() {
   // Fix for the issue on the high resolution screens
+  game.width = canvas.offsetWidth;
+  game.height = canvas.offsetHeight;
   canvas.width = canvas.offsetWidth * dpr;
   canvas.height = canvas.offsetHeight * dpr;
   canvas.style.touchAction = "none";
 
   ctx.imageSmoothingEnabled = true;
+  ctx.scale(dpr, dpr);
 
   initGame();
 };
@@ -200,12 +207,13 @@ function initGame() {
   game.airResistance = 0.095;
   game.difficulty = 0;
   game.score = 0;
+  game.totalHits = 0;
 }
 
 // reset tank to initial state
 function initTank() {
   tank.x = canvasPadding + controls.width + controls.padding;
-  tank.y = canvas.height - canvasPadding - tank.height;
+  tank.y = game.height - canvasPadding - tank.height;
   tank.bullets = 5;
 }
 
@@ -218,11 +226,11 @@ function initBarrel() {
 
 // move target's position
 function initTarget() {
-  var allowedArea = canvas.width * 0.6 - target.movementRange;
-  var targetStartX = canvas.width - allowedArea - target.width - canvasPadding;
-  var targetAllowedY = canvas.height - target.height - canvasPadding - target.movementRange * 2;
+  var allowedArea = game.width * 0.6 - target.movementRange;
+  var targetStartX = game.width - allowedArea - target.width - canvasPadding;
+  var targetAllowedY = game.height - target.height - canvasPadding;
   target.x = targetStartX + Math.floor(Math.random() * (allowedArea)) + canvasPadding;
-  target.y = Math.floor(Math.random() * (targetAllowedY)) + canvasPadding + target.movementRange;
+  target.y = Math.floor(Math.random() * (targetAllowedY)) + canvasPadding;
   target.originalX = target.x;
   target.originalY = target.y;
 }
@@ -456,12 +464,14 @@ function updateTarget() {
 
   if (target.currentDirection === 'up') {
     target.y -= target.movementSpeedMultiplier;
-    if (target.y <= target.originalY - target.movementRange) {
+    if (target.y <= target.originalY - target.movementRange
+      || target.y <= canvasPadding) {
       newDirection = true;
     }
   } else if (target.currentDirection === 'down') {
     target.y += target.movementSpeedMultiplier;
-    if (target.y >= target.originalY + target.movementRange) {
+    if (target.y >= target.originalY + target.movementRange
+      || target.y >= game.height - target.height - canvasPadding) {
       newDirection = true;
     }
   } else if (target.currentDirection === 'left') {
@@ -471,7 +481,8 @@ function updateTarget() {
     }
   } else if (target.currentDirection === 'right') {
     target.x += target.movementSpeedMultiplier;
-    if (target.x >= target.originalX + target.movementRange) {
+    if (target.x >= target.originalX + target.movementRange
+      || target.x >= game.width - target.width - canvasPadding) {
       newDirection = true;
     }
   }
@@ -545,7 +556,7 @@ function drawHitMessage() {
   ctx.font = "50px Arial";
   var message = "HIT!";
   var textSize = getTextSize(message);
-  ctx.fillText(message, canvas.width / 2 - textSize.width / 2, canvas.height / 2 - textSize.height);
+  ctx.fillText(message, game.width / 2 - textSize.width / 2, game.height / 2 - textSize.height);
   ctx.restore();
 };
 
@@ -560,7 +571,7 @@ function drawExplosion() {
 function checkBounds() {
   if (bullet.fired === false) { return; }
 
-  if (bullet.x < 0 || bullet.x > canvas.width || bullet.y < 0 || bullet.y > canvas.height) {
+  if (bullet.x < 0 || bullet.x > game.width || bullet.y < 0 || bullet.y > game.height) {
     bullet.stopped = true;
 
     if (isDelayOver()) {
@@ -584,7 +595,7 @@ function drawMissMessage() {
   ctx.font = "50px Arial";
   var message = "MISS!";
   var textSize = getTextSize(message);
-  ctx.fillText(message, canvas.width / 2 - textSize.width / 2, canvas.height / 2 - textSize.height);
+  ctx.fillText(message, game.width / 2 - textSize.width / 2, game.height / 2 - textSize.height);
   ctx.restore();
 };
 
@@ -616,27 +627,29 @@ function drawGameOver(addHighScore = false) {
   ctx.font = "50px Arial";
   var message = "Game Over";
   var textSize = getTextSize(message);
-  ctx.fillText(message, canvas.width / 2 - textSize.width / 2, canvas.height / 2 - textSize.height);
+  ctx.fillText(message, game.width / 2 - textSize.width / 2, game.height / 2 - textSize.height);
 
   // add score
   ctx.font = "30px Arial";
   ctx.fillStyle = "green";
   var score = "Score: " + game.score;
   var scoreSize = getTextSize(score);
-  ctx.fillText(score, canvas.width / 2 - scoreSize.width / 2, canvas.height / 2 + 5);
+  ctx.fillText(score, game.width / 2 - scoreSize.width / 2, game.height / 2 + 5);
 
   if (addHighScore) {
     ctx.font = "20px Arial";
     var highScore = "New High Score!";
     var highScoreSize = getTextSize(highScore);
-    ctx.fillText(highScore, canvas.width / 2 - highScoreSize.width / 2, canvas.height / 2 + scoreSize.height + 10);
+    ctx.fillText(highScore, game.width / 2 - highScoreSize.width / 2, game.height / 2 + scoreSize.height + 10);
   }
 
   ctx.restore();
 };
 
 function adjustDifficulty() {
-  if (game.score > 0 && game.score % 5 === 0) {
+  game.totalHits += 1;
+
+  if (game.totalHits % game.hitsPerDifficulty === 0) {
     game.difficulty += 1;
   }
 
@@ -747,8 +760,6 @@ function handlePointerDown(event) {
   var rect = canvas.getBoundingClientRect();
   var x = event.clientX - rect.left;
   var y = event.clientY - rect.top;
-  x *= dpr;
-  y *= dpr;
 
   if (x >= controls.powerUp.x && x <= controls.powerUp.x + controls.width &&
     y >= controls.powerUp.y && y <= controls.powerUp.y + controls.height) {
