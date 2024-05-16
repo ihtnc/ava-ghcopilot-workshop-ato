@@ -43,7 +43,8 @@ var target = {
   height: 50,
   movementRange: 100,
   movementSpeedMultiplier: 0.75,
-  currentDirection: ''
+  currentDirection: '',
+  isHit: false
 };
 
 // create a bullet object
@@ -58,7 +59,8 @@ var bullet = {
   offsetY: 0,
   width: 30,
   height: 10,
-  degreeMultiplier: -1
+  frame: 0,
+  speed: 0.10
 };
 
 var rank = {
@@ -82,16 +84,16 @@ var delayCounter = {
 
 // create an explosion object
 var explosion = {
-  width: 50,
-  height: 50
+  width: 75,
+  height: 75
 };
 
 // create a game object
 var game = {
   score: 0,
-  gravity: 30,
-  airResistance: 0.05,
-  powerMultiplier: 10,
+  gravity: 3.75,
+  airResistance: 0.095,
+  powerMultiplier: 8,
   maxAngle: 70,
   minAngle: -15,
   maxPower: 20,
@@ -101,7 +103,8 @@ var game = {
   totalHits: 0,
   airResistanceModifier: 0.05,
   width: 0,
-  height: 0
+  height: 0,
+  fps: 60
 };
 
 var controls = {
@@ -144,33 +147,33 @@ var controls = {
 // get the canvas element
 var canvas = document.getElementById("gameCanvas");
 var ctx = canvas.getContext("2d");
-var canvasPadding = 50;
+var canvasPadding = 0;
 
 // load resources
 var tankImage = new Image();
-tankImage.src = "./image/tank-no-barrel.svg";
+tankImage.src = "./images/game/tank-no-barrel.svg";
 var tankBarrelImage = new Image();
-tankBarrelImage.src = "./image/tank-barrel.svg";
+tankBarrelImage.src = "./images/game/tank-barrel.svg";
 var targetImage = new Image();
-targetImage.src = "./image/target.svg";
+targetImage.src = "./images/game/target.svg";
 var bulletImage = new Image();
-bulletImage.src = "./image/bullet.svg";
+bulletImage.src = "./images/game/bullet.svg";
 var explosionImage = new Image();
-explosionImage.src = "./image/explosion.svg";
+explosionImage.src = "./images/game/explosion.svg";
 var arrowImage = new Image();
-arrowImage.src = "./image/arrow.svg";
+arrowImage.src = "./images/game/arrow.svg";
 var shootImage = new Image();
-shootImage.src = "./image/shoot.svg";
+shootImage.src = "./images/game/shoot.svg";
 var rankImage = new Image();
-rankImage.src = "./image/rank.svg";
+rankImage.src = "./images/game/rank.svg";
 
 // event listeners
-canvas.addEventListener("keydown", handleKeyDown);
-canvas.addEventListener("keyup", cancelCommand);
-canvas.addEventListener("pointerdown", handlePointerDown);
-canvas.addEventListener("pointerup", cancelCommand);
-canvas.addEventListener("pointerout", cancelCommand);
-window.addEventListener("resize", drawGame);
+document.addEventListener("keydown", handleKeyDown);
+document.addEventListener("keyup", cancelCommand);
+document.addEventListener("pointerdown", handlePointerDown);
+document.addEventListener("pointerup", cancelCommand);
+document.addEventListener("pointerout", cancelCommand);
+window.addEventListener("resize", handleResize);
 
 // prevent context menu
 canvas.addEventListener("contextmenu", function (e) {
@@ -182,18 +185,23 @@ var dpr = window.devicePixelRatio || 1;
 
 // initialise game
 function init() {
-  // Fix for the issue on the high resolution screens
+  canvas.style.touchAction = "none";
+
+  ctx.imageSmoothingEnabled = true;
+
+  resize();
+  initGame();
+};
+
+// resize game
+function resize() {
   game.width = canvas.offsetWidth;
   game.height = canvas.offsetHeight;
   canvas.width = canvas.offsetWidth * dpr;
   canvas.height = canvas.offsetHeight * dpr;
-  canvas.style.touchAction = "none";
 
-  ctx.imageSmoothingEnabled = true;
   ctx.scale(dpr, dpr);
-
-  initGame();
-};
+}
 
 // reset game
 function initGame() {
@@ -203,7 +211,7 @@ function initGame() {
   initBullet();
   initControls();
 
-  game.gravity = 4.75;
+  game.gravity = 3.75;
   game.airResistance = 0.095;
   game.difficulty = 0;
   game.score = 0;
@@ -213,7 +221,7 @@ function initGame() {
 // reset tank to initial state
 function initTank() {
   tank.x = canvasPadding + controls.width + controls.padding;
-  tank.y = game.height - canvasPadding - tank.height;
+  tank.y = game.height - controls.width + controls.padding - canvasPadding - tank.height;
   tank.bullets = 5;
 }
 
@@ -233,12 +241,14 @@ function initTarget() {
   target.y = Math.floor(Math.random() * (targetAllowedY)) + canvasPadding;
   target.originalX = target.x;
   target.originalY = target.y;
+  target.isHit = false;
 }
 
 // reset bullet to initial state
 function initBullet() {
   bullet.fired = false;
   bullet.stopped = true;
+  bullet.frame = 0;
 
   relocateBullet();
   setInitialBulletVelocity();
@@ -385,7 +395,7 @@ function drawBarrel() {
 
 // draw the target
 function drawTarget() {
-  if (targetImage.complete) {
+  if (targetImage.complete && target.isHit === false) {
     ctx.drawImage(targetImage, target.x, target.y, target.width, target.height);
   };
 };
@@ -439,16 +449,24 @@ function updateGame() {
 function updateBullet() {
   if (!bullet.fired || bullet.stopped) { return; }
 
-  // apply air resistance
-  bullet.velocityX *= (1 - game.airResistance);
-  bullet.velocityY *= (1 - game.airResistance);
+  if (bullet.frame === 0) {
+    // apply air resistance
+    bullet.velocityX *= (1 - game.airResistance);
+    bullet.velocityY *= (1 - game.airResistance);
 
-  // apply gravity
-  bullet.velocityY += game.gravity;
+    // apply gravity
+    bullet.velocityY += game.gravity;
+  }
 
   // update the bullet's position
-  bullet.x += bullet.velocityX;
-  bullet.y += bullet.velocityY;
+  var framePerChange = game.fps * bullet.speed;
+  bullet.x += bullet.velocityX / framePerChange;
+  bullet.y += bullet.velocityY / framePerChange;
+  bullet.frame++;
+
+  if (bullet.frame >= framePerChange) {
+    bullet.frame = 0;
+  }
 };
 
 // update the target's position based on difficulty
@@ -528,6 +546,7 @@ function checkHit() {
   var hit = checkCollision();
   if (hit) {
     bullet.stopped = true;
+    target.isHit = true;
 
     if (isDelayOver()) {
       tank.bullets += 1;
@@ -563,7 +582,7 @@ function drawHitMessage() {
 // draw the explosion at target
 function drawExplosion() {
   if (explosionImage.complete) {
-    ctx.drawImage(explosionImage, target.x, target.y, explosion.width, explosion.height);
+    ctx.drawImage(explosionImage, target.x + target.width / 2 - explosion.width / 2, target.y + target.height / 2 - explosion.height / 2, explosion.width, explosion.height);
   };
 }
 
@@ -571,7 +590,7 @@ function drawExplosion() {
 function checkBounds() {
   if (bullet.fired === false) { return; }
 
-  if (bullet.x < 0 || bullet.x > game.width || bullet.y < 0 || bullet.y > game.height) {
+  if (bullet.x < 0 || bullet.x > game.width || bullet.y > game.height) {
     bullet.stopped = true;
 
     if (isDelayOver()) {
@@ -938,6 +957,11 @@ function getRotatedCoordinates(x, y, cx, cy, angle) {
 function getTextSize(text) {
   var metrics = ctx.measureText(text);
   return { width: metrics.width, height: parseInt(ctx.font) };
+}
+
+function handleResize() {
+  resize();
+  drawGame();
 }
 
 // run the game
