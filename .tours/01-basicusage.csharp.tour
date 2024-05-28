@@ -1,0 +1,90 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "01-Basic-Usage (C#)",
+  "steps": [
+    {
+      "title": "Introduction - Code Completion",
+      "description": "# Basic Usage\r\n\r\n>2mins\r\n\r\n## Demos\r\n\r\nIn this first demo, we're going to explore the core functionality of GitHub Copilot, which is Code Completion. \r\n\r\nWe are going to learn the basics of how you can leverage this AI-powered tool to enhance your coding experience.\r\n\r\n\r\nPress `Next` to continue 👇"
+    },
+    {
+      "title": "Context is Key",
+      "file": "exercise/CSharp/Console/Functions.cs",
+      "description": "# Context is Key\n\n> 3mins (Demo)\n\nContext provides the necessary backdrop that informs the purpose and function of the code. \n\nThis \"context\" helps GitHub Copilot anticipate the most likely suggestions that align with your overall goal.\n\nFor GitHub Copilot, context comes from comments, code structure, and opened files that guide its AI to generate relevant and useful suggestions. \n\nLet's begin with a straightforward comment in our functions.cs file. I will write simple message written as a C# comment and let Github Copilot complete it.\n\n### Try it out\n\n```c#\n//Best practices for functions in C#:\n```\n\nAfter pasting the comment, put your cursor at the end of the line and press `Enter`\n\nCopilot's suggestion will appear in a translucent text, usually referred to as \"Ghost Text\". Simply press `Tab` to accept the suggestion. And if you keep on pressing `Enter` after each accepted suggestion, GitHub Copilot will continue suggesting more.\n\n> The message in the comment gave the necessary context to Copilot which predicted that you are trying to enumerate the best practices in writing a function.\n\n&nbsp;\n\n> Remember to use the language-specific commenting symbols. This ensures you don't get syntax errors and Copilot can accurately interpret your intent and offer the most suitable suggestions for your code.\n\nPress `Next` to continue 👇",
+      "line": 1
+    },
+    {
+      "title": "Vague or unclear comments",
+      "file": "exercise/CSharp/Console/GeneratedClass.cs",
+      "description": "# Vague or unclear comments\n\nUsing vague or unclear comments can cause Copilot to suggest unexpected code.\n\n> 3 mins (Demo)\n\n## Try it out\n\nEnsure this file is empty before adding the comment below. We'll test how GitHub Copilot responds with vague requests.\n\n> ```c#\n// Generate a class\n```\n\nPress `Enter` twice from the end of the comment. Press `Tab` once you see Copilot's suggestion then `Enter`. Continue pressing `Tab` then `Enter` until Copilot completes the function definition.\n\n&nbsp;\n\n> Copilot would follow common code formatting standards of the language you are using (like adding a line between the `using` statements and the namespace/class statements for C#). So if there are no more suggestions after the `using` statements, you might need to press `Enter` one more time to add another line before it suggests more code.\n\n&nbsp;\n\nBecause the comment lacks additional context, it will suggest the most likely code based on its knowledge.\n\n> Note: Suggestions may differ from others\n\nNotice that vague comments may yield unexpected suggestions from GitHub Copilot. For precise, useful code generation, always provide clear, specific comments to guide its suggestion.\n\nPress `Next` to continue 👇\n\n\n",
+      "line": 1
+    },
+    {
+      "title": "Clear Comments (1 of 2)",
+      "file": "exercise/CSharp/Console/Utilities.cs",
+      "description": "# Clear Comments\n\n> 3mins (Demo)\n\nLet's see some more code completions. Let's give GitHub Copilot clearer context on what we're trying to do by adding the following comment to the first line of the Utilities.cs file. \n\n## Try it out\n\n> ```c#\n// Create a static class named Utilities that has a GetRandom function.\n// The class is to be on the exercise.CSharp.Console namespace.\n// The function should return a random number between, and including, the minimum and maximum value.\n// The function should have two parameters, the minimum and maximum number to choose from.\n```\n\nPress `Enter` twice after the comment.\n\nThen accept Copilot's suggestions by pressing the `Tab` then `Enter` key as you see the suggestions come up.\n\n\n> Key take away: Providing a clear context or \"goal\" for Copilot will increase the chances of yeilding the most relevant suggestions.\n\nPress `Next` to continue 👇\n",
+      "line": 1
+    },
+    {
+      "title": "Clear Comments (2 of 2)",
+      "file": "exercise/CSharp/Console/Program.cs",
+      "description": "# Clear Comments\n\n> 3mins (Demo)\n\n\n## Running the function\n\n### .NET 8.0 required\n\nCall the method that Copilot has just suggested in the Program.cs file\n\nTo see the method in action, run the console application from the terminal.\n\nEnsure you are on the Console folder in the terminal:\n\n>> cd exercise\\CSharp\\Console\n\n\n\nThen run the application:\n\n>> dotnet run\n\n\n\n## Testing the function\n\n### .NET 8.0 required\n\nTests have been added to validate the behaviour of the method based on the requirement. To find out whether the code Copilot suggested indeed addresses the requirement, run the test in the terminal.\n\nEnsure you are on the Console folder in the terminal:\n\n>> cd exercise\\CSharp\\Console\n\n\n\nThen run the test:\n\n>> dotnet test\n\nRemember to save the file before executing any of the above commands in the terminal.\n\nPress `Next` to continue 👇\n",
+      "line": 2
+    },
+    {
+      "title": "Additional Suggestions (1 of 2)",
+      "file": "exercise/CSharp/WebApi/NonProdFilter.cs",
+      "description": "# Additional Suggestions\n\n> 5mins (Demo)\n\n## Additional Suggestions Shortcut\n### Ctrl + Enter (Both Windows and Mac).\n\nLet's get Copilot help us create a custom endpoint filter. Then we will ask it for additional suggestions (when available). \n\n## Try it out\n\nType or copy paste the comment below to the NonProdFilter.cs file\n\n```c#\n// Create a custom endpoint filter named NonProdFilter on the exercise.CSharp.WebApi namespace.\n// The filter should implement the Microsoft.AspNetCore.Http.IEndpointFilter interface.\n// It should check the full request URL including the query string for the text \"NonProd\".\n// If the text is present (regardless of casing) the filter should proceed.\n// Otherwise, the filter should return a http 404 response.\n```\n\nWait for Copilot to suggest something (it could be a single `using` statement or an entire code) then press Ctrl+Enter to view Copilot's additional suggestion pane.\n\nAfter pressing Ctrl+Enter, you should see a new pane showing the **Additional Suggestions pane**\n\nSelect the suggestion that satisfies your requirement.\n\n> Demo Tip: Rephrase the comment if Copilot fails to generate additional suggestions.\n\n&nbsp;\n\n> Demo Tip: Ensure the `HttpContext.Request.QueryString` is taken into consideration in the filter logic.\n\n## ⚠️ Note\n\n`IEndPointFilter` is a relatively recent API introduced in .NET 7.0. Copilot may not be able to fully suggest a completely working code everytime. Regardless, the code suggested should require minimal changes (i.e.: manually implementing the derived interface methods and porting the generated code over to those methods).\n\n## Demo tip:\n\nBasically, you need to do the following to let the request through\n\n> ```c#\nreturn next(context);\n\nOtherwise, you need to return the response from one of the `Results` methods.\n\n> ```c#\nreturn Results.NotFound();\n\nRefer to the [Microsoft Learn](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/min-api-filters?view=aspnetcore-8.0) page for more info implementing filters on a Minimal API.\n\nPress `Next` to continue",
+      "line": 1
+    },
+    {
+      "title": "Additional Suggestions (2 of 2)",
+      "file": "exercise/CSharp/WebApi/Program.cs",
+      "description": "# Additional Suggestions\n\n> 2mins (Demo)\n\nThe WebApi was already configured to use the NonProdFilter on one of the endpoints.\n\n## Try it out\n\nRun the api to test the filter.\n\nEnsure you are on the WebApi folder in the terminal:\n\n>> cd exercise\\CSharp\\WebApi\n\n\n\nThen run the api:\n\n>> dotnet run\n\n\n\nOnce the server is up, take note of the port the server is listening to. Then open the browser and navigate to the APIs swagger endpoint (i.e.: http://localhost:5271/swagger) \n\nNotice that the `/new-info` endpoint is only accessible if there is a 'NonProd' text in the URL (in this example, in the query string)\n\n Press `Next` to continue\n",
+      "line": 26
+    },
+    {
+      "title": "Ask help with Refactoring (1 of 2)",
+      "file": "exercise/CSharp/Console/QueueManager.cs",
+      "description": "# Ask help with Refactoring\n\n> 2mins (Demo)\n\n**Refactoring** is the process of restructuring existing code without changing its external behavior. Its primary **_purpose is to improve_** the nonfunctional attributes of the software, making it easier to comprehend, reducing its complexity, and enhancing its maintainability.\n\n\n## Inline Chat \n\nIn this topic, we will cover the inline chat, where you can interact with GitHub Copilot using natural language directly from the file you're editing.\n\n## Shortcuts (VS Code)\n\nTo launch Inline-chat, simply press these key combination\n\n### Cmd (⌘) + i  for Mac\n### Ctrl + i for Windows\n\n## Try it out\n\nThis class can be refactored to be more performant. Here's how you could ask GitHub Copilot to help with the refactoring:\n\n1. Highlight the entire QueueManager class definition in the code editor.\n1. Activate Github Copilot's inline chat feature. (`Ctrl + i or Cmd + i`)\n1. Ask Copilot, \"Please refactor this class to make it more efficient\"\n\n> Note: You can refactor any piece of code in a file, be it a couple of lines, a method, or the entire class.\n\nPress `Next` to continue\n",
+      "line": 11
+    },
+    {
+      "title": "Ask help with Refactoring (2 of 2)",
+      "file": "exercise/CSharp/Console/QueueManagerTests.cs",
+      "description": "# Ask help with Refactoring\n\n> 2mins (Demo)\n\n## Checking the integrity of the refactor\n\nQueueManager already has existing tests to validate it's behaviour. The refactor should not cause any of the existing tests to fail.\n\n\n\nLet's run and test whether Copilot has suggested a refactor on the class without affecting its behaviour.\n\nTo run the tests, ensure you are on the Console folder in the terminal:\n\n>> cd exercise\\CSharp\\Console\n\n\n\nThen run the test:\n\n>> dotnet test\n\nPress `Next` to continue\n\n",
+      "line": 3
+    },
+    {
+      "title": "Ask help with troubleshooting",
+      "file": "exercise/CSharp/Console/KebabCaseConverter.cs",
+      "description": "# Ask help with troubleshooting\n\n>> 3mins (Demo)\n\n## The problem\n\nThis converter does not seem to convert the string to kebab case properly.\n## Try it out\n\nTry calling the Convert method from Program.cs then run the application. You will notice that the method only converts the string to lower case and the spaces are not converted into dashes.\n\n1. Highlight the entire Convert method.\r\n2. Activate GitHub Copilot's inline chat feature.\r\n3. Ask Copilot, \"This method does not convert the string properly\"\n\nAccept the suggestion, then test the code again by running the application.\n\nPress `Next` to continue",
+      "line": 13
+    },
+    {
+      "title": "Ask help with error handling",
+      "file": "exercise/CSharp/Console/StarwarsApi.cs",
+      "description": "# Ask help with error handling\n\n> 3mins (Demo)\n\n## Error Handling\n\nThis class has a method that calls an external API and returns the response.\nBut right now, it assumes there will be no errors. If the external API responds with a HTTP error, the method won't be able to handle it gracefully.\n\n## Try it out\n\nCall the GetCharacter method from the Program.cs file. If you supply an invalid value (i.e.: \"Picard\"), you will see an unhandled exception.\n\nNow, let’s see how to ask GitHub Copilot to suggest error handling:\n\n1. Highlight the entire GetCharacter method.\r\n2. Activate GitHub Copilot's inline chat feature.\r\n3. Ask Copilot, \"Add error handling to this method to handle web exceptions gracefully and return a friendly message\"\n\nAccept the suggestion, then test the code again by supplying an invalid value.\n\nPress `Next` to continue",
+      "line": 14
+    },
+    {
+      "title": "Other language support",
+      "file": "exercise/html/demo.html",
+      "description": "## Other language support\r\n\r\n>> 3mins (Demo)\r\n\r\nCode suggestions for other languages.\r\n\r\n>> Tip: Viewing the HTML - Right click the Tab with title \"demo.html\", then select \"Reveal in File Explorer. Double click demo.html.\r\n\r\n## Try it out\r\n\r\nLet's try the code completions again, this time with an HTML.\r\n\r\n> `<!--Create a basic HTML page boilerplate that uses external CSS stylesheet named \"styles.css\", and a script tag for a JavaScript file named \"scripts.js\" placed at the end of the body. Within the body, include a header section with a navigation bar containing placeholder links for \"Home\" and \"Contact Us\". Also, add a main content area with a sample article that includes a heading, two paragraphs of Lorem Ipsum text, and an image with alt text. Finally, include a footer with a copyright notice.-->`\r\n\r\n### Commenting symbol\r\n\r\n>> Notice the comment symbol <!---->. Because we're using a HTML file, we need to use the correct commenting symbol.\r\n\r\nPress `Enter` at the end of the comment, review and accept the suggestions until complete.\r\n\r\n> Tip: If Copilot does not provide a complete code suggestion, or it's taking a while to Tab and Enter, simply highlight the code, including your comments at the top, press Ctrl + i then type `Generate the full HTML code with tailwind CSS requirement I have provided.`. \r\n\r\nOnce Copilot completes the HTML, save the file the view the HTML in a browser. \r\n\r\n>> Right click the Tab with title `demo.html`, then select `Reveal in File Explorer`. Double click demo.html.\r\n\r\nPress `Next` to Continue.\r\n",
+      "line": 1
+    },
+    {
+      "title": "Files as Context",
+      "file": "exercise/CSharp/Console/SnakeCaseConverter.cs",
+      "description": "# Files as Context\n\nGitHub Copilot can provide better suggestions the more context you provide it. Besides using clear comments, meaningful names for functions and variables, having related files open can also help GitHub Copilot to generate more relevant suggestions, which we will see in the next demo.\n\n## Use Neighboring files as Context\n\nKebabCaseConverter.cs is a C# class from earlier that converts a string into kebab-case.\n\nYou may notice that apart from the method definition, the file includes appropriate documentation, such as details about the parameters and the return value.\n\n## Try it out\n\n1. Keep KebabCaseConverter.cs open (Right-click \"Pin\" so it will stay opened)\n2. Open `SnakeCaseConverter.cs` and copy the comment below.\n\n> ```c#\n// Generate a class that converts a string into snake case.\n```\n\n3. Press Enter twice starting at the end of the comment.\n4. Review the suggestion\n\nCopilot will now suggest code with a similar pattern from the opened file `KebabCaseConverter.cs`.\n\n### Neighboring Tabs or opened files\n\nNotice how GitHub Copilot used the pattern from the open file on suggesting how to write the function. Without explicitly asking it to do so, it suggested documentation (comments) about the function. Copilot uses opened file or also known as \"neighboring tabs\" as additional context to recommend suggestions.\n\n\n## What if you want to override the suggestion?\n\nSimple: Reject the suggestion and start typing how you want the code to look like, then Copilot will start suggesting again based on what you've written.\n\nSo, if you don't want Copilot to use a specific way of writing code, you will have to take the wheel and drive.\n\nPress `Next` to continue 👇\n\n\n",
+      "line": 1
+    },
+    {
+      "title": "Recap",
+      "description": "# Recap of Basic Usage\n\n>> 3mins\n\n## Probabilistic, not deterministic\n\nGitHub Copilot is fundamentally a predictive tool that leverages a Large Language Model to suggest **probable code** snippets, **not guaranteed solutions**, based on the context and patterns in your coding.\n\n>> Trust, but Verify\n\n## Clear Comments\n\nProviding clear context to GitHub Copilot significantly improves your chances of receiving the most relevant and optimal code suggestions. Context is Key and Precision matters.\n\n## Additional suggestions (when available)\n\nWhen available, the **'Additional Suggestions pane'** in GitHub Copilot offers developers different versions of code suggestions, giving you choices to best fit your specific requirements.\n\n## Four T's \n\nWhen using Code Completions, remember these Four T's\n\n- Tab (Accept)\n- Tweak (Accept then refine)\n- Take the time to review additional/alternate suggestions\n- Trash (Reject then iterate)\n\nPress `Finish` to complete this tour. 🎉"
+    },
+    {
+      "title": "Basic Usage Questions",
+      "description": "# Basic Usage Questions\r\n\r\n>> 5 mins Q&A"
+    }
+  ]
+}
